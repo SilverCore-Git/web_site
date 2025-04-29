@@ -7,10 +7,10 @@
         }
 
         const nav_items: NavItem[] = [
-                { name: "Accueil", icon: "home", href: "" },
-                { name: "Nos services", icon: "project-diagram", href: "" },
-                { name: "Qui sommes nous", icon: "users", href: "" },
-                { name: "Contact", icon: "envelope", href: "" }
+                { name: "Accueil", icon: "home", href: "/#home" },
+                { name: "Nos services", icon: "project-diagram", href: "/#services" },
+                { name: "Qui sommes nous", icon: "users", href: "/#about" },
+                { name: "Contact", icon: "envelope", href: "/#contact" }
         ];
 
 </script>
@@ -24,7 +24,7 @@
 
                 <a href="/">
 
-                        <ul class="absolute inset-0 ml-6 flex justify-start items-center flex-row text-white">
+                        <ul class="absolute inset-0 ml-9 flex justify-start items-center flex-row text-white">
 
                                 <li><img class="w-55" src="../assets/logo+text.png" /></li>
 
@@ -32,7 +32,7 @@
 
                 </a>
       
-                <ul class="absolute inset-0 mr-6 flex justify-end items-center flex-row text-white gap-20">
+                <ul class="absolute inset-0 mr-11 flex justify-end items-center flex-row text-white gap-20">
 
                         <li class="cursor-pointer hover:scale-110 transition-all duration-500" v-for="(item, index) in nav_items" :key="index">
                                 

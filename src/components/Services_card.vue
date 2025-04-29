@@ -23,10 +23,6 @@
        <!-- /* From Uiverse.io by catraco */  -->
        <div class="card w-60 bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-slate-100 border border-indigo-700 grid grid-cols-2 justify-center p-4 gap-4 rounded-lg shadow-lg">
         
-            <div class="col-span-2 flex justify-center items-center">
-                <img class="cover" src="../assets/logo+text.png" alt="logo" />
-            </div>
-
             <div class="col-span-2 text-lg font-bold capitalize rounded-md ">
                 {{ title }}
             </div>
