@@ -1,4 +1,39 @@
+<script lang="ts" setup>
 
+  import Services_card from '../components/Services_card.vue';
+  import About from '../components/About.vue';
+
+  interface Service {
+    title: string;
+    content: string;
+    href: string;
+  }
+
+  const Services: Service[] = [
+    { 
+      title: 'Silvertransfert',
+      content: 'Silvertransfert est un outil de transfert de fichier en ligne sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
+      href: 'https://www.silvertransfert.fr' 
+    },
+    {
+      title: 'Silvercore', 
+      content: 'Silvercore est un hébergeur web, nous vous proposons des services d\'hébergement mutualisé et VPS.', 
+      href: 'https://www.silvercore.fr' 
+    },
+    { 
+      title: 'Silvercloud', 
+      content: 'Silvercloud est un service de stockage en ligne sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
+      href: 'https://www.silvercloud.fr' 
+    },
+    { 
+      title: 'Silvermail', 
+      content: 'Silvermail est un service de messagerie sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
+      href: 'https://www.silvermail.fr'
+    }
+  ]
+
+
+</script>
 
 <template>
 
@@ -39,43 +74,6 @@
     </section>
 
 </template>
-
-<script lang="ts" setup>
-
-  import Services_card from '../components/Services_card.vue';
-  import About from '../components/About.vue';
-
-  interface Service {
-    title: string;
-    content: string;
-    href: string;
-  }
-
-  const Services: Service[] = [
-    { 
-      title: 'Silvertransfert',
-      content: 'Silvertransfert est un outil de transfert de fichier en ligne sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
-      href: 'https://www.silvertransfert.fr' 
-    },
-    {
-      title: 'Silvercore', 
-      content: 'Silvercore est un hébergeur web, nous vous proposons des services d\'hébergement mutualisé et VPS.', 
-      href: 'https://www.silvercore.fr' 
-    },
-    { 
-      title: 'Silvercloud', 
-      content: 'Silvercloud est un service de stockage en ligne sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
-      href: 'https://www.silvercloud.fr' 
-    },
-    { 
-      title: 'Silvermail', 
-      content: 'Silvermail est un service de messagerie sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
-      href: 'https://www.silvermail.fr'
-    }
-  ]
-
-
-</script>
 
 
 <style scoped>

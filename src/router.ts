@@ -3,8 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 // views
 import Home_view from './views/Home.vue';
-
-import Services_card from './components/Services_card.vue';
   
 const routes = [
   {

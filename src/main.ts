@@ -6,7 +6,6 @@ import router from './router';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHome, faProjectDiagram, faUsers, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import VTooltip from 'v-tooltip';
 
 library.add(faHome, faProjectDiagram, faUsers, faEnvelope);
 
@@ -14,6 +13,5 @@ const app = createApp(App);
 app.component('font-awesome-icon', FontAwesomeIcon);
 
 app.use(router);
-app.use(VTooltip);
 
 app.mount('#app');

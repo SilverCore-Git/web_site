@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 
 <section class="about">
 
@@ -55,11 +55,7 @@
 </section>
 
 </template>
-<script>
-export default {
-    
-}
-</script>
+
 <style scoped>
     @import url('../assets/css/about.css');
 </style>
