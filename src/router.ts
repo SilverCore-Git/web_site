@@ -1,18 +1,43 @@
 
-// import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
-// const routes = [
-//   {
-//     path: '/de',      // Route pour /de
-//     name: 'DeRoute',   // Nom de la route (facultatif)
-//     component: HelloWorld,  // Le composant HelloWorld sera affiché pour cette route
-//     props: { msg: 'test' },  // On passe le prop msg avec la valeur 'test'
-//   }
-// ];
+// views
+import Home_view from './views/Home.vue';
 
-// const router = createRouter({
-//   history: createWebHistory(import.meta.env.BASE_URL),
-//   routes,
-// });
+import Services_card from './components/Services_card.vue';
+  
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home_view,
+    props: {},
+    meta: { title: 'Accueil - silvercore' }
+  },
 
-// export default router;
+  {
+    path: '/dd',
+    name: 'Services_card',
+    component: Services_card,
+    props: {},
+    meta: { title: 'Services_card - silvercore' }
+  },
+
+
+];
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+});
+
+router.beforeEach((to, from, next) => {
+    from;
+    const title = to.meta.title as string;
+    if (title) {
+      document.title = title;
+    }
+    next();
+  });
+
+export default router;

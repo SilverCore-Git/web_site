@@ -8,7 +8,7 @@
 
         const nav_items: NavItem[] = [
                 { name: "Accueil", icon: "home", href: "" },
-                { name: "Nos projets", icon: "project-diagram", href: "" },
+                { name: "Nos services", icon: "project-diagram", href: "" },
                 { name: "Qui sommes nous", icon: "users", href: "" },
                 { name: "Contact", icon: "envelope", href: "" }
         ];
@@ -18,18 +18,31 @@
 
 <template>
 
-        <nav class=" relative bg-black h-16">
+        <div class="bg-black sticky top-0 h16 text-black">#</div>
 
-                <a href="/"><ul class=" absolute inset-0 ml-16 flex justify-start items-center flex-row text-white">
+        <nav class="sticky top-5 z-50 h-16 rounded-2xl ml-36 mr-36">
 
-                        <li><img class="w-55" src="../assets/logo+text.png"></li>
+                <a href="/">
 
-                </ul></a>
+                        <ul class="absolute inset-0 ml-6 flex justify-start items-center flex-row text-white">
 
-                <ul class=" absolute inset-0 mr-16 flex justify-end items-center flex-row text-white gap-20">
+                                <li><img class="w-55" src="../assets/logo+text.png" /></li>
 
-                        <li class=" cursor-pointer hover:scale-110 transition-all duration-500" v-for="(item, index) in nav_items" :key="index">
-                                <a :href="item.href"> <font-awesome-icon :icon="item.icon" class="mr-2" /> {{ item.name }} </a>
+                        </ul>
+
+                </a>
+      
+                <ul class="absolute inset-0 mr-6 flex justify-end items-center flex-row text-white gap-20">
+
+                        <li class="cursor-pointer hover:scale-110 transition-all duration-500" v-for="(item, index) in nav_items" :key="index">
+                                
+                                <a :href="item.href">
+
+                                        <font-awesome-icon :icon="item.icon" class="mr-2" />
+                                        {{ item.name }}
+
+                                </a>
+
                         </li>
 
                 </ul>
@@ -37,6 +50,16 @@
         </nav>
 
 </template>
+      
 
+<style scoped>
+
+        nav {
+                background-color: rgb(9, 0, 39);
+                border: 0.5px solid #ffff;
+                box-shadow: 0px 0px 60px #1f4c65;
+        }
+
+</style>
 
 
