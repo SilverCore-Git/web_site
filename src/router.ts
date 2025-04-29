@@ -14,16 +14,6 @@ const routes = [
     props: {},
     meta: { title: 'Accueil - silvercore' }
   },
-
-  {
-    path: '/dd',
-    name: 'Services_card',
-    component: Services_card,
-    props: {},
-    meta: { title: 'Services_card - silvercore' }
-  },
-
-
 ];
 
 const router = createRouter({

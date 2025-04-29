@@ -38,21 +38,12 @@
 
     </section>
 
-    <section class="flex justify-center items-center flex-col" style="height: 100vh; width: 100%;" id="contact">
-
-      <h1 class="title text-6xl font-bold uppercase tracking-wider mb-28">Contact</h1>
-
-      <Contact />
-
-    </section> 
-
 </template>
 
 <script lang="ts" setup>
 
   import Services_card from '../components/Services_card.vue';
   import About from '../components/About.vue';
-  import Contact from '../components/Contact.vue';
 
   interface Service {
     title: string;

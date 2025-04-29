@@ -9,8 +9,7 @@
         const nav_items: NavItem[] = [
                 { name: "Accueil", icon: "home", href: "/#home" },
                 { name: "Nos services", icon: "project-diagram", href: "/#services" },
-                { name: "Qui sommes nous", icon: "users", href: "/#about" },
-                { name: "Contact", icon: "envelope", href: "/#contact" }
+                { name: "Qui sommes nous", icon: "users", href: "/#about" }
         ];
 
 </script>
@@ -18,7 +17,7 @@
 
 <template>
 
-        <div class="bg-black sticky top-0 h16 text-black">#</div>
+        <div style="z-index: 2;" class="bg-black sticky top-0 text-black">#</div>
 
         <nav class="sticky top-5 z-50 h-16 rounded-2xl ml-36 mr-36">
 
