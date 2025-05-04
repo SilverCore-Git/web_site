@@ -16,22 +16,31 @@
       href: 'https://www.silvertransfert.fr' 
     },
     {
-      title: 'Silvercore', 
-      content: 'Silvercore est un hébergeur web, nous vous proposons des services d\'hébergement mutualisé et VPS.', 
-      href: 'https://www.silvercore.fr' 
+      title: 'Silverauth', 
+      content: 'Silverauth est le gestionaire de compte de silvercore.', 
+      href: 'https://auth.silvercore.fr' 
     },
     { 
-      title: 'Silvercloud', 
-      content: 'Silvercloud est un service de stockage en ligne sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
-      href: 'https://www.silvercloud.fr' 
-    },
-    { 
-      title: 'Silvermail', 
-      content: 'Silvermail est un service de messagerie sécurisé et respectieux de la vie privée, transferez vos fichier jusqu\'a 10go !', 
-      href: 'https://www.silvermail.fr'
+      title: 'silverdium', 
+      content: 'Silverdium, serveur minecraft pvp faction modé.', 
+      href: 'https://www.silverdium.fr' 
     }
   ]
 
+  const silvertools_project: Service[] = [
+    { 
+      title: 'SilverBatch vite + vue + tw creator',
+      content: 'Ce script de silverbatch vous permet de créer un projet vite + vue + tailwindcss clé en main très facilement, il vous sufit de lancer le script, répondre aux question et c\'est tout !', 
+      href: 'https://github.com/SilverCore-Git/silverbatch_vite-vue-tw_creator' 
+    }
+  ]
+
+  const scroll_to = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
 </script>
 
@@ -41,7 +50,7 @@
 
         <h1 class="title  text-8xl font-bold uppercase tracking-wider mb-18">silvercore</h1>
 
-        <a href="/#services"><button class="btn-services btn-services-link">
+        <a ><button @click="scroll_to('services')" class="btn-services btn-services-link">
             Nos services
         </button></a>
 
@@ -59,6 +68,26 @@
             :title="service.title" 
             :content="service.content" 
             :href="service.href"
+          />
+
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section class="flex justify-center items-center flex-col" style="height: 100vh; width: 100%;" id="tools">
+
+      <h1 class="title text-6xl font-bold uppercase tracking-wider mb-28">SilverTools</h1>
+
+      <ul style="cursor: default;" class="card-group flex flex-wrap justify-center gap-16 sm:flex-row flex-col">
+
+        <li v-for="(silvertools_project, index) in silvertools_project" :key="index">
+
+          <Services_card 
+            :title="silvertools_project.title" 
+            :content="silvertools_project.content" 
+            :href="silvertools_project.href"
           />
 
         </li>

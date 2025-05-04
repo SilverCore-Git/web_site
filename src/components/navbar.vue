@@ -7,10 +7,19 @@
         }
 
         const nav_items: NavItem[] = [
-                { name: "Accueil", icon: "home", href: "/#home" },
-                { name: "Nos services", icon: "project-diagram", href: "/#services" },
-                { name: "Qui sommes nous", icon: "users", href: "/#about" }
+                { name: "Accueil", icon: "house", href: "/#home" },              // bi-house
+                { name: "Nos services", icon: "diagram-3", href: "/#services" }, // bi-diagram-3
+                { name: "SilverTools", icon: "tools", href: "/#tools" },         // bi-tools
+                { name: "Qui sommes nous", icon: "people", href: "/#about" }     // bi-people
         ];
+
+        const scroll_to = (id: string) => {
+                const element = document.getElementById(id)
+                if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' })
+                }
+        }
+
 
 </script>
 
@@ -35,9 +44,9 @@
 
                         <li class="cursor-pointer hover:scale-110 transition-all duration-500" v-for="(item, index) in nav_items" :key="index">
                                 
-                                <a :href="item.href">
+                                <a @click="scroll_to(item.href.replace('/#', ''))">
 
-                                        <font-awesome-icon :icon="item.icon" class="mr-2" />
+                                        <i :class="`bi bi-${item.icon}`" class="mr-2"></i>
                                         {{ item.name }}
 
                                 </a>

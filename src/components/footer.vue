@@ -40,7 +40,7 @@
           <div>
             <h5 class="text-lg font-semibold mb-4">Contact</h5>
             <p class="text-gray-400">
-              Email: <a href="mailto:contact@silvercore.fr" class="hover:text-blue-500">contact@silvercore.fr</a>
+              Email: <a href="mailto:silverdium@hotmail.com" class="hover:text-blue-500">silverdium@hotmail.com</a>
             </p>
           </div>
   
