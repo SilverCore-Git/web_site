@@ -1,73 +1,39 @@
-<script setup lang="ts">
-
-        interface NavItem {
-                name: string;
-                icon: string;
-                href: string;
-        }
-
-        const nav_items: NavItem[] = [
-                { name: "Accueil", icon: "house", href: "/#home" },              // bi-house
-                { name: "Nos services", icon: "diagram-3", href: "/#services" }, // bi-diagram-3
-                { name: "SilverTools", icon: "tools", href: "/#tools" },         // bi-tools
-                { name: "Qui sommes nous", icon: "people", href: "/#about" }     // bi-people
-        ];
-
-        const scroll_to = (id: string) => {
-                const element = document.getElementById(id)
-                if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' })
-                }
-        }
-
-
-</script>
-
-
 <template>
 
-        <div style="z-index: 2;" class="bg-black sticky top-0 text-black">#</div>
+    <nav class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
 
-        <nav class="sticky top-5 z-50 h-16 rounded-2xl ml-36 mr-36">
+        <div @click="router.push('/')" class="flex flex-row text-2xl font-bold text-gray-900 cursor-pointer">
+            <img src="/favicon.svg" class="w-10 mr-2">
+            <span class="text-blue-600">Silver</span>
+            <span class="text-gray-800">Core</span>
+        </div>
 
-                <a href="/">
-
-                        <ul class="absolute inset-0 ml-9 flex justify-start items-center flex-row text-white">
-
-                                <li><img class="w-55" src="../assets/logo+text.png" /></li>
-
-                        </ul>
-
-                </a>
-      
-                <ul class="absolute inset-0 mr-11 flex justify-end items-center flex-row text-white gap-20">
-
-                        <li class="cursor-pointer hover:scale-110 transition-all duration-500" v-for="(item, index) in nav_items" :key="index">
-                                
-                                <a @click="scroll_to(item.href.replace('/#', ''))">
-
-                                        <i :class="`bi bi-${item.icon}`" class="mr-2"></i>
-                                        {{ item.name }}
-
-                                </a>
-
-                        </li>
-
-                </ul>
-
+        <nav class="hidden md:flex space-x-8">
+            <a @click="router.push('/'); scroll_to('home')" class=" cursor-pointer text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Accueil</a>
+            <a @click="router.push('/'); scroll_to('services')" class=" cursor-pointer text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Services</a>
+            <a @click="router.push('/'); scroll_to('a-propos')" class=" cursor-pointer text-gray-600 hover:text-blue-600 transition duration-300 font-medium">À Propos</a>
+            <a @click="router.push('/'); scroll_to('contact')" class=" cursor-pointer text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Contact</a>
         </nav>
 
+        <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+
+      </nav>
+
 </template>
-      
 
-<style scoped>
+<script lang="ts" setup>
 
-        nav {
-                background-color: rgb(9, 0, 39);
-                border: 0.5px solid #ffff;
-                box-shadow: 0px 0px 60px #1f4c65;
-        }
+  import { useRouter } from 'vue-router'
 
-</style>
+  const router = useRouter();
 
+  const scroll_to = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
+</script>

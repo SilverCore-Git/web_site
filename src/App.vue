@@ -1,22 +1,22 @@
-
-<script setup lang="ts">
+<script setup lang='ts'>
   import Navbar from './components/Navbar.vue';
   import Footer from './components/Footer.vue';
-
 </script>
 
 <template>
 
-  <Navbar />
+  <header class="bg-white shadow-sm py-4">
+    <Navbar />
+  </header>
 
   <router-view></router-view>
 
-  <Footer />
+  <footer>
+    <Footer />
+  </footer>
 
 </template>
 
-<style>
-
-
+<style scoped>
 
 </style>

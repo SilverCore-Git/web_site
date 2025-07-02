@@ -1,67 +1,46 @@
-<script lang="ts" setup>
-    defineProps({
+<template>
 
-        title: {
-            type: String,
-            default: 'nom du service'
-        },
-        content: {
-            type: String,
-            default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.'
-        },
-        href: {
-            type: String,
-            default: 'https://www.silvercore.fr'
-        }
+    <div class="bg-white p-8 rounded-xl card-shadow flex flex-col items-center text-center">
 
-    })
-</script>
+        <img :src="`/assets/img/${img}.png`" class="w-30 rounded-2xl mb-6 icon-color">
 
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ title }}</h3>
 
-<template lang="html">
+        <p class="text-lg text-gray-700 mb-6">{{ description }}</p>
 
-       <!-- /* From Uiverse.io by catraco */  -->
-       <div class="card w-60 bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-slate-100 border border-indigo-700 grid grid-cols-2 justify-center p-4 gap-4 rounded-lg shadow-lg">
-        
-            <div class="col-span-2 text-lg font-bold capitalize rounded-md ">
-                {{ title }}
-            </div>
+        <ul class="text-gray-600 text-left w-full max-w-sm mx-auto mb-6 space-y-2">
 
-            <div class="col-span-2 rounded-md text-slate-200">
-                {{ content }}
-            </div>
+            <li 
+                v-for="(adventage, index) in adventages"
+                :key="index"
+                class="flex items-center"
+            >
+                <span class="text-green-500 mr-2">✔</span> 
+                {{ adventage }}
+            </li>
 
-            <div class="col-span-1">
-                <a :href="href" target="_blank">
-                <button style="cursor: pointer;" class="rounded-md bg-indigo-700 hover:bg-indigo-500 hover:text-white duration-300 p-2 shadow-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" 
-                        width="24" height="24" viewBox="0 0 24 24" 
-                        fill="none" stroke="currentColor" stroke-width="2" 
-                        stroke-linecap="round" stroke-linejoin="round" 
-                        class="feather feather-external-link text-white">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                </button>
-                </a>
-            </div>
+        </ul>
 
-        </div>
+        <a 
+            :href="link" 
+            target="_blank"
+            class="btn-primary text-white font-bold py-2 px-6 rounded-full inline-block text-md mt-auto"
+        >
+            Découvrir {{ title }}
+        </a>
 
+    </div>
 
 </template>
 
+<script lang="ts" setup>
 
-<style scoped>
+defineProps<{
+    title: string;
+    img: string;
+    description: string;
+    adventages: string[];
+    link: string;
+}>();
 
-    .card {
-        transition: all 0.3s ease-in-out;
-    }
-    
-    .card:hover {
-        box-shadow: 0px 0px 60px #1f4c65;
-        transform: scale(1.05);
-    }
-
-</style>
+</script>

@@ -1,8 +1,29 @@
-
-@import url('bootstrap-icons/font/bootstrap-icons.css');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
-    background-color: #000000;
-    color: rgb(230, 250, 255);
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.gradient-bg {
+    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+}
+
+.btn-primary {
+    cursor: pointer;
+    background: linear-gradient(to right, #6a82fb, #825cfc);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 4px 10px rgba(106, 130, 251, 0.4);
+    transform: scale(1.02);
+}
+
+.card-shadow {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon-color {
+    color: #6a82fb;
 }

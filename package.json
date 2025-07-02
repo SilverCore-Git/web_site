@@ -1,5 +1,5 @@
 {
-  "name": "silvercore.fr",
+  "name": "newnewwebsite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,22 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@tailwindcss/vite": "^4.1.4",
-    "bootstrap-icons": "^1.11.3",
-    "font-awesome": "^4.7.0",
-    "vue": "^3.5.13",
+    "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.2",
+    "@tailwindcss/vite": "^4.1.11",
+    "@vitejs/plugin-vue": "^6.0.0",
     "@vue/tsconfig": "^0.7.0",
-    "tailwindcss": "^4.1.4",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.1",
-    "vue-tsc": "^2.2.8"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vue-tsc": "^2.2.10"
   }
 }

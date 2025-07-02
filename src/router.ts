@@ -1,18 +1,24 @@
+import { createRouter, createWebHistory } from 'vue-router'
 
-import { createRouter, createWebHistory } from 'vue-router';
+import Home from './views/Home.vue'
+import Confidential from './views/Confidential.vue';
 
-// views
-import Home_view from './views/Home.vue';
-  
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home_view,
+  { 
+    path: '/', 
+    name: 'Home', 
+    component: Home,
     props: {},
-    meta: { title: 'Accueil - silvercore' }
+    meta: { title: 'Silvercore' }
   },
-];
+  { 
+    path: '/confidential', 
+    name: 'confidential', 
+    component: Confidential,
+    props: {},
+    meta: { title: 'Silvercore - confidentialité' }
+  }
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,12 +26,12 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    from;
-    const title = to.meta.title as string;
-    if (title) {
-      document.title = title;
-    }
-    next();
-  });
+  from;
+  const title = to.meta.title as string;
+  if (title) {
+    document.title = title;
+  }
+  next();
+});
 
-export default router;
+export default router
