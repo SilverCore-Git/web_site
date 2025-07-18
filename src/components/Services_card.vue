@@ -24,7 +24,7 @@
         <a 
             :href="link" 
             target="_blank"
-            class="btn-primary text-white font-bold py-2 px-6 rounded-full inline-block text-md mt-auto"
+            class="btn-primary mt-auto"
         >
             Découvrir {{ title }}
         </a>

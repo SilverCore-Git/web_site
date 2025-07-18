@@ -5,7 +5,7 @@
 
 <template>
 
-  <header class="bg-white shadow-sm py-4">
+  <header class="bg-white shadow-lg py-4">
     <Navbar />
   </header>
 

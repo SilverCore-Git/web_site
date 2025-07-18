@@ -1,29 +1,70 @@
 @import 'tailwindcss';
 
+:root {
+    --primary: #6356e5;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f0f4f8;
 }
 
 .gradient-bg {
-    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+    position: relative;
+    z-index: 0;
 }
+
+.gradient-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/green_patern.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(3px);
+    border-bottom-left-radius: 3rem; 
+    border-bottom-right-radius: 3rem;
+}
+
 
 .btn-primary {
     cursor: pointer;
-    background: linear-gradient(to right, #6a82fb, #825cfc);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: .8rem 1.5rem;
+    border-radius: 8px;
+    color: white;
     transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 4px 10px rgba(106, 130, 251, 0.4);
-    transform: scale(1.02);
+    background-color: #3328aa;
+    color: white;
+}
+
+
+.btn-second {
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    padding: .8rem 1.5rem;
+    border-radius: 8px;
+    color: black;
+    backdrop-filter: blur(50px);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-second:hover {
+    background-color: var(--primary);
+    color: white;
 }
 
 .card-shadow {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px #23198d42;
 }
 
 .icon-color {
-    color: #6a82fb;
+    color: var(--primary);
 }
