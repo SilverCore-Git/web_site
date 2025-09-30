@@ -22,7 +22,7 @@
             <section>
                 <h2 class="text-2xl font-bold mb-4">2. Données collectées</h2>
                 <p>
-                    Aucune données sont collectées sur ce site web.
+                    Aucune donnée n'est collectée sur ce site web.
                 </p>
             </section>
 

@@ -28,20 +28,23 @@
 
     <section 
       id="a-propos" 
-      class="py-16 bg-white rounded-lg mx-4 sm:mx-8 lg:mx-16 -mt-16 relative z-10 card-shadow"
+      class="py-16 bg-white rounded-lg mx-auto sm:mx-8 lg:mx-16 -mt-10 md:-mt-16 relative z-10 card-shadow"
     >
 
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center ">
 
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Notre Engagement : Innovation et Intégrité</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Notre Engagement : Innovation et sécurité</h2>
 
-            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-10">
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto">
                 Chez SilverCore, nous croyons en un monde où la protection de la vie privée n'est pas une option, mais une norme. 
                 Chaque service que nous développons est conçu pour être esthétique, intuitif et sécurisé. 
-                Garantissant une transparence totale et une expérience utilisateur inégalée.
+                Garantissant une transparence totale et une expérience utilisateur optimal.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div 
+                :class="true ? 'hidden' : 'grid'"
+                class="grid-cols-1 md:grid-cols-3 gap-8 mt-10"
+            >
 
                 <div 
                   v-for="(card, index) in convictions_list"
@@ -56,6 +59,25 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        id="article"
+        class="px-4 py-16 flex justify-center items-center flex-col"
+    >
+
+        <div
+            class="flex flex-col justify-center items-center space-y-10"
+        >
+
+            <Article_card
+                v-for="article in articles" 
+                :article="article"
+            />
 
         </div>
 
@@ -88,7 +110,9 @@
 
     </section>
 
-    <section class="py-16 bg-[var(--primary)] text-white text-center rounded-t-3xl">
+    <section 
+        class="py-16 bg-[var(--primary)] text-white text-center rounded-t-3xl"
+        >
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -140,14 +164,20 @@
 
 <script lang="ts" setup>
 
+import Article_card from '../components/Article_card.vue';
 import Services_card from '../components/Services_card.vue';
+import articles_config from '../assets/config/articles.json';
+import type { Article } from '../assets/config/type';
 
-  const scroll_to = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+
+const scroll_to = (id: string) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
   }
+}
+
+const articles: Article[] = articles_config;
 
 const convictions_list: 
     {

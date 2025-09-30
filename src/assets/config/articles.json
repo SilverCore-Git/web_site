@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Notre politique",
+    "content": "SilverCore repose sur des valeurs éthiques, éco-responsables et respectueuses de la vie privée. Nous développons nos services en plaçant au premier plan la sécurité et l’intégrité des données personnelles de nos utilisateurs.",
+    "sections": [
+      {
+        "title": "éco-responsabilité",
+        "content": "Nous concevons nos services et nos infrastructures dans une optique durable et respectueuse de l’environnement. SilverCore s’engage à réduire au maximum son empreinte carbone et à compenser ses émissions de gaz à effet de serre. Nous encourageons également la réutilisation et l’optimisation des ressources numériques afin de limiter le gaspillage et de prolonger la durée de vie des équipements."
+      },
+      {
+        "title": "vie privée",
+        "content": "La protection de vos données est au cœur de nos priorités. SilverCore contrôle l’accès à ses bases de données et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées. Nous adoptons une politique de transparence totale, vous offrant un contrôle clair et simple sur vos données personnelles."
+      },
+      {
+        "title": "éthique",
+        "content": "SilverCore adopte une approche éthique fondée sur la transparence, l’équité et la responsabilité. Nous veillons à ce que nos décisions et nos pratiques respectent à la fois nos utilisateurs et partenaires. Notre objectif est de développer des solutions technologiques qui apportent une réelle valeur ajoutée sans compromis sur nos principes : neutralité, honnêteté et respect de chacun."
+      }
+    ]
+  },
+  {
+    "title": "Hébergement",
+    "content": "Dans une optique d’éco-responsabilité et de protection des données, SilverCore repose sur un modèle d’auto-hébergement. Nous possédons et gérons directement nos propres machines et infrastructures, ce qui nous permet d’assurer une maîtrise complète de nos services et une plus grande transparence vis-à-vis de nos utilisateurs.",
+    "sections": [
+      {
+        "title": "éco-responsabilité",
+        "content": "Nos infrastructures reposent principalement sur du matériel issu de la réutilisation et de la seconde main. En prolongeant la durée de vie des équipements, nous allions performance, durabilité et respect de l’environnement."
+      },
+      {
+        "title": "protection de vos données",
+        "content": "L’auto-hébergement nous offre un contrôle total sur nos systèmes et nos bases de données. Vos informations restent exclusivement sur nos propres serveurs, sans dépendance envers des fournisseurs tiers. Ce choix garantit une sécurité renforcée et une confidentialité accrue."
+      }
+    ]
+  }
+]

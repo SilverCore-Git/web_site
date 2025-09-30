@@ -2,6 +2,7 @@
 
 :root {
     --primary: #6356e5;
+    --second: #148b60;
 }
 
 body {
@@ -63,6 +64,10 @@ body {
 
 .card-shadow {
     box-shadow: 0 10px 20px #23198d42;
+}
+
+.card-shadow-second {
+    box-shadow: 0 10px 20px #1d8d1942;
 }
 
 .icon-color {

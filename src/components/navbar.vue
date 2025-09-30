@@ -8,14 +8,14 @@
 
         <nav class="hidden md:flex space-x-8">
             <a @click="router.push('/'); scroll_to('home')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">Accueil</a>
+            <a @click="router.push('/'); scroll_to('article')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">Articles</a>
             <a @click="router.push('/'); scroll_to('services')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">Services</a>
-            <a @click="router.push('/'); scroll_to('a-propos')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">À Propos</a>
             <a @click="router.push('/'); scroll_to('contact')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">Contact</a>
         </nav>
 
         <nav 
           :class="menu ? 'right-0' : '-right-60'"
-          class="flex flex-col justify-center items-center bg-white xl:hiden fixed top-0  gap-9 px-10 h-screen z-30 shadow-sm"
+          class="flex flex-col justify-center items-center bg-white md:hiden fixed top-0  gap-9 px-10 h-screen z-30 shadow-sm"
           style="transition: all 0.3s;"
         >
             <a @click="menu = false; router.push('/'); scroll_to('home')" class=" cursor-pointer text-gray-600 hover:text-[var(--primary)] transition duration-300 font-medium">Accueil</a>
@@ -26,7 +26,7 @@
 
         <button 
           @click="menu = !menu" 
-          class="cursor-pointer  xl:hidden text-gray-600 hover:text-[var(--primary )] focus:outline-none z-50"
+          class="cursor-pointer  md:hidden text-gray-600 hover:text-[var(--primary )] focus:outline-none z-50"
           style="transition: all 0.3s;"
           :class="menu ? 'rotate-90' : 'rotate-0'"
         >
