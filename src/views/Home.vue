@@ -7,8 +7,11 @@
 
         <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                Redécouvrez la Simplicité et l'Élégance
+            <h1 
+                class="notranslate text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
+                style="text-shadow: 2px 2px 4px var(--primary);"
+            >
+                SilverCore
             </h1>
 
             <p class="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
@@ -33,7 +36,9 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Notre Engagement : Innovation et Intégrité</h2>
 
             <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-10">
-                Chez SilverCore, nous croyons en un internet où la protection de la vie privée n'est pas une option, mais une norme. Chaque service que nous développons est conçu pour être esthétique, intuitif et sécurisé, garantissant une transparence totale et une expérience utilisateur inégalée.
+                Chez SilverCore, nous croyons en un monde où la protection de la vie privée n'est pas une option, mais une norme. 
+                Chaque service que nous développons est conçu pour être esthétique, intuitif et sécurisé. 
+                Garantissant une transparence totale et une expérience utilisateur inégalée.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
@@ -61,7 +66,9 @@
 
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-            <h2 class="text-3xl font-bold text-gray-900 mb-12">Nos Services Innovants</h2>
+            <h2 class="text-4xl uppercase font-bold text-gray-900 mb-12"
+                style="text-shadow: 1px 1px 2px var(--primary);"
+            >Nos Services</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -88,7 +95,7 @@
             <h2 class="text-3xl font-bold mb-6">La Transparence au Cœur de Nos Actions</h2>
 
             <p class="text-lg max-w-3xl mx-auto ">
-                SilverCore s'engage pour un avenir numérique où la transparence et le respect de l'utilisateur sont primordiaux. Nos solutions open-source reflètent notre dévouement à ces principes.
+                SilverCore s'engage pour un avenir numérique où la transparence et le respect de l'utilisateur sont primordiaux. Nos solutions reflètent notre dévouement à ces principes.
             </p>
 
         </div>

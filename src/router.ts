@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './views/Home.vue'
 import Confidential from './views/Confidential.vue';
+import Mentions_legales from './views/Mentions_legales.vue';
 
 const routes = [
   { 
@@ -11,12 +12,20 @@ const routes = [
     props: {},
     meta: { title: 'Silvercore' }
   },
+
   { 
-    path: '/confidential', 
+    path: '/politique-de-confidentialite', 
     name: 'confidential', 
     component: Confidential,
     props: {},
     meta: { title: 'Silvercore - confidentialité' }
+  },
+  { 
+    path: '/mentions-legales', 
+    name: 'mentions-legales', 
+    component: Mentions_legales,
+    props: {},
+    meta: { title: 'Silvercore - mentions legales' }
   }
 ]
 

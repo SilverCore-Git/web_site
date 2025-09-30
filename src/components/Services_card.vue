@@ -4,7 +4,7 @@
 
         <img :src="`/assets/img/${img}.png`" class="w-30 rounded-2xl mb-6 icon-color">
 
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ title }}</h3>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 notranslate">{{ title }}</h3>
 
         <p class="text-lg text-gray-700 mb-6">{{ description }}</p>
 
