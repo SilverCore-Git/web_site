@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import Footer from './components/Footer.vue';
 import Navbar from './components/Navbar.vue';
-import Router from './Router.vue';
 </script>
 
 <template>
 
   <div class="background_purple w-screen h-screen">
-      <Navbar/>
-      <Router />
+      <Navbar />
+      <router-view />
       <Footer />
   </div>
 
