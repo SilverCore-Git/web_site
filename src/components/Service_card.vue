@@ -2,18 +2,19 @@
 
     <div
         class="
-            service_card flex justify-start 
+            service_card flex justify-start gap-6
             items-start text-start flex-col p-6
+            shadow-md shadow-gray-600
         "
     >
 
-        <div class="flex flex-row gap-3">
+        <div class="flex flex-row gap-4">
             <img :src="prop.logo" class="rounded-lg w-[35px] h-[35px]" />
-            <span>{{ prop.name }}</span>
+            <span class="text-2xl">{{ prop.name }}</span>
         </div>
 
-        <h3>{{ prop.title }}</h3>
-        <p>
+        <h3 class=" font-bold text-3xl">{{ prop.title }}</h3>
+        <p class=" text-gray-300">
             {{ prop.description }}
         </p>
 
