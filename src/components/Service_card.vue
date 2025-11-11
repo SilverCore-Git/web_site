@@ -1,26 +1,37 @@
 <template>
 
     <div
-        class="service_card flex justify-start items-start text-start"
+        class="
+            service_card flex justify-start 
+            items-start text-start flex-col p-6
+        "
     >
 
+        <div class="flex flex-row gap-3">
+            <img :src="prop.logo" class="rounded-lg w-[35px] h-[35px]" />
+            <span>{{ prop.name }}</span>
+        </div>
 
-        <h1>{{ title }}</h1>
+        <h3>{{ prop.title }}</h3>
+        <p>
+            {{ prop.description }}
+        </p>
+
+        <button>
+            {{ prop.btn.content }}
+        </button>
+
+        <img :src="prop.baner" />
 
     </div>
 
 </template>
 
 <script lang="ts" setup>
-import type { Button } from '../assets/ts/types';
 
-
+import type { Service } from '../assets/ts/types';
 defineProps<{
-    name: string;
-    logo: string;
-    title: string;
-    description: string;
-    btn: Button;
+    prop: Service
 }>();
 
 </script>

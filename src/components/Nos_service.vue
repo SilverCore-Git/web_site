@@ -26,10 +26,10 @@ const services = home_config.services;
                 "
         >
 
-            <!-- <Service_card
+            <Service_card
                 v-for="service in services.services"
-                :title="service.title"
-            /> -->
+                :prop="service"
+            />
 
         </div>
 
