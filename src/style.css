@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './assets/fonts/Outfit_Complete/Fonts/WEB/css/outfit.css';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
