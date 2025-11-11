@@ -1,39 +1,18 @@
 <template>
-    <div class="parent_contenue_HeroSection center direction_column">
-        <div class="Heading_1 text-align_center">
-            Des services numériques pensés pour votre confidentialité
+    <section class="flex justify-center items-center flex-col mt-10 mb-30">
+        <div class="max-w-3xl text-center flex justify-center items-center flex-col">
+            <div class="text-[60px] font-bold mb-2 ">
+                Des services numériques pensés pour votre confidentialité
+            </div>
+            <div class="mb-16">
+                Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée.
+            </div>
+            <button class="center">Nos services</button>
         </div>
-        <div class="espace_15"></div>
-        <div class="contenue text-align_center">
-            Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée.
-        </div>
-        <div class="espace_32"></div>
-        <div class="btn_basic center">Nos services</div>
-    </div>
+    </section>
 </template>
 
-<!-- <template>
-    <div class="parent_contenue_HeroSection center direction_column">
-        <div>
-            <div class="Heading_1 text-align_center">Des services numériques pensés pour votre confidentialité</div>
-        </div>
-        <div>
-            <div class="contenue text-align_center">Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée.</div>
-        </div>
-        <div class="btn_basic center">Nos services</div>
-    </div>
-</template> -->
-
 <style>
-.parent_contenue_HeroSection {
-    height: 89%;
-    width: 100%;
-
-}
-
-.contenue {
-    max-width: 500px;
-}
 
 .espace_15 {
     height: 15px;

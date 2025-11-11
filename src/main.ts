@@ -8,8 +8,8 @@ app.directive("fade", {
     beforeMount(el) {
         // état initial invisible
         el.style.opacity = 0;
-        el.style.transform = "translateY(10px)";
-        el.style.transition = "opacity .6s ease, transform .6s ease";
+        el.style.transform = "translateY(100px)";
+        el.style.transition = "opacity 1s ease, transform .6s ease";
     },
     mounted(el) {
         const observer = new IntersectionObserver(
@@ -18,12 +18,12 @@ app.directive("fade", {
                     if (entry.isIntersecting) {
                         el.style.opacity = 1;
                         el.style.transform = "translateY(0)";
-                        observer.unobserve(el); // ne se rejoue pas à chaque scroll
+                        observer.unobserve(el);
                     }
                 });
             },
             {
-                threshold: 0.2 // 20% visible → fade in
+                threshold: 0.2
             }
         );
 
