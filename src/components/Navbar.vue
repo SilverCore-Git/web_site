@@ -1,5 +1,15 @@
 <script setup lang="ts">
-import navbar_config from "";
+import navbar_config from "../config/navbar_config.json";
+const btn = navbar_config.btn;
+
+import type { Nav } from '../assets/ts/types';
+defineProps<{
+    prop: Nav
+}>();
+
+const button_contact = () => {
+    
+};
 </script>
 
 <template>
@@ -7,19 +17,32 @@ import navbar_config from "";
         <div class="center navbar">
             <div class="container">
                 <div class=" left center space-around cursor_pointer">
-                    <img src="/assets/logo/score/silvercore_logo.svg" alt="">
-                    <h3 class="ml-[10px]">Silvercore</h3>
+                    <img :src="navbar_config.logo" alt="">
+                    <h3 class="ml-[10px]">{{ navbar_config.title }}</h3>
                 </div>
+
                 <div class="center">
-                    <p class="Page cursor_pointer Body_XS">Accueil</p>
-                    <p class="Page cursor_pointer Body_XS">Service</p>
-                    <p class="Page cursor_pointer Body_XS">Politique</p>
-                    <p class="Page cursor_pointer Body_XS">Contact</p>
+
+                    <a 
+                        v-for="Nav in navbar_config.tab"
+                        class="Page cursor_pointer Body_XS"
+                        :href="Nav.href"
+                        
+                    >{{ Nav.name }}</a>
+
                 </div>
-                <div class="btn_basic center cursor_pointer">Contact</div>
+
+                <button @click="button_contact"
+
+                class="btn_basic center"
+                :href="btn.href"
+                
+                >{{ btn.content }}</button>
+
             </div>
         </div>
     </nav>
+
 </template>
 
 
@@ -57,5 +80,6 @@ import navbar_config from "";
 
 .Page {
     padding: 15px;
+    color: white;
 }
 </style>

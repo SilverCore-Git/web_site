@@ -27,7 +27,7 @@
 <style>
 .parent_contenue_HeroSection {
     height: 89%;
-    width: 55pc;
+    width: 100%;
 
 }
 
