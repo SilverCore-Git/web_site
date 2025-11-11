@@ -1,5 +1,26 @@
+<script setup lang="ts">
+import Service_card from './Service_card.vue';
+
+const services: { title: string }[] = [
+    {
+        title: "test"
+    },
+    {
+        title: "test2"
+    },
+    {
+        title: "test3"
+    }
+]
+
+</script>
+
 <template>
-    <div class="parent_nos_service align-items_center direction_column">
+
+    <section 
+        class="parent_nos_service align-items_center direction_column"
+    >
+
         <div class="header_nos_service center direction_column">
             <div class="Badge center">Service</div>
             <div class="espace_25"></div>
@@ -7,17 +28,22 @@
             <div class="espace_10"></div>
             <div class="Body_M text-align_center">Tailored solutions to streamline, innovate, and grow.</div>
         </div>
-        <div class="espace_60"></div>
-        <div class="top center">
-            <div class="content_service"></div>
-            <div class="espace_width_15"></div>
-            <div class="content_service"></div>
+
+        <div
+            class="
+                    flex flex-wrap max-w-8xl justify-center items-center gap-4
+                "
+        >
+
+            <Service_card
+                v-for="service in services"
+                :title="service.title"
+            />
+
         </div>
-        <div class="espace_15"></div>
-        <div class="end">
-            <div class="content_service center"></div>
-        </div>
-    </div>
+
+    </section>
+
 </template>
 
 <style>
@@ -46,16 +72,6 @@
 
 .espace_15 {
     height: 15px;
-}
-
-.content_service {
-    background-color: rgba(255, 255, 255, 0.06);
-
-    height: 600px;
-    width: 578px;
-
-    border: 1.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
 }
 
 .top {
