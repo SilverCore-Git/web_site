@@ -5,14 +5,15 @@ import Nos_service from './components/Nos_service.vue';
 </script>
 
 <template>
-  <div class="w-screen h-screen overflow-x-hidden parent_Hero_scetion
-              flex flex-col justify-center items-center">
-    <div class="w-screen h-screen background_purple ">
+  <!-- <div class="w-screen h-screen overflow-x-hidden parent_Hero_scetion
+              flex flex-col justify-center items-center"></div> -->
+
+  <div class="background_purple w-screen h-screen">
       <Navbar/>
       <contenue_HeroSection />
       <Nos_service/>
-    </div>
   </div>
+
 </template>
 
 <style>

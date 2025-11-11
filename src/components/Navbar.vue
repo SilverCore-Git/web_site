@@ -11,15 +11,22 @@ const btn = navbar_config.btn;
 </script>
 
 <template>
-    <nav class="center parent_navbar ">
-        <div class="center navbar">
-            <div class="container">
-                <div class=" left center space-around cursor_pointer">
+    <!-- <nav class="center parent_navbar ">
+        
+    </nav> -->
+
+    <!-- [] -->
+
+    <div class="center navbar w-screen">
+            <div class="container max-w-[1200px] w-[90%] rounded-[7px]">
+                <div 
+                class=" left center space-around cursor_pointer ml-[25px]"
+                >
                     <img :src="navbar_config.logo" alt="">
                     <h3 class="ml-[10px] ">{{ navbar_config.title }}</h3>
                 </div>
 
-                <div class="center">
+                <div class="center my-[20px]">
 
                     <a 
                         v-for="Nav in navbar_config.tab"
@@ -32,14 +39,13 @@ const btn = navbar_config.btn;
 
                 <button
 
-                class="btn_basic center"
+                class="btn_basic center mr-[25px]"
                 :href="btn.href"
                 
                 >{{ btn.content }}</button>
                 <!--  @click="button_contact" -->
             </div>
         </div>
-    </nav>
 
 </template>
 
@@ -51,12 +57,13 @@ const btn = navbar_config.btn;
 
 }
 .navbar {
-    background-color: black;
+    /* background-color: black; */
 
-    height: 53%;
-    width: 92%;
+    height: 16%;
+    width: 100%;
+    /* width: 92%;
     max-width: 1200px;
-    border-radius: 7px;
+    border-radius: 7px; */
 }
 
 .container {
@@ -64,8 +71,12 @@ const btn = navbar_config.btn;
     justify-content: space-between;
     align-items: center;
     
-    height: 30px;
-    width: 96%;
+    /* height: 30px;
+    width: 96%; */
+    /* width: 90%; */
+    /* max-width: 1200px; */
+
+    background-color: black;
 }
 
 .left {
