@@ -37,35 +37,11 @@ const services = home_config.services;
 
 </template>
 
-<style>
+<style scoped>
 .parent_nos_service {
     height: 100%;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
-}
-
-.espace_10 {
-    height: 10px;
-}
-
-.espace_25 {
-    height: 25px;
-}
-
-.espace_60 {
-    height: 60px;
-}
-
-.espace_width_15 {
-    width: 15px;
-}
-
-.espace_15 {
-    height: 15px;
-}
-
-.top {
-    width: 100%;
 }
 </style>

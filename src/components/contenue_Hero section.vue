@@ -12,13 +12,4 @@
     </section>
 </template>
 
-<style>
-
-.espace_15 {
-    height: 15px;
-}
-
-.espace_32 {
-    height: 32px;
-}
-</style>
+<style scoped></style>
