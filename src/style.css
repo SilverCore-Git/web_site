@@ -23,7 +23,7 @@ html, body {
 
 a {
   font-weight: 500;
-  color: var(--primary);
+  /* color: var(--primary); */
   text-decoration: inherit;
 }
 a:hover {
