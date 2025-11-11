@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Service_card from './Service_card.vue';
-import home_config from '../config/home_config.json';
+import home_config from '../../config/home_config.json';
 const services = home_config.services;
 </script>
 

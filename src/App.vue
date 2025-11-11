@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
 import contenue_HeroSection from './components/contenue_Hero section.vue';
-import Nos_service from './components/Nos_service.vue';
+import Nos_service from './components/nos_services/Nos_service.vue';
 </script>
 
 <template>
