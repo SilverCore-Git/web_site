@@ -78,25 +78,6 @@ button:focus-visible {
   align-items: center;
 }
 
-.align-items_center {
-  display: flex;
-  align-items: center;
-}
-
-.direction_column {
-  flex-direction: column;
-}
-
-.space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.space-around {
-  display: flex;
-  justify-content: space-around;
-}
-
 .btn_basic {
   background-color: #512FEB;
 
@@ -129,13 +110,6 @@ button:focus-visible {
 
 }
 
-.cursor_pointer {
-  cursor: pointer;
-}
-
-.text-align_center {
-  text-align: center;
-}
 
 /* Font sur le projet Framer */
 

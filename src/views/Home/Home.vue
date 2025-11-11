@@ -1,5 +1,5 @@
 <template>
-
+    
     <Hero />
     <Nos_service />
 

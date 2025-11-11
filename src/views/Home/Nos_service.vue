@@ -7,7 +7,7 @@ const services = home_config.services;
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col text-center"
+        class="flex justify-center items-center flex-col text-center pt-[13%]"
     >
 
         <div 

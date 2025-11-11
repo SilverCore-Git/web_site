@@ -7,7 +7,7 @@ const routes = [
     path: '/', 
     name: 'Home', 
     component: Home,
-    meta: { title: 'Accueil - Silvernote' }
+    meta: { title: 'Accueil - Silvercore' }
   }
 ]
 

@@ -7,7 +7,7 @@ import Navbar from './components/Navbar.vue';
 
   <div class="background_purple w-screen h-screen">
       <Navbar />
-      <router-view />
+      <router-view/>
       <Footer />
   </div>
 
