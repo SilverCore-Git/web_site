@@ -2,14 +2,12 @@
 import navbar_config from "../config/navbar_config.json";
 const btn = navbar_config.btn;
 
-import type { Nav } from '../assets/ts/types';
-defineProps<{
-    prop: Nav
-}>();
+// import type { Nav } from '../assets/ts/types';
+// defineProps<{
+//     prop: Nav
+// }>();
 
-const button_contact = () => {
-    
-};
+// const button_contact = () => {};
 </script>
 
 <template>
@@ -18,7 +16,7 @@ const button_contact = () => {
             <div class="container">
                 <div class=" left center space-around cursor_pointer">
                     <img :src="navbar_config.logo" alt="">
-                    <h3 class="ml-[10px]">{{ navbar_config.title }}</h3>
+                    <h3 class="ml-[10px] ">{{ navbar_config.title }}</h3>
                 </div>
 
                 <div class="center">
@@ -32,13 +30,13 @@ const button_contact = () => {
 
                 </div>
 
-                <button @click="button_contact"
+                <button
 
                 class="btn_basic center"
                 :href="btn.href"
                 
                 >{{ btn.content }}</button>
-
+                <!--  @click="button_contact" -->
             </div>
         </div>
     </nav>

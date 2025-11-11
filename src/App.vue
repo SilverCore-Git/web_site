@@ -7,7 +7,7 @@ import Nos_service from './components/Nos_service.vue';
 <template>
   <div class="w-screen h-screen overflow-x-hidden parent_Hero_scetion
               flex flex-col justify-center items-center">
-    <div class="w-screen h-screen">
+    <div class="w-screen h-screen background_purple ">
       <Navbar/>
       <contenue_HeroSection />
       <Nos_service/>
@@ -17,7 +17,7 @@ import Nos_service from './components/Nos_service.vue';
 
 <style>
 
-.parent_Hero_section {
+.background_purple {
   background: linear-gradient(to bottom, rgba(81, 47, 235, 0.5), #000000);
 }
 </style>
