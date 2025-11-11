@@ -19,7 +19,7 @@
 
             {
                 "name": "Silvernote",
-                "logo": "/assets/path/to/logo",
+                "logo": "/assets/logo/snote/favicon.svg",
                 "title": "Votre app de prise de note gratuite.",
                 "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote.",
                 "btn": {
@@ -32,7 +32,7 @@
 
             {
                 "name": "Silvertransfert",
-                "logo": "/assets/path/to/logo",
+                "logo": "/assets/logo/stransfert/favicon.png",
                 "title": "Des transferts gratuit et sécurisé.",
                 "description": "Transférez vos fichiers volumineux avec Silvertransfert : un outil sécurisé, gratuit et entièrement en français.",
                 "btn": {
@@ -45,7 +45,7 @@
 
             {
                 "name": "SilverIA",
-                "logo": "/assets/path/to/logo",
+                "logo": "/assets/logo/silveria/favicon.webp",
                 "title": "Un seul agent IA pour tout silvercore.",
                 "description": "Notre assistant intelligent, est directement intégré à Silvernote pour transformer la manière dont vous travaillez.",
                 "btn": {
