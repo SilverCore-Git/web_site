@@ -1,44 +1,35 @@
 <script setup lang="ts">
 import Service_card from './Service_card.vue';
-
-const services: { title: string }[] = [
-    {
-        title: "test"
-    },
-    {
-        title: "test2"
-    },
-    {
-        title: "test3"
-    }
-]
-
+import home_config from '../config/home_config.json';
+const services = home_config.services;
 </script>
 
 <template>
 
     <section 
-        class="parent_nos_service align-items_center direction_column"
+        class="flex justify-center items-center flex-col text-center"
     >
 
-        <div class="header_nos_service center direction_column">
-            <div class="Badge center">Service</div>
-            <div class="espace_25"></div>
-            <div class="Heading_2 text-align_center">Nos Service</div>
-            <div class="espace_10"></div>
-            <div class="Body_M text-align_center">Tailored solutions to streamline, innovate, and grow.</div>
+        <div 
+            class="mb-10"
+        >
+            <h2 class="text-[50px] font-bold">{{ services.title }}</h2>
+            <p class="">
+                {{ services.description }}
+            </p>
         </div>
 
         <div
             class="
-                    flex flex-wrap max-w-8xl justify-center items-center gap-4
+                    flex justify-center items-center
+                    flex-wrap max-w-8xl gap-4
                 "
         >
 
-            <Service_card
-                v-for="service in services"
+            <!-- <Service_card
+                v-for="service in services.services"
                 :title="service.title"
-            />
+            /> -->
 
         </div>
 
