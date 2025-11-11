@@ -27,7 +27,7 @@
                     "href": "https://www.silvernote.fr",
                     "color": "#F28C28"
                 },
-                "baner": "/assets/path/to/banner"
+                "baner": "/assets/img/mockup_mcbook_silvernote.png"
             },
 
             {
@@ -40,7 +40,7 @@
                     "href": "https://www.silvertransfert.fr",
                     "color": "#7F6CFF"
                 },
-                "baner": "/assets/path/to/banner"
+                "baner": "/assets/img/mockup_phone_silvertransfert_extend.png"
             },
 
             {

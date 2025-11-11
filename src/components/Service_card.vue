@@ -1,6 +1,7 @@
 <template>
 
     <div
+        v-fade
         class="
             service_card flex justify-start gap-6
             items-start text-start flex-col p-6
@@ -22,7 +23,18 @@
             {{ prop.btn.content }}
         </button>
 
-        <img :src="prop.baner" />
+        <div
+            class="
+                max-h-[340px] w-[497px]
+                flex justify-center items-center relative
+            "
+        >
+            <img 
+                :src="prop.baner"
+                class="object-cover object-center"   
+            />
+        </div>
+
 
     </div>
 
