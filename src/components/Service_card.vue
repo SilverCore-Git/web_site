@@ -19,9 +19,11 @@
             {{ prop.description }}
         </p>
 
-        <button>
-            {{ prop.btn.content }}
-        </button>
+        <SButton 
+            :content="prop.btn.content"
+            :bg-color="prop.btn.color"
+            :href="prop.btn.href"
+        />
 
         <div
             class="
@@ -43,6 +45,7 @@
 <script lang="ts" setup>
 
 import type { Service } from '../assets/ts/types';
+import SButton from './SButton.vue';
 defineProps<{
     prop: Service
 }>();
