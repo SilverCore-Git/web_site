@@ -16,6 +16,6 @@ import Navbar from './components/Navbar.vue';
 <style>
 
 .background_purple {
-  background: linear-gradient(to bottom, rgba(81, 47, 235, 0.5), #000000);
+  background: linear-gradient(to bottom, rgba(81, 47, 235, 0.4), #000000);
 }
 </style>
