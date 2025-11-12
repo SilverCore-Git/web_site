@@ -13,30 +13,29 @@ const scrollWrapper = ref<HTMLElement | null>(null);
 const scrollContent = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-  if (!scrollWrapper.value || !scrollContent.value) return;
+    if (!scrollWrapper.value || !scrollContent.value) return;
 
-  // Fixe la hauteur du wrapper au scroll natif
-  const updateHeight = () => {
-    scrollWrapper.value!.style.height = scrollContent.value!.scrollHeight + 'px';
-  };
+    const updateHeight = () => {
+      scrollWrapper.value!.style.height = scrollContent.value!.scrollHeight + 'px';
+    };
 
-  updateHeight();
-  window.addEventListener('resize', updateHeight);
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
 
-  let current = 0;
-  let target = 0;
-  const ease = 0.08;
+    let current = 0;
+    let target = 0;
+    const ease = 0.2;
 
-  const animate = () => {
-    target = window.scrollY;
-    current += (target - current) * ease;
+    const animate = () => {
+      target = window.scrollY;
+      current += (target - current) * ease;
 
-    scrollContent.value!.style.transform = `translateY(${-current}px)`;
+      scrollContent.value!.style.transform = `translateY(${-current}px)`;
 
-    requestAnimationFrame(animate);
-  };
+      requestAnimationFrame(animate);
+    };
 
-  animate();
+    animate();
 });
 </script>
 
