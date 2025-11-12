@@ -4,8 +4,7 @@
         v-fade
         class="
             service_card flex justify-start gap-6
-            items-start text-start flex-col p-6
-            shadow-md shadow-gray-600
+            items-start text-start flex-col p-6 h-[620px]
         "
     >
 

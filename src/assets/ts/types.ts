@@ -15,3 +15,10 @@ export interface Service {
     baner: string;
 }
 
+
+export interface Politique {
+    title: string;
+    icon: string;
+    content: string;
+}
+

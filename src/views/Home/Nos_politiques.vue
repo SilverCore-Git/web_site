@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Service_card from '@/components/Service_card.vue';
 import home_config from '../../config/home_config.json';
-const services = home_config.services;
+import Politique_card from '../../components/Politique_card.vue';
+const politiques = home_config.politiques;
 </script>
 
 <template>
@@ -13,21 +13,21 @@ const services = home_config.services;
         <div 
             class="mb-10"
         >
-            <h2 class="text-[50px] font-bold">{{ services.title }}</h2>
+            <h2 class="text-[50px] font-bold">{{ politiques.title }}</h2>
             <p class="">
-                {{ services.description }}
+                {{ '' }}
             </p>
         </div>
 
         <div
             class="
                     flex justify-center items-center
-                    flex-wrap max-w-6xl gap-4
+                    flex-wrap max-w-8xl gap-4
                 "
         >
 
-            <Service_card
-                v-for="service in services.services"
+            <Politique_card
+                v-for="service in politiques.politique"
                 :prop="service"
             />
 
