@@ -27,7 +27,7 @@ const button_contact = () => {
                         :src="navbar_config.logo" alt=""
                     
                     >
-                    <h3 class="ml-[10px] ">{{ navbar_config.title }}</h3>
+                    <h3 class="ml-[8px] Heading_4">{{ navbar_config.title }}</h3>
                 </div>
 
                 <div 
