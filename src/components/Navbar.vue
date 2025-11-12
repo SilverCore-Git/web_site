@@ -11,7 +11,7 @@ const button_contact = () => {
 
 <template>
 
-    <div class="fixed top-0 left-0 w-screen h-[13%] center" >
+    <div class="fixed top-0 left-0 w-screen h-[13%] center z-50" >
             <div 
                 class="max-w-[1200px] w-[95%] rounded-[7px] flex justify-between items-center bg-black/70 backdrop-blur-sm"
 
