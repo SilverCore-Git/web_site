@@ -23,7 +23,7 @@ const button_contact = () => {
 
                 >
                     <img 
-                        class="h-[30px]"
+                        class="h-[38px]"
                         :src="navbar_config.logo" alt=""
                     
                     >
