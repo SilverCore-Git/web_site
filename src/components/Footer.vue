@@ -8,10 +8,12 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 <template>
     <SmothScrollWraper/>
     <footer
-        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50] "
+        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50]"
     >
-        <div class="py-[3em] flex mx-[8em]
-                    xl:justify-between 2xl:justify-between sm:flex-col md:flex-row
+        <div class="py-[3em] flex flex-col mx-[2em]
+                    min-sm:mx-[4em]
+                    min-md:mx-[8em]
+                    min-md:flex-row 
         ">
             <div
                 class=" h-full flex flex-col "
@@ -51,8 +53,8 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 
             </div>
 
-            <div class="flex h-full 
-                        sm:flex-col md:flex-col xl:flex-row
+            <div class="flex h-full flex-col
+                        min-xl:flex-row
                     ">
                 <div
                     class=" flex pr-[2em] py-[1em]"
