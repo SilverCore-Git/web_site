@@ -7,7 +7,7 @@ const politiques = home_config.politiques;
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col text-center pt-[13%]"
+        class="flex justify-center items-center flex-col text-center pt-[13%] pb-[5em]"
     >
 
         <div 
