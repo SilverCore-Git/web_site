@@ -9,9 +9,9 @@ import footer_config from "../config/footer_config.json"
     <footer
         class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px]"
     >
-        <div class=" py-[3em] flex items-center mx-[8em] ">
+        <div class=" py-[3em] flex justify-between items-center mx-[8em] ">
             <div
-                class=" h-full w-[50%] flex flex-col "
+                class=" h-full flex flex-col "
             >
                 <div>
                     <div
@@ -22,11 +22,11 @@ import footer_config from "../config/footer_config.json"
                             :src="footer_config.logo"
                         />
                         <h3
-                            class="font-bold font-outfit text-[25px] pl-[10px]"
+                            class="font-bold font-outfit text-[25px]"
                         >{{ footer_config.title }}</h3>
                     </div>
                     <div
-                        class="pr-[15px]"
+                        class="w-[85%] max-w-[500px]"
                     >{{ footer_config.description }}</div>
                 </div>
 
@@ -48,9 +48,9 @@ import footer_config from "../config/footer_config.json"
 
             </div>
 
-            <div class=" h-full  w-[50%] flex justify-between" >
+            <div class=" h-full flex" >
                 <div
-                    class=" flex "
+                    class=" flex p-[1em]"
                     v-for="categories_footer in footer_config.categories"
                 >
                     <div>
