@@ -3,7 +3,6 @@
     "logo": "/assets/logo/score/silvercore_logo.svg",
     "title": "Silvercore",
     "description": "SilverCore vous offre des services de divertissement et utilitaires originaux, respectueux de votre vie privée et accessibles à tous.",
-
     "social": [
         {
             "icon": "bi-icon",
@@ -72,6 +71,12 @@
             ]
         }
 
-    ]
+    ],
 
+    "droits_reserves": [
+        {
+            "text": "© 2025 Silvercore. Tous droits réservés.",
+            "href": ""
+        }
+    ]
 }
