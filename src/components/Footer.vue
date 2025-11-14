@@ -7,7 +7,7 @@ import footer_config from "../config/footer_config.json"
 <template>
 
     <footer
-        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px]"
+        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50]"
     >
         <div class=" py-[3em] flex justify-between items-center mx-[8em] ">
             <div
