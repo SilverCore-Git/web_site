@@ -23,7 +23,7 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
                         class="flex items-center my-[10px]"
                     >
                         <img
-                            class="h-[50px]"
+                            class="h-[50px] pr-[7px]"
                             :src="footer_config.logo"
                         />
                         <h3
