@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import footer_config from "../config/footer_config.json"
+import SmothScrollWraper from "./smothScrollWraper.vue";
 
 
 </script>
 
 <template>
-
+    <SmothScrollWraper/>
     <footer
         class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50]"
     >
