@@ -2,6 +2,7 @@
 
     "logo": "/assets/logo/score/silvercore_logo.svg",
     "title": "Silvercore",
+    "valeur": [{"rotation": "45deg"},{"rotation": "-45deg"}],
 
     "tab": [
         {
