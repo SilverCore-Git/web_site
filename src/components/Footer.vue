@@ -7,33 +7,37 @@ import footer_config from "../config/footer_config.json"
 <template>
 
     <footer
-        class="h-[40%] flex justify mx-[8em]"
+        class=" py-[9em] flex items-center mx-[8em]"
     >
 
         <div
-            class=" h-full w-[50%] flex justify-center flex-col"
+            class=" h-full w-[50%] flex flex-col "
         >
-            <div class="flex mx-[10px]">
+            <div>
                 <div
-                    class="flex items-center"
+                    class="flex items-center my-[10px]"
                 >
                     <img
-                        class="h-[50px] bg-amber-300"
+                        class="h-[50px]"
                         :src="footer_config.logo"
                     />
-                    <div>{{ footer_config.title }}</div>
+                    <h3
+                        class="font-bold font-outfit text-[25px] pl-[10px]"
+                    >{{ footer_config.title }}</h3>
                 </div>
-                <div>{{ footer_config.description }}</div>
+                <div
+                    class="pr-[15px]"
+                >{{ footer_config.description }}</div>
             </div>
 
 
             <div
-                class="flex"
+                class="flex my-[3em]"
             >
                 <a
                     v-for="social in footer_config.social"
                     :href="social.href"
-                    class="bg-gray-500 p-[10px] rounded-[7px] mx-[10px]"
+                    class="bg-gray-500 p-[10px] rounded-[7px] mr-[15px]"
                 >
                     <img
                         :src="social.icon"
@@ -59,6 +63,7 @@ import footer_config from "../config/footer_config.json"
                     >
                         <a
                             class="font-outfit text-[rgba(255,255,255,0.7)]"
+                            :href="item.href"
                         >{{item.name}}</a>
                     </div>
                 </div>
