@@ -8,9 +8,11 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 <template>
     <SmothScrollWraper/>
     <footer
-        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50]"
+        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50] "
     >
-        <div class=" py-[3em] flex justify-between items-center mx-[8em] ">
+        <div class="py-[3em] flex mx-[8em]
+                    xl:justify-between 2xl:justify-between sm:flex-col md:flex-row
+        ">
             <div
                 class=" h-full flex flex-col "
             >
@@ -49,9 +51,11 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 
             </div>
 
-            <div class=" h-full flex" >
+            <div class="flex h-full 
+                        sm:flex-col md:flex-col xl:flex-row
+                    ">
                 <div
-                    class=" flex p-[1em]"
+                    class=" flex pr-[2em] py-[1em]"
                     v-for="categories_footer in footer_config.categories"
                 >
                     <div>
