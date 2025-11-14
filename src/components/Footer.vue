@@ -11,9 +11,9 @@ import footer_config from "../config/footer_config.json"
     >
 
         <div
-            class=" h-full w-[50%] bg-red-600 flex justify-center flex-col"
+            class=" h-full w-[50%] flex justify-center flex-col"
         >
-            <div class="flex">
+            <div class="flex mx-[10px]">
                 <div
                     class="flex items-center"
                 >
@@ -44,8 +44,26 @@ import footer_config from "../config/footer_config.json"
 
         </div>
 
-        <div class=" h-full  w-[50%] bg-blue-600" >
-            <h2>hhgjfkutuogyfi</h2>
+        <div class=" h-full  w-[50%] flex justify-between" >
+            <div
+                class=" flex "
+                v-for="categories_footer in footer_config.categories"
+            >
+                <div>
+                    <div
+                        class="font-bold font-outfit text-[20px] pb-[13px]"
+                    >{{ categories_footer.title }}</div>
+                    <div
+                        v-for="item in categories_footer.content"
+                        class="py-[7px]"
+                    >
+                        <a
+                            class="font-outfit text-[rgba(255,255,255,0.7)]"
+                        >{{item.name}}</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
