@@ -27,7 +27,7 @@ const button_contact = () => {
                         :src="navbar_config.logo" alt=""
                     
                     >
-                    <h3 class="ml-[8px] Heading_4">{{ navbar_config.title }}</h3>
+                    <h3 class="ml-[8px] font-bold font-outfit text-[25px]">{{ navbar_config.title }}</h3>
                 </div>
 
                 <div 
@@ -43,13 +43,6 @@ const button_contact = () => {
                     >{{ Nav.name }}</a>
 
                 </div>
-
-                <!-- <button
-                    @click="button_contact"
-                    class="btn_basic center mr-[25px]"
-                    :href="btn.href"
-                
-                >{{ btn.content }}</button> -->
 
                 <SButton
                     :content= "navbar_btn.content"
