@@ -9,6 +9,10 @@ const button_contact = () => {
     window.location.href = navbar_btn.href;
 };
 
+const click_menu_hamburger = () => {
+    console.log("[DEBUG]: Menu hamburger activer")
+};
+
 
 </script>
 
@@ -57,49 +61,32 @@ const button_contact = () => {
                     />
                 </div>
 
-                <!-- <div 
+                <div 
                     class="flex flex-col justify-around h-[38px] w-[38px] mr-[25px]
-                         min-lg:hidden
+                        min-lg:hidden
                     "
+                    @click="click_menu_hamburger"
                 >
                     <div
                         v-for="value in 3"
                         class=" bg-white w-full h-[5px] rounded-[4px]"
                     ></div>
 
-                </div> -->
-                
-                <!-- <div 
-                    class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px]
-                         min-lg:hidden absolute right-0
-                    "
-                >
-                    <div
-                        class=" bg-white w-full h-[5px] rounded-[4px] rotate-[-45deg]"
-                    ></div>
-
                 </div>
 
-                <div 
-                    class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px]
-                         min-lg:hidden absolute right-0
-                    "
-                >
-                    <div
-                        class=" bg-white w-full h-[5px] rounded-[4px] rotate-[45deg]"
-                    ></div>
-
-                </div> -->
-
                 <div
-                v-for="value_croix in navbar_config.valeur"
-                class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px] lg:hidden absolute right-0"
+                    v-for="rotation in [-45, 45]"
+                    :key="rotation"
+                    class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px] min-lg:hidden absolute right-0
+                            hidden
+                        "
                 >
                     <div
                         class="bg-white w-full h-[5px] rounded-[4px]"
-                        :style="{ transform: `rotate(${value_croix}deg)` }"
+                        :style="{ transform: `rotate(${rotation}deg)` }"
                     ></div>
                 </div>
+
 
             </div>
             
