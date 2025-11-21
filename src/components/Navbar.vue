@@ -9,89 +9,107 @@ const button_contact = () => {
     window.location.href = navbar_btn.href;
 };
 
-const click_menu_hamburger = () => {
-    console.log("[DEBUG]: Menu hamburger activer")
-};
 
+const navBar: HTMLElement | null = document.getElementById("NavBar");
 
+navBar?.addEventListener("click", () => {
+    // console.log("[DEBUG]: Menu hamburger activer");
+    navBar.classList.toggle("menu_hamburger_active");
+});
 </script>
 
 <template>
-            <div 
-                class="
-                        fixed top-6 inset-x-[10%] 2xl:inset-x-[20%] z-50
-                        rounded-[7px] flex justify-between items-center 
-                        border border-gray-400/50 bg-black/70 backdrop-blur-sm
-                    "
+
+    <nav
+
+        class="
+                    fixed top-6 inset-x-[10%] 2xl:inset-x-[20%] z-50
+                    rounded-[7px] flex justify-between items-center
+                    border border-gray-400/50 bg-black/70 backdrop-blur-sm
+                    px-[13px]
+                    mg:px-[25px]
+                "
+        id="NavBar"
+    >
+        <div
+            class="center justify-around cursor-pointer  my-[9.5px]"
+
+        >
+        <!-- ml-[25px] -->
+        <!-- mr-[13px] -->
+            <img
+                class="h-[38px]"
+                :src="navbar_config.logo" alt=""
 
             >
-                <div
-                    class="center justify-around cursor-pointer ml-[25px] my-[9.5px]"
+            <h3
 
-                >
-                    <img 
-                        class="h-[38px]"
-                        :src="navbar_config.logo" alt=""
-                    
-                    >
-                    <h3 class="ml-[8px] font-bold font-outfit text-[25px]">{{ navbar_config.title }}</h3>
-                </div>
+                class="ml-2 font-bold font-outfit text-[25px]"
 
-                <div 
-                    class="center"
+            >{{ navbar_config.title }}</h3>
+        </div>
 
-                >
+        <div
+            class="center"
 
-                    <a 
-                            v-for="Nav in navbar_config.tab"
-                            class="text-white p-[15px] text-white cursor-pointer Body_XS 
-                                    hidden min-lg:flex
-                                "
-                            :href="Nav.href"
-                        
-                    >{{ Nav.name }}</a>
+        >
 
-                </div>
-                
-                <div class="hidden min-lg:flex">
-                    <SButton
-                        class=" mr-[25px] hidden"
-                        :content= "navbar_btn.content"
-                        :href="navbar_btn.href"
-                    />
-                </div>
-
-                <div 
-                    class="flex flex-col justify-around h-[38px] w-[38px] mr-[25px]
-                        min-lg:hidden
-                    "
-                    @click="click_menu_hamburger"
-                >
-                    <div
-                        v-for="value in 3"
-                        class=" bg-white w-full h-[5px] rounded-[4px]"
-                    ></div>
-
-                </div>
-
-                <div
-                    v-for="rotation in [-45, 45]"
-                    :key="rotation"
-                    class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px] min-lg:hidden absolute right-0
-                            hidden
+            <a
+                    v-for="Nav in navbar_config.tab"
+                    class="p-[15px] text-white cursor-pointer Body_XS
+                            hidden lg:flex
                         "
-                >
-                    <div
-                        class="bg-white w-full h-[5px] rounded-[4px]"
-                        :style="{ transform: `rotate(${rotation}deg)` }"
-                    ></div>
-                </div>
+                    :href="Nav.href"
 
+            >{{ Nav.name }}</a>
 
-            </div>
-            
+        </div>
+
+        <div class="hidden lg:flex">
+            <SButton
+                class=" hidden"
+                :content= "navbar_btn.content"
+                :href="navbar_btn.href"
+            />
+        </div>
+
+        <div
+            class="flex flex-col justify-around h-[35px] w-[35px]
+                lg:hidden
+            "
+            @click="click_menu_hamburger"
+        >
+            <div
+                v-for="value in 3"
+                class="bg-white w-full h-[5px] rounded-sm"
+            ></div>
+
+        </div>
+
+        <div
+            v-for="rotation in [-45, 45]"
+            :key="rotation"
+            class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px] min-lg:hidden absolute right-0
+                    hidden
+                "
+        >
+            <div
+                class="bg-white w-full h-[5px] rounded-[4px]"
+                :style="{ transform: `rotate(${rotation}deg)` }"
+            ></div>
+
+        </div>
+
+    </nav>
+
 
 </template>
 
 
-<style scoped></style>
+<style scoped>
+
+.menu_hamburger_active {
+    background-color: red;
+}
+
+</style>
