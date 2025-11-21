@@ -8,19 +8,20 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 <template>
     <SmothScrollWraper/>
     <footer
-        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t-[1px] z-[50]"
+        class="flex flex-col border-[rgba(255,255,255,0.15)] border-t"
     >
         <div class="py-[3em] flex flex-col mx-[2em]
-                    min-sm:mx-[4em]
-                    min-md:mx-[8em]
-                    min-md:flex-row 
+                    sm:mx-[4em]
+                    md:mx-[8em]
+                    md:flex-row
+                    xl:justify-between
         ">
             <div
                 class=" h-full flex flex-col "
             >
                 <div>
                     <div
-                        class="flex items-center my-[10px]"
+                        class="flex items-center my-2.5"
                     >
                         <img
                             class="h-[50px] pr-[7px]"
@@ -42,19 +43,20 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
                     <a
                         v-for="social in footer_config.social"
                         :href="social.href"
-                        class=" bg-[rgba(255,255,255,0.2)]  p-[10px] rounded-[7px] mr-[15px]"
+                        class=" bg-[rgba(255,255,255,0.2)]  p-2.5 rounded-[7px] mr-[15px]"
                     >
                         <img
                             :src="social.icon"
-                            class="w-[20px] h-[20px]"
+                            class="w-5 h-5"
                         >
+
                     </a>
                 </div>
 
             </div>
 
             <div class="flex h-full flex-col
-                        min-xl:flex-row
+                        xl:flex-row
                     ">
                 <div
                     class=" flex pr-[2em] py-[1em]"
@@ -81,10 +83,10 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
 
         <div
             v-for="droits_reserves in footer_config.droits_reserves"
-            class="py-[1.5em] pl-[2em] border-[rgba(255,255,255,0.15)] border-t-[1px]"
+            class="py-[1.5em] pl-[2em] border-[rgba(255,255,255,0.15)] border-t"
         >
-            <a 
-                :href="droits_reserves.href" 
+            <a
+                :href="droits_reserves.href"
                 class="text-[rgba(255,255,255,0.7)]"
             >{{ droits_reserves.text }}</a>
         </div>
