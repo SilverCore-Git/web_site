@@ -5,15 +5,15 @@
     "description": "SilverCore vous offre des services de divertissement et utilitaires originaux, respectueux de votre vie privée et accessibles à tous.",
     "social": [
         {
-            "icon": "bi-icon",
+            "icon": "bi-youtube",
             "href": "Discord"
         },
         {
-            "icon": "bi-icon",
+            "icon": "bi-instagram",
             "href": "Discord"
         },
         {
-            "icon": "bi-icon",
+            "icon": "bi-discord",
             "href": "Discord"
         }
     ],

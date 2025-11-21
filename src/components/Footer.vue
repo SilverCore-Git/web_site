@@ -45,10 +45,12 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
                         :href="social.href"
                         class=" bg-[rgba(255,255,255,0.2)]  p-2.5 rounded-[7px] mr-[15px]"
                     >
-                        <img
-                            :src="social.icon"
-                            class="w-5 h-5"
+                        <!-- class="w-5 h-5" -->
+                        <i
+                            :class="social.icon"
                         >
+
+                        </i>
 
                     </a>
                 </div>
