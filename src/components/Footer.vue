@@ -42,7 +42,7 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
                     <a
                         v-for="social in footer_config.social"
                         :href="social.href"
-                        class="bg-gray-500 p-[10px] rounded-[7px] mr-[15px]"
+                        class=" bg-[rgba(255,255,255,0.2)]  p-[10px] rounded-[7px] mr-[15px]"
                     >
                         <img
                             :src="social.icon"
