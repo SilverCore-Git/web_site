@@ -4,7 +4,7 @@
         v-fade
         class="
             service_card flex justify-start gap-5.5 h-[345px]
-            items-start text-start flex-col p-6 max-w-100
+            items-start text-start flex-col p-6 max-w-85 md:w-100
         "
     >
 
