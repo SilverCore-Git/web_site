@@ -4,7 +4,8 @@
         v-fade
         class="
             service_card flex justify-start gap-6
-            items-start text-start flex-col p-6 h-[620px]
+            items-start text-start flex-col p-6 h-[620px] 
+            w-[93%] sm:w-[95%] md:w-[640px]
         "
     >
 
@@ -26,7 +27,7 @@
 
         <div
             class="
-                max-h-[340px] w-[497px]
+                max-h-[340px] max-w-[497px]
                 flex justify-center items-center relative
             "
         >
@@ -57,7 +58,7 @@ defineProps<{
     background-color: rgba(255, 255, 255, 0.06);
 
     min-height: 500px;
-    width: 540px;
+    max-width: 540px;
 
     border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;

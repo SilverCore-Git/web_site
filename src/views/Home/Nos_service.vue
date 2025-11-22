@@ -13,7 +13,7 @@ const services = home_config.services;
         <div 
             class="mb-10"
         >
-            <h2 class="text-[50px] font-bold">{{ services.title }}</h2>
+            <h2 class="text-[28px] sm:text-[40px] md:text-[50px] font-bold">{{ services.title }}</h2>
             <p class="">
                 {{ services.description }}
             </p>
@@ -22,7 +22,7 @@ const services = home_config.services;
         <div
             class="
                     flex justify-center items-center
-                    flex-wrap max-w-6xl gap-4
+                    flex-wrap max-w-6xl gap-4 
                 "
         >
 
