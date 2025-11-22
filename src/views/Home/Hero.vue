@@ -5,7 +5,7 @@ import hero_config from "../../config/hero_config.json"
 
 <template>
     <section
-        class="flex justify-center items-center flex-col pt-[15em]
+        class="flex justify-center items-center flex-col pt-[15em] px-3.5
 
     ">
     <!-- pt-[13%] -->
