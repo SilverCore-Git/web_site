@@ -47,6 +47,7 @@ import SmothScrollWraper from "./smothScrollWraper.vue";
                     >
                         <!-- class="w-5 h-5" -->
                         <i
+                            class="bi"
                             :class="social.icon"
                         >
 
