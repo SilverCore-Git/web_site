@@ -3,12 +3,12 @@
     <div
         v-fade
         class="
-            service_card flex justify-start gap-6 h-[350px]
+            service_card flex justify-start gap-5.5 h-[345px]
             items-start text-start flex-col p-6 max-w-100
         "
     >
 
-        <i class="bi" :class="prop.icon"></i>
+        <i class=" bg-[rgba(255,255,255,0.2)] rounded-[7px] p-2.5 bi" :class="prop.icon"></i>
 
         <h3 class="text-[22px] font-bold">{{ prop.title }}</h3>
 
