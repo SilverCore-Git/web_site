@@ -6,15 +6,11 @@
     "social": [
         {
             "icon": "bi-instagram",
-            "href": "Discord"
-        },
-        {
-            "icon": "bi-youtube",
-            "href": "Discord"
+            "href": "https://taap.it/silvercore.insta"
         },
         {
             "icon": "bi-discord",
-            "href": "Discord"
+            "href": "https://taap.it/silvercore.discord"
         }
     ],
 
