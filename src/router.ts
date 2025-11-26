@@ -1,14 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
+import mentions_legales from './views/mentions_legales/mentions_legales.vue';
+
 
 
 const routes = [
-  { 
-    path: '/', 
-    name: 'Home', 
+  {
+    path: '/',
+    name: 'Home',
     component: Home,
     meta: { title: 'Accueil - Silvercore' }
-  }
+  },
+  {
+    path: '/mentions_legales',
+    name: 'mentions_legales',
+    component: mentions_legales,
+    meta: { title: 'mentions_legales - Silvercore' }
+  } 
 ]
 
 
