@@ -1,56 +1,15 @@
 <script setup lang="ts">
-import mentions_legales_config from "../../config/mentions_legales_config.json";
+
+// JSON config import
+import mentions_legales_config from "../config/mentions_legales_config.json";
+
+// Component import
+import JSONVueRenderer from '../../components/JSON Vue Renderer.vue';
+
 </script>
 
 <template>
-    <div class="pt-[8em]">
-        <!-- General title  -->
-        <h1>{{ mentions_legales_config.title }}</h1>
-
-        <!-- Sections -->
-        <div
-            v-for="(section, sectionKey) in mentions_legales_config.selection"
-            :key="sectionKey"
-            class="mt-8"
-        >
-            <!-- Category title -->
-            <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
-
-            <!-- Description paragraphs -->
-            <p
-                v-for="(value, index) in section.description"
-                :key="index"
-                class="mb-2"
-            >
-                {{ value }}
-            </p>
-
-            <!-- Link text -->
-            <p
-                v-if="'lien' in section && section.lien"
-                class="mb-2"
-            >
-                {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
-            </p>
-
-            <!-- Bullet list -->
-            <ul
-                v-if="'liste' in section && section.liste"
-                class="mb-2 list-disc pl-5"
-            >
-                <p v-if="section.liste.before" v-for="(item, index) in section.liste.before" :key="'before-' + index">
-                    {{ item }}
-                </p>
-
-                <li v-for="(item, index) in section.liste.puce" :key="index">
-                    {{ item }}
-                </li>
-
-                <p v-if="section.liste.after" v-for="(item, index) in section.liste.after" :key="'after-' + index">
-                    {{ item }}
-                </p>
-            </ul>
-
-        </div>
-    </div>
+    <JSONVueRenderer
+        :props="mentions_legales_config"
+    />
 </template>
