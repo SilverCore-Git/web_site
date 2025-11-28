@@ -23,7 +23,7 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 v-if="'lien' in section && section.lien"
                 class="mb-2"
             >
-                {{ section.lien.text }} <a :href="section.lien.href">{{ section.lien.value }}</a>
+                {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
             </p>
 
             <ul
