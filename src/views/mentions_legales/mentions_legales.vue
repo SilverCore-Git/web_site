@@ -4,13 +4,19 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
 
 <template>
     <div class="pt-[8em]">
+        <!-- General title  -->
         <h1>{{ mentions_legales_config.title }}</h1>
+
+        <!-- Sections -->
         <div
             v-for="(section, sectionKey) in mentions_legales_config.selection"
             :key="sectionKey"
             class="mt-8"
         >
+            <!-- Category title -->
             <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
+
+            <!-- Description paragraphs -->
             <p
                 v-for="(value, index) in section.description"
                 :key="index"
@@ -19,6 +25,7 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 {{ value }}
             </p>
 
+            <!-- Link text -->
             <p
                 v-if="'lien' in section && section.lien"
                 class="mb-2"
@@ -26,6 +33,7 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
             </p>
 
+            <!-- Bullet list -->
             <ul
                 v-if="'liste' in section && section.liste"
                 class="mb-2 list-disc pl-5"
