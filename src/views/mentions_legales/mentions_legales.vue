@@ -23,7 +23,7 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 v-if="'lien' in section && section.lien"
                 class="mb-2"
             >
-                {{ section.lien.text }} <a href="mailto:contact@silvercore.fr">{{ section.lien.value }}</a>
+                {{ section.lien.text }} <a :href="section.lien.href">{{ section.lien.value }}</a>
             </p>
 
         </div>
