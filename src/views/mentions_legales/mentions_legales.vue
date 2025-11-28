@@ -26,6 +26,15 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 {{ section.lien.text }} <a :href="section.lien.href">{{ section.lien.value }}</a>
             </p>
 
+            <ul
+                v-if="'liste' in section && section.liste"
+                class="mb-2 list-disc pl-5"
+            >
+                <li v-for="(item, index) in section.liste" :key="index">
+                    {{ item }}
+                </li>
+            </ul>
+
         </div>
     </div>
 </template>
