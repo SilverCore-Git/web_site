@@ -30,9 +30,17 @@ import mentions_legales_config from "../../config/mentions_legales_config.json";
                 v-if="'liste' in section && section.liste"
                 class="mb-2 list-disc pl-5"
             >
-                <li v-for="(item, index) in section.liste" :key="index">
+                <p v-if="section.liste.before" v-for="(item, index) in section.liste.before" :key="'before-' + index">
+                    {{ item }}
+                </p>
+
+                <li v-for="(item, index) in section.liste.puce" :key="index">
                     {{ item }}
                 </li>
+
+                <p v-if="section.liste.after" v-for="(item, index) in section.liste.after" :key="'after-' + index">
+                    {{ item }}
+                </p>
             </ul>
 
         </div>
