@@ -10,9 +10,10 @@
                 "Directeur de la publication : Félix Cornudet"
             ],
             "lien":{
-                "text":"Email : ",
+                "before":"Email : ",
                 "value":"contact@silvercore.fr",
-                "href":"mailto:contact@silvercore.fr"
+                "href":"mailto:contact@silvercore.fr",
+                "after":"."
             }
         },
         "hebergeur": {
@@ -49,10 +50,18 @@
                 "Pour toute question, vous pouvez nous contacter :",
                 "Par Discord :"
             ],
-            "liste":[
-                "Serveur de support",
-                "Serveur général"
-            ]
+            "liste":{
+                "before": [
+                    "test"
+                ],
+                "puce": [
+                    "Serveur de support",
+                    "Serveur général"
+                ],
+                "after": [
+                    "test"
+                ]
+            }
         }
 
     }
