@@ -37,10 +37,21 @@
             ]
         },
         "cookies": {
-            "title": "4. Données personnelles",
+            "title": "5. Cookies",
             "description": [
                 "Ce site utilise gtranslate pour traduire le contenu, avec avec des cookies anonymes.",
                 "Aucun cookie publicitaire, marketing ou de suivi personnel n'est utilisé."
+            ]
+        },
+        "contact": {
+            "title": "6. Contact",
+            "description": [
+                "Pour toute question, vous pouvez nous contacter :",
+                "Par Discord :"
+            ],
+            "liste":[
+                "Serveur de support",
+                "Serveur général"
             ]
         }
 
