@@ -12,11 +12,11 @@ const routes = [
     meta: { title: 'Accueil - Silvercore' }
   },
   {
-    path: '/mentions_legales',
+    path: '/mentions-legales',
     name: 'mentions_legales',
     component: mentions_legales,
-    meta: { title: 'mentions_legales - Silvercore' }
-  } 
+    meta: { title: 'Mentions legales - Silvercore' }
+  }
 ]
 
 

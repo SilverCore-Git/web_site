@@ -1,0 +1,48 @@
+{
+    "title": "Mentions légales",
+    "selection": {
+        "editeur": {
+            "title": "1. Éditeur du site",
+            "description": [
+                "Nos services",
+                "Organisation ayant aucun forme juridique.",
+                "69004 - Lyon - France",
+                "Directeur de la publication : Félix Cornudet"
+            ],
+            "lien":{
+                "text":"Email : ",
+                "value":"contact@silvercore.fr",
+                "href":"mailto:contact@silvercore.fr"
+            }
+        },
+        "hebergeur": {
+            "title": "2. Hébergeur",
+            "description": [
+                "Auto hebergement - SilverCore",
+                "69004 - Lyon - France"
+        ]
+        },
+        "responsabilite": {
+            "title": "2. Hébergeur",
+            "description": [
+                "Les informations présentes sur le site sont fournies à titre indicatif.",
+                "SilverCore ne saurait être tenu responsable des dommages liés à l'utilisation du site ou à des erreurs de contenu."
+            ]
+        },
+        "donnees_personnelles": {
+            "title": "4. Données personnelles",
+            "description": [
+                "Ce site ne collecte aucune donnée personnelle.",
+                "Aucun formulaire, système d'inscription ou espace membre n'est proposé."
+            ]
+        },
+        "cookies": {
+            "title": "4. Données personnelles",
+            "description": [
+                "Ce site utilise gtranslate pour traduire le contenu, avec avec des cookies anonymes.",
+                "Aucun cookie publicitaire, marketing ou de suivi personnel n'est utilisé."
+            ]
+        }
+
+    }
+}
