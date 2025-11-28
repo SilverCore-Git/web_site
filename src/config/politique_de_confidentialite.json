@@ -1,0 +1,55 @@
+{
+    "title": "Politique de Confidentialité",
+    "selection": {
+        "introduction": {
+            "title": "1. Introduction",
+            "description": [
+                "Nos services",
+                "Organisation ayant aucun forme juridique.",
+                "69004 - Lyon - France",
+                "Directeur de la publication : Félix Cornudet"
+            ],
+            "lien":{
+                "text":"Email : ",
+                "value":"contact@silvercore.fr",
+                "href":"mailto:contact@silvercore.fr"
+            }
+        },
+        "donnees_collectees": {
+            "title": "2. Données collectées",
+            "description": [
+                "Aucune donnée n'est collectée sur ce site web"
+        ]
+        },
+        "hebergement_et_securite": {
+            "title": "3. Hébergement et sécurité",
+            "description": [
+                "Les données sont hébergées en France, avec des flux chiffrés via HTTPS et sécurisés par HSTS."
+            ]
+        },
+        "cookies": {
+            "title": "4. Cookies",
+            "description": [
+                "Nous n'utilisons aucun cookie."
+            ]
+        },
+        "vos_droits": {
+            "title": "5. Vos droits",
+            "liste":{
+                "before": [
+                    "Conformément au RGPD, vous disposez des droits suivants :"
+                ],
+                "puce": [
+                    "Serveur de support",
+                    "Serveur général"
+                ]
+            }
+        },
+        "lien":{
+                "before":"Pour toute demande, contactez-nous via notre",
+                "value":"serveur Discord.",
+                "href":"https://discord.gg/ftFhQTJsQ5",
+                "after":"."
+        }
+    }
+}
