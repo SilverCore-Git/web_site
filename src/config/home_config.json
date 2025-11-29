@@ -41,19 +41,6 @@
                     "color": "#7F6CFF"
                 },
                 "baner": "/assets/img/mockup_phone_silvertransfert_extend.png"
-            },
-
-            {
-                "name": "SilverIA",
-                "logo": "/assets/logo/silveria/SilverIA.webp",
-                "title": "Un seul agent IA pour tout silvercore.",
-                "description": "Notre assistant intelligent, est directement intégré à Silvernote pour transformer la manière dont vous travaillez.",
-                "btn": {
-                    "content": "Découvrir",
-                    "href": "https://app.silvernote.fr/silveria",
-                    "color": "#FF5E62"
-                },
-                "baner": "/assets/path/to/banner"
             }
 
         ]
