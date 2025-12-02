@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
+import scrollTo from '../assets/ts/scrollTo';
 
 const navbar_btn = navbar_config.btn;
 const croix_valeur = navbar_config.valeur ;
@@ -59,7 +60,7 @@ navBar?.addEventListener("click", () => {
                     class="p-[15px] text-white cursor-pointer Body_XS
                             hidden lg:flex
                         "
-                    :href="Nav.href"
+                    @click="scrollTo(Nav.href)"
 
             >{{ Nav.name }}</a>
 

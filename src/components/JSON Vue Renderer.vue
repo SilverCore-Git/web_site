@@ -1,56 +1,66 @@
 <script setup lang="ts">
-import mentions_legales_config from "../config/mentions_legales_config.json";
+
+defineProps<{
+    config: any
+}>();
 
 </script>
 
 <template>
-    <div class="pt-[8em]">
-        <!-- General title  -->
-        <h1>{{ mentions_legales_config.title }}</h1>
+    <div class="w-screen flex justify-start items-center flex-col pt-[8em]">
 
-        <!-- Sections -->
-        <div
-            v-for="(section, sectionKey) in mentions_legales_config.selection"
-            :key="sectionKey"
-            class="mt-8"
-        >
-            <!-- Category title -->
-            <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
+        <div class=" max-w-3xl">
+                
+            <!-- General title  -->
+            <h1 class="text-center">{{ config.title }}</h1>
 
-            <!-- Description paragraphs -->
-            <p
-                v-for="(value, index) in section.description"
-                :key="index"
-                class="mb-2"
+            <span>dernière mise a jours : jj-mm-yyyy</span>
+
+            <!-- Sections -->
+            <div
+                v-for="(section, sectionKey) in config.selection"
+                :key="sectionKey"
+                class="mt-8"
             >
-                {{ value }}
-            </p>
+                <!-- Category title -->
+                <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
 
-            <!-- Link text -->
-            <p
-                v-if="'lien' in section && section.lien"
-                class="mb-2"
-            >
-                {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
-            </p>
-
-            <!-- Bullet list -->
-            <ul
-                v-if="'liste' in section && section.liste"
-                class="mb-2 list-disc pl-5"
-            >
-                <p v-if="section.liste.before" v-for="(item, index) in section.liste.before" :key="'before-' + index">
-                    {{ item }}
+                <!-- Description paragraphs -->
+                <p
+                    v-for="(value, index) in section.description"
+                    :key="index"
+                    class="mb-2 ml-2"
+                >
+                    {{ value }}
                 </p>
 
-                <li v-for="(item, index) in section.liste.puce" :key="index">
-                    {{ item }}
-                </li>
-
-                <p v-if="section.liste.after" v-for="(item, index) in section.liste.after" :key="'after-' + index">
-                    {{ item }}
+                <!-- Link text -->
+                <p
+                    v-if="'lien' in section && section.lien"
+                    class="mb-2 ml-2"
+                >
+                    {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
                 </p>
-            </ul>
+
+                <!-- Bullet list -->
+                <ul
+                    v-if="'liste' in section && section.liste"
+                    class="mb-2 list-disc pl-5"
+                >
+                    <p v-if="section.liste.before" v-for="(item, index) in section.liste.before" :key="'before-' + index">
+                        {{ item }}
+                    </p>
+
+                    <li v-for="(item, index) in section.liste.puce" :key="index">
+                        {{ item }}
+                    </li>
+
+                    <p v-if="section.liste.after" v-for="(item, index) in section.liste.after" :key="'after-' + index">
+                        {{ item }}
+                    </p>
+                </ul>
+
+            </div>
 
         </div>
     </div>

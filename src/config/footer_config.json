@@ -22,11 +22,11 @@
             "content": [
                 {
                     "name": "Confidentialité",
-                    "href": "https://d.d/d"
+                    "href": ""
                 },
                 {
                     "name": "Mentions legales",
-                    "href": "https://d.d/d"
+                    "href": "/mentions-legales"
                 }
             ]
         },
@@ -52,10 +52,6 @@
         {
             "title": "Nos services",
             "content": [
-                {
-                    "name": "SilverIA",
-                    "href": "https://app.silvernote.fr/silveria"
-                },
                 {
                     "name": "Silvernote",
                     "href": "https://wwww.silvernote.fr"

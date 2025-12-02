@@ -8,6 +8,7 @@ const services = home_config.services;
 
     <section 
         class="flex justify-center items-center flex-col text-center pt-[13%]"
+        id="services"
     >
 
         <div 

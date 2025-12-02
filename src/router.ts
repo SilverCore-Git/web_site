@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
-import mentions_legales from './components/JSON Vue Renderer.vue';
-
+import JSONVueRenderer from './components/JSON Vue Renderer.vue';
+import mention_legales_config from './config/mentions_legales_config.json';
+import politique_config from "./config/politique_de_confidentialite.json";
 
 
 const routes = [
@@ -14,8 +15,20 @@ const routes = [
   {
     path: '/mentions-legales',
     name: 'mentions_legales',
-    component: mentions_legales,
+    component: JSONVueRenderer,
+    props: {
+      config: mention_legales_config
+    },
     meta: { title: 'Mentions legales - Silvercore' }
+  },
+  {
+    path: '/politique-de-confidentialite',
+    name: 'politique',
+    component: JSONVueRenderer,
+    props: {
+      config: politique_config
+    },
+    meta: { title: 'Politique de confidentialite - Silvercore' }
   }
 ]
 
