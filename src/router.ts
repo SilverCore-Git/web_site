@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
-import JSONVueRenderer from './components/JSON Vue Renderer.vue';
+import JSONVueRenderer from './components/StructuredContent/StructuredContent-component.vue';
 import mention_legales_config from './config/mentions_legales_config.json';
 import politique_config from "./config/politique_de_confidentialite.json";
 

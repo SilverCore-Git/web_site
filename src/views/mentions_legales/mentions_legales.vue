@@ -4,7 +4,7 @@
 import mentions_legales_config from "../config/mentions_legales_config.json";
 
 // Component import
-import JSONVueRenderer from '../../components/JSON Vue Renderer.vue';
+import JSONVueRenderer from '../../components/StructuredContent/StructuredContent-component.vue';
 
 </script>
 

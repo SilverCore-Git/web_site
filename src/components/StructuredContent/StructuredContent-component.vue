@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { StructuredContent } from './StructuredContent-types';
+
 
 defineProps<{
-    config: any
+    config: StructuredContent
 }>();
 
 </script>
@@ -14,7 +16,10 @@ defineProps<{
             <!-- General title  -->
             <h1 class="text-center">{{ config.title }}</h1>
 
-            <span>dernière mise a jours : jj-mm-yyyy</span>
+            <span
+                class=""
+                v-if="config.lastUpdate"
+            >dernière mise a jours : {{ config.lastUpdate }}</span>
 
             <!-- Sections -->
             <div
