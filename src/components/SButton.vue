@@ -57,7 +57,8 @@ const buttonStyle = computed(() => ({
 }));
 
 const open = (href: string) => {
-  router.push(href)
+  if (href.startsWith('http')) return window.open(href);
+  router.push(href);
 }
 </script>
 

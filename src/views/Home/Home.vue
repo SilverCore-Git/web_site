@@ -3,8 +3,8 @@
     <SmothScrollWraper>
         <Hero />
         <Nos_service />
-        <Nos_politiques />
-        <Footer/>
+        <Nos_politiques class="mb-20" />
+        <Footer />
     </SmothScrollWraper>
 
 </template>

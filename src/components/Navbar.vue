@@ -2,14 +2,11 @@
 import { useRouter } from "vue-router";
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
+import { ref } from "vue";
 
 const router = useRouter();
 const navbar_btn = navbar_config.btn;
-const croix_valeur = navbar_config.valeur ;
-
-const button_contact = () => {
-    window.location.href = navbar_btn.href;
-};
+const openNav = ref<boolean>(false);
 
 const scrollTo = (href: string) => {
     router.push(href);
@@ -34,11 +31,9 @@ const scrollTo = (href: string) => {
             class="center justify-around cursor-pointer  my-[9.5px]"
 
         >
-        <!-- ml-[25px] -->
-        <!-- mr-[13px] -->
             <img
                 class="h-[38px]"
-                :src="navbar_config.logo" alt=""
+                :src="navbar_config.logo"
 
             >
             <h3
@@ -50,54 +45,37 @@ const scrollTo = (href: string) => {
 
         <div
             class="center"
-
         >
 
             <a
-                    v-for="Nav in navbar_config.tab"
-                    class="p-[15px] text-white cursor-pointer Body_XS
-                            hidden lg:flex
-                        "
-                    @click="scrollTo(Nav.href)"
+                v-for="Nav in navbar_config.tab"
+                class="p-[15px] text-white cursor-pointer Body_XS
+                        hidden lg:flex
+                    "
+                @click="scrollTo(Nav.href)"
 
             >{{ Nav.name }}</a>
 
         </div>
 
-        <div class="hidden lg:flex">
+        <div class="flex">
             <SButton
                 class=" hidden"
-                :content= "navbar_btn.content"
+                :content="navbar_btn.content"
                 :href="navbar_btn.href"
             />
         </div>
 
-        <div
-            class="flex flex-col justify-around h-[35px] w-[35px]
-                lg:hidden
+        <!-- <div
+            class="
+                flex flex-col justify-center 
+                lg:hidden absolute right-4
+                bi bi-list text-3xl
+                transition-all duration-300
             "
-            @click="click_menu_hamburger"
-        >
-            <div
-                v-for="value in 3"
-                class="bg-white w-full h-[5px] rounded-sm"
-            ></div>
-
-        </div>
-
-        <div
-            v-for="rotation in [-45, 45]"
-            :key="rotation"
-            class="flex flex-col justify-center h-[38px] w-[38px] mr-[25px] min-lg:hidden absolute right-0
-                    hidden
-                "
-        >
-            <div
-                class="bg-white w-full h-[5px] rounded-[4px]"
-                :style="{ transform: `rotate(${rotation}deg)` }"
-            ></div>
-
-        </div>
+            :style="{ transform: `rotate(${openNav ? '90' : '0'}deg)` }"
+            @click="openNav = !openNav"
+        /> -->
 
     </nav>
 
