@@ -12,7 +12,15 @@
 
     "services": {
 
-        "title": "Nos services",
+        "title": {
+            "text": "Des services",
+            "keyWords": [
+                "simple",
+                "intuitifs",
+                "complet",
+                "sécurisé"
+            ]
+        },
         "description": null,
 
         "services": [

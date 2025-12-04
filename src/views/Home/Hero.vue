@@ -11,14 +11,11 @@ import hero_config from "../../config/hero_config.json"
     ">
     <!-- pt-[13%] -->
         <div
-            class="max-w-5xl flex justify-center items-center flex-col gap-6"
+            class="max-w-4xl text-center flex justify-center items-center flex-col gap-6"
         >
 
-            <h1 class="md:min-w-lg font-bold text-[30px] flex gap-2 md:text-[48px] xl:text-[60px]">
-                {{ hero_config.title.text }}
-                <TextWriter
-                    :words="hero_config.title.keyWords"
-                />
+            <h1 class="font-bold text-[30px] flex gap-2 md:text-[48px] xl:text-[60px]">
+                {{ hero_config.title }}
             </h1>
 
             <div class="mb-4 max-w-lg text-[16px]

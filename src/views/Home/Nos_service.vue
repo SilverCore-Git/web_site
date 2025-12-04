@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Service_card from '@/components/Service_card.vue';
 import home_config from '../../config/home_config.json';
+import TextWriter from '../../components/textWriter.vue';
 const services = home_config.services;
 </script>
 
@@ -14,7 +15,12 @@ const services = home_config.services;
         <div 
             class="mb-10"
         >
-            <h2 class="text-[28px] sm:text-[40px] md:text-[50px] font-bold">{{ services.title }}</h2>
+            <h2 class="min-w-xl text-[28px] flex gap-2 sm:text-[40px] md:text-[50px] font-bold">
+                {{ services.title.text }}
+                <TextWriter
+                    :words="services.title.keyWords"
+                />
+            </h2>
             <p class="">
                 {{ services.description }}
             </p>
