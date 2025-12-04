@@ -1,6 +1,14 @@
 {
 
-    "title": "Des services numériques pensés pour votre confidentialité",
-    "description": "Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée."
+    "title": {
+        "text": "Des services",
+        "keyWords": [
+            "simple",
+            "intuitifs",
+            "complet",
+            "sécurisé"
+        ]
+    },
+    "description": "Silvercore conçoit des outils numériques basé sur la simplicité et intuitivité tout en restant complet et sécurité."
 
 }
