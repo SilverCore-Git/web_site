@@ -37,6 +37,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      const el = document.querySelector(to.hash);
+      if (el) return { top: (el as HTMLElement).offsetTop, behavior: 'smooth' };
+    }
+    return { top: 0 };
+  }
 });
 
 router.beforeEach((to: any, _from: any, next: any) => {

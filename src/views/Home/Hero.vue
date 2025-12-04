@@ -26,10 +26,10 @@ import hero_config from "../../config/hero_config.json"
 
             <SButton
                 content="Nos services"
+                premium
+                href="#services"
             />
 
         </div>
     </section>
 </template>
-
-<style scoped></style>

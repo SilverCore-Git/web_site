@@ -7,19 +7,19 @@
     "tab": [
         {
             "name": "Accueil",
-            "href": "#hero"
+            "href": "/#hero"
         },
         {
             "name": "Services",
-            "href": "#services"
+            "href": "/#services"
         },
         {
             "name": "Politiques",
-            "href": "#politiques"
+            "href": "/#politiques"
         },
         {
             "name": "Contact",
-            "href": "#contact"
+            "href": "/#contact"
         }
     ],
 

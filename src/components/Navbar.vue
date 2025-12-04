@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
-import scrollTo from '../assets/ts/scrollTo';
 
+const router = useRouter();
 const navbar_btn = navbar_config.btn;
 const croix_valeur = navbar_config.valeur ;
 
@@ -10,13 +11,10 @@ const button_contact = () => {
     window.location.href = navbar_btn.href;
 };
 
+const scrollTo = (href: string) => {
+    router.push(href);
+}
 
-const navBar: HTMLElement | null = document.getElementById("NavBar");
-
-navBar?.addEventListener("click", () => {
-    // console.log("[DEBUG]: Menu hamburger activer");
-    navBar.classList.toggle("menu_hamburger_active");
-});
 </script>
 
 <template>
