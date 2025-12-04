@@ -22,7 +22,7 @@
             "content": [
                 {
                     "name": "Confidentialité",
-                    "href": ""
+                    "href": "/politique-de-confidentialite"
                 },
                 {
                     "name": "Mentions legales",
@@ -36,15 +36,15 @@
             "content": [
                 {
                     "name": "Formulaire",
-                    "href": "https://d.d/d"
+                    "href": "/contact"
                 },
                 {
                     "name": "Discord silvercore",
-                    "href": "https://d.d/d"
+                    "href": "https://taap.it/silvercore.discord"
                 },
                 {
                     "name": "Discord support",
-                    "href": "https://d.d/d"
+                    "href": "https://taap.it/silvercore.discord.support"
                 }
             ]
         },
