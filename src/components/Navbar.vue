@@ -29,7 +29,7 @@ const scrollTo = (href: string) => {
     >
         <div
             class="center justify-around cursor-pointer  my-[9.5px]"
-
+            @click="router.push('/')"
         >
             <img
                 class="h-[38px]"
@@ -58,13 +58,13 @@ const scrollTo = (href: string) => {
 
         </div>
 
-        <div class="flex">
+        <!-- <div class="flex">
             <SButton
                 class=" hidden"
                 :content="navbar_btn.content"
                 :href="navbar_btn.href"
             />
-        </div>
+        </div> -->
 
         <!-- <div
             class="
