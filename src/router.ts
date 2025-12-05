@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
-import JSONVueRenderer from './components/StructuredContent/StructuredContent-component.vue';
+import StructuredContent from './components/StructuredContent/StructuredContent-component.vue';
 import mention_legales_config from './config/mentions_legales_config.json';
 import politique_config from "./config/politique_de_confidentialite.json";
 
@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/mentions-legales',
     name: 'mentions_legales',
-    component: JSONVueRenderer,
+    component: StructuredContent,
     props: {
       config: mention_legales_config
     },
@@ -24,7 +24,7 @@ const routes = [
   {
     path: '/politique-de-confidentialite',
     name: 'politique',
-    component: JSONVueRenderer,
+    component: StructuredContent,
     props: {
       config: politique_config
     },
