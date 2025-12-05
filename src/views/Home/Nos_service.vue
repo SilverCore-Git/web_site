@@ -8,9 +8,12 @@ const services = home_config.services;
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col text-center pt-[13%]"
+        class="flex justify-center items-center flex-col text-center pt-[13%] relative"
         id="services"
     >
+
+        <div class="absolute top-40 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
+        <div class="absolute top-120 left-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
 
         <div 
             class="mb-10"

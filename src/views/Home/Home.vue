@@ -3,8 +3,9 @@
     <SmothScrollWraper>
         <Hero />
         <Nos_service />
-        <Nos_politiques class="mb-20" />
-        <Footer />
+        <Nos_politiques />
+        <ContactForm />
+        <Footer class="mt-20" />
     </SmothScrollWraper>
 
 </template>
@@ -15,6 +16,7 @@ import Hero from './Hero.vue';
 import Nos_politiques from './Nos_politiques.vue';
 import SmothScrollWraper from '../../components/smothScrollWraper.vue';
 import Footer from '../../components/Footer.vue';
+import ContactForm from '../../components/contactForm.vue';
 
 
 </script>

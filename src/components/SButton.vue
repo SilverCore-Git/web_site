@@ -1,5 +1,6 @@
 <template>
-  <a
+  <button
+    :type="type as any"
     @click="open(href)"
     :class="[
       `relative inline-flex items-center justify-center
@@ -15,7 +16,7 @@
       {{ content }}
     </span>
 
-    <span v-if="!premium" class="ml-2 inline-flex">
+    <span v-if="!premium && arrow" class="ml-2 inline-flex">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -32,7 +33,7 @@
         <polyline points="12 5 19 12 12 19"></polyline>
       </svg>
     </span>
-  </a>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -46,7 +47,9 @@ const props = defineProps({
   href: { type: String, default: "#services" },
   bgColor: { type: String, default: "rgb(81, 47, 235)" },
   borderColor: { type: String, default: "rgba(255, 255, 255, 0.1)" },
-  premium: { type: Boolean, default: false }
+  premium: { type: Boolean, default: false },
+  arrow: { type: Boolean, default: true },
+  type: { type: String, default: 'button' }
 });
 
 const buttonStyle = computed(() => ({
