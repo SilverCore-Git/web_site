@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SmothScrollWraper from '../smothScrollWraper.vue';
 import type { StructuredContent } from './StructuredContent-types';
 
 
@@ -10,22 +11,21 @@ defineProps<{
 
 <template>
     <div class="w-screen flex justify-start items-center flex-col pt-[8em]">
-
         <div class=" max-w-3xl">
                 
             <!-- General title  -->
-            <h1 class="text-center">{{ config.title }}</h1>
+            <h1 class="text-center mb-7">{{ config.title }}</h1>
 
             <span
                 class=""
                 v-if="config.lastUpdate"
-            >dernière mise a jours : {{ config.lastUpdate }}</span>
+            >Dernière mise a jours : {{ config.lastUpdate }}</span>
 
             <!-- Sections -->
             <div
                 v-for="(section, sectionKey) in config.selection"
                 :key="sectionKey"
-                class="mt-8"
+                class="mt-6 bg-[#ffffff15] p-6 rounded-lg shadow-md"
             >
                 <!-- Category title -->
                 <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
