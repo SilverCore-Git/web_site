@@ -5,7 +5,7 @@
         class="
             service_card flex justify-start gap-6
             items-start text-start flex-col p-6 h-[620px] 
-            w-[93%] sm:w-[95%] md:w-[640px]
+            w-[93%] sm:w-[95%] md:w-[640px] backdrop-blur-2xl
         "
     >
 
@@ -15,9 +15,10 @@
         </div>
 
         <h3 class=" font-bold text-3xl">{{ prop.title }}</h3>
-        <p class=" text-gray-300">
-            {{ prop.description }}
-        </p>
+        <p 
+            class="text-gray-300"
+            v-html="prop.description"
+        ></p>
 
         <SButton 
             :content="prop.btn.content"

@@ -12,8 +12,7 @@ const services = home_config.services;
         id="services"
     >
 
-        <div class="absolute top-40 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
-        <div class="absolute top-120 left-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
+        <div class="absolute top-40 left-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
 
         <div 
             class="mb-10"

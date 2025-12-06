@@ -29,7 +29,7 @@
                 "name": "Silvernote",
                 "logo": "/assets/logo/snote/favicon.svg",
                 "title": "Votre app de prise de note gratuite.",
-                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote.",
+                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. <br/> <span class=\"font-bold\">Attention app en beta !!</span>",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvernote.fr",
@@ -42,7 +42,7 @@
                 "name": "Silvertransfert",
                 "logo": "/assets/logo/stransfert/favicon.png",
                 "title": "Des transferts gratuit et sécurisé.",
-                "description": "Transférez vos fichiers volumineux avec Silvertransfert : un outil sécurisé, gratuit et entièrement en français.",
+                "description": "Marre des services qui promettent la sécurité sans la chiffrer vraiment ? SilverTransfert chiffre tes fichiers de bout en bout : personne ne peut voir, même pas nous. Simple. Rapide. Français. Envoie jusqu’à 10 Go, sereinement. Le partage qui respecte ta confidentialité.",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvertransfert.fr",

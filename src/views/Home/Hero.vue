@@ -5,11 +5,14 @@ import hero_config from "../../config/hero_config.json"
 </script>
 
 <template>
+
     <section
         class="flex justify-center items-center flex-col pt-[15em] px-3.5
 
     ">
-    <!-- pt-[13%] -->
+
+        <div class="absolute top-10 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
+
         <div
             class="max-w-4xl text-center flex justify-center items-center flex-col gap-6"
         >
