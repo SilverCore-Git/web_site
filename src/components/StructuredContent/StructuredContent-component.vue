@@ -18,7 +18,7 @@ defineProps<{
             <div class=" max-w-3xl">
                     
                 <!-- General title  -->
-                <h1 class="text-center mb-7">{{ config.title }}</h1>
+                <h1 class="text-center mb-7 font-bold">{{ config.title }}</h1>
 
                 <span
                     class=""
@@ -29,7 +29,7 @@ defineProps<{
                 <div
                     v-for="(section, sectionKey) in config.selection"
                     :key="sectionKey"
-                    class="mt-6 bg-[#ffffff15] p-6 rounded-lg shadow-md"
+                    class="mt-6 bg-[#ffffff27] p-6 rounded-lg shadow-md backdrop-blur-xs"
                 >
                     <!-- Category title -->
                     <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
@@ -44,30 +44,39 @@ defineProps<{
                     </p>
 
                     <!-- Link text -->
-                    <p
-                        v-if="'lien' in section && section.lien"
-                        class="mb-2 ml-2"
-                    >
-                        {{ section.lien.before }} <a class=" text-blue-400" :href="section.lien.href">{{ section.lien.value }}</a>{{ section.lien.after }}
+                    <p v-if="section.lien" class="mb-2 text-base">
+                        {{ section.lien.before }}
+                        <a :href="section.lien.href" class="text-blue-400 hover:underline">
+                            {{ section.lien.value }}
+                        </a>
+                        {{ section.lien.after }}
                     </p>
 
                     <!-- Bullet list -->
-                    <ul
-                        v-if="'liste' in section && section.liste"
-                        class="mb-2 list-disc pl-5"
-                    >
-                        <p v-if="section.liste.before" v-for="(item, index) in section.liste.before" :key="'before-' + index">
+                    <div v-if="section.liste" class="mb-2">
+                        
+                        <!-- Texte avant la liste -->
+                        <p v-if="section.liste.before" class="mb-1 text-base">
+                            <span v-for="(item, index) in section.liste.before" :key="'before-' + index">
                             {{ item }}
+                            </span>
                         </p>
 
-                        <li v-for="(item, index) in section.liste.puce" :key="index">
+                        <!-- La liste principale -->
+                        <ul class="list-disc pl-5 mb-1">
+                            <li v-for="(item, index) in section.liste.puce" :key="'puce-' + index" class="mb-1">
                             {{ item }}
-                        </li>
+                            </li>
+                        </ul>
 
-                        <p v-if="section.liste.after" v-for="(item, index) in section.liste.after" :key="'after-' + index">
+                        <!-- Texte après la liste -->
+                        <p v-if="section.liste.after" class="mt-1 text-base">
+                            <span v-for="(item, index) in section.liste.after" :key="'after-' + index">
                             {{ item }}
+                            </span>
                         </p>
-                    </ul>
+
+                    </div>
 
                 </div>
 
@@ -77,5 +86,5 @@ defineProps<{
         <Footer />
 
     </SmothScrollWraper>
-    
+
 </template>
