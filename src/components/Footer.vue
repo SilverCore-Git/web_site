@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import footer_config from "../config/footer_config.json"
+
+const router = useRouter();
+
+const open = (href: string) => {
+    window.open(href + '?from=www.silvercore.fr');
+}
 </script>
 
 <template>
@@ -40,16 +47,13 @@ import footer_config from "../config/footer_config.json"
                     <a
                         v-for="social in footer_config.social"
                         :href="social.href"
+                        target="_blank"
                         class=" bg-[rgba(255,255,255,0.2)]  p-2.5 rounded-[7px] mr-[15px]"
                     >
-                        <!-- class="w-5 h-5" -->
                         <i
                             class="bi"
                             :class="social.icon"
-                        >
-
-                        </i>
-
+                        />
                     </a>
                 </div>
 
@@ -72,7 +76,7 @@ import footer_config from "../config/footer_config.json"
                         >
                             <a
                                 class="font-outfit text-[rgba(255,255,255,0.7)]"
-                                :href="item.href"
+                                @click="item.href.startsWith('http') ? open(item.href) : router.push(item.href)"
                             >{{item.name}}</a>
                         </div>
                     </div>
