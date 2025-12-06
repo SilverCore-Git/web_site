@@ -45,8 +45,8 @@
 
 <script lang="ts" setup>
 
-import type { Service } from '@/assets/ts/types';
-import SButton from '@/components/SButton.vue';
+import type { Service } from '../assets/ts/types';
+import SButton from '../components/SButton.vue';
 defineProps<{
     prop: Service
 }>();

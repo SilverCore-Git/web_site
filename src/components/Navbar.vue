@@ -2,11 +2,9 @@
 import { useRouter } from "vue-router";
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
-import { ref } from "vue";
 
 const router = useRouter();
 const navbar_btn = navbar_config.btn;
-const openNav = ref<boolean>(false);
 
 const scrollTo = (href: string) => {
     router.push(href);

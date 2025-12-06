@@ -44,7 +44,7 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to, _from, _savedPosition) {
     if (to.hash) {
       const el = document.querySelector(to.hash);
       if (el) return { top: (el as HTMLElement).offsetTop, behavior: 'smooth' };

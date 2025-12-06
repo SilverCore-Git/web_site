@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SButton from '../../components/SButton.vue';
-import TextWriter from '../../components/textWriter.vue';
 import hero_config from "../../config/hero_config.json"
 </script>
 

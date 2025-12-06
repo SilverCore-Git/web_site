@@ -123,14 +123,5 @@ const form = ref({
 
 const sent = ref(false)
 
-async function handleSubmit() {
-  console.log("Données envoyées :", form.value)
-
-
-  sent.value = true
-  setTimeout(() => sent.value = false, 3000)
-  form.value = { name:"", email:"", message:"" }
-}
-
 </script>
 
