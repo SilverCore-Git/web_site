@@ -1,6 +1,6 @@
 <template>
-  <div class="scroll-wrapper" ref="scrollWrapper">
-    <div class="scroll-content" ref="scrollContent">
+  <div class="scroll-wrapper h-full w-full" ref="scrollWrapper">
+    <div class="scroll-content h-full w-full" ref="scrollContent">
         <slot />
     </div>
   </div>
