@@ -1,69 +1,78 @@
 {
     "title": "Mentions légales",
-    "lastUpdate": "dd-mm-yyyy",
+    "lastUpdate": "2025-12-06",
     "selection": {
         "editeur": {
             "title": "1. Éditeur du site",
             "description": [
-                "Nos services",
-                "Organisation ayant aucun forme juridique.",
-                "69004 - Lyon - France",
+                "Silvercore",
+                "Organisation sans structure juridique actuellement déclarée.",
+                "Basée à Lyon - France",
                 "Directeur de la publication : Félix Cornudet"
             ],
-            "lien":{
-                "before":"Email : ",
-                "value":"contact@silvercore.fr",
-                "href":"mailto:contact@silvercore.fr",
-                "after":"."
+            "lien": {
+                "before": "Email : ",
+                "value": "contact@silvercore.fr",
+                "href": "mailto:contact@silvercore.fr",
+                "after": "."
             }
         },
         "hebergeur": {
             "title": "2. Hébergeur",
             "description": [
-                "Auto hebergement - SilverCore",
-                "69004 - Lyon - France"
-        ]
+                "Le site est auto-hébergé par Silvercore",
+                "Adresse : 69004 - Lyon - France",
+                "Protection et sécurité renforcées via Cloudflare (anti-bot, anti-DDoS, cache, proxy)"
+            ]
         },
         "responsabilite": {
-            "title": "2. Hébergeur",
+            "title": "3. Responsabilité",
             "description": [
                 "Les informations présentes sur le site sont fournies à titre indicatif.",
-                "SilverCore ne saurait être tenu responsable des dommages liés à l'utilisation du site ou à des erreurs de contenu."
+                "Silvercore ne saurait être tenu responsable des dommages liés à l'utilisation du site ou à des erreurs de contenu.",
+                "L'utilisation du site se fait sous la responsabilité de l'utilisateur."
             ]
         },
         "donnees_personnelles": {
             "title": "4. Données personnelles",
             "description": [
-                "Ce site ne collecte aucune donnée personnelle.",
-                "Aucun formulaire, système d'inscription ou espace membre n'est proposé."
+                "Lorsque vous utilisez le formulaire de contact, nous collectons les informations suivantes : nom, email et message.",
+                "Ces données sont utilisées uniquement pour répondre à vos demandes et ne sont pas partagées avec des tiers.",
+                "Les informations collectées sont conservées pendant la durée nécessaire au traitement de votre demande, puis supprimées.",
+                "Les logs techniques collectés par le serveur et Cloudflare sont utilisés uniquement à des fins de sécurité et ne sont pas exploités par Silvercore.",
+                "Conformément au RGPD, vous disposez des droits d'accès, de rectification, de suppression, d'opposition et de limitation du traitement de vos données personnelles."
             ]
         },
         "cookies": {
             "title": "5. Cookies",
             "description": [
-                "Ce site utilise gtranslate pour traduire le contenu, avec avec des cookies anonymes.",
                 "Aucun cookie publicitaire, marketing ou de suivi personnel n'est utilisé."
             ]
         },
         "contact": {
             "title": "6. Contact",
             "description": [
-                "Pour toute question, vous pouvez nous contacter :",
-                "Par Discord :"
+                "Pour toute question ou demande, vous pouvez nous contacter :"
             ],
-            "liste":{
+            "liste": {
                 "before": [
-                    "test"
+                    "Voici les moyens pour nous joindre :"
                 ],
                 "puce": [
-                    "Serveur de support",
-                    "Serveur général"
+                    "Email : contact@silvercore.fr",
+                    "Discord : serveur de support",
+                    "Discord : serveur général"
                 ],
                 "after": [
-                    "test"
+                    "Nous nous efforçons de répondre dans les plus brefs délais."
                 ]
             }
+        },
+        "mise_a_jour": {
+            "title": "7. Mise à jour",
+            "description": [
+                "Ces mentions légales peuvent être modifiées à tout moment afin de rester conformes à la législation en vigueur."
+            ]
         }
-
     }
 }
