@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SmothScrollWraper from '../smothScrollWraper.vue';
 import type { StructuredContent } from './StructuredContent-types';
 
 

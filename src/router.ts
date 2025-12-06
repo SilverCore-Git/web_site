@@ -3,6 +3,7 @@ import Home from './views/Home/Home.vue';
 import StructuredContent from './components/StructuredContent/StructuredContent-component.vue';
 import mention_legales_config from './config/mentions_legales_config.json';
 import politique_config from "./config/politique_de_confidentialite.json";
+import Contact from './views/Contact.vue';
 
 
 const routes = [
@@ -29,6 +30,12 @@ const routes = [
       config: politique_config
     },
     meta: { title: 'Politique de confidentialite - Silvercore' }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact,
+    meta: { title: 'Contact - silvercore' }
   }
 ]
 

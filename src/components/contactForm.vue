@@ -40,14 +40,14 @@
 
             </div>
 
-            <form 
-                @submit.prevent="handleSubmit" 
-                class="space-y-6 backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10 relative pointer-events-none"
+            <form
+                class="space-y-6 backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10 relative"
+                action="https://formsubmit.co/contact@silvercore.fr" method="POST"
             >
 
-                <div class="absolute inset-0 pb-6 bg-black/60 z-100 pointer-events-none">
+                <!-- <div class="absolute inset-0 pb-6 bg-black/60 z-100 pointer-events-none">
                     <h2 class="absolute inset-0 flex justify-center items-center -rotate-40 text-5xl font-semibold text-(--primary) uppercase">A venir</h2>
-                </div>
+                </div> -->
 
                 <div>
                     <label class="block text-white mb-2">Nom</label>

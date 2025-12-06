@@ -21,9 +21,8 @@ const scrollTo = (href: string) => {
         class="
                     fixed top-6 inset-x-[10%] 2xl:inset-x-[20%] z-50
                     rounded-[7px] flex justify-between items-center
-                    border border-gray-400/50 bg-black/70 backdrop-blur-sm
-                    px-[13px]
-                    mg:px-[25px]
+                    border border-gray-400/50 bg-black/70 backdrop-blur-xl
+                    px-[13px] md:px-[25px]
                 "
         id="NavBar"
     >
@@ -58,13 +57,13 @@ const scrollTo = (href: string) => {
 
         </div>
 
-        <!-- <div class="flex">
+        <div class="flex">
             <SButton
                 class=" hidden"
                 :content="navbar_btn.content"
                 :href="navbar_btn.href"
             />
-        </div> -->
+        </div>
 
         <!-- <div
             class="
