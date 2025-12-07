@@ -1,36 +1,114 @@
 <script setup lang="ts">
 import SButton from '../../components/SButton.vue';
 import hero_config from "../../config/hero_config.json"
+import { useGsapTextFill, useGsapFadeInUp, useGsapFloat } from '../../composables/useGsapAnimations';
+import { onMounted } from 'vue';
+import gsap from 'gsap';
+
+onMounted(() => {
+    // Animation du titre - mot par mot
+    const title = document.querySelector('.hero-title');
+    if (title) {
+        const text = title.textContent;
+        title.innerHTML = '';
+        
+        const words = text!.split(' ');
+        words.forEach((word: string, _wordIndex: number) => {
+            const wordSpan = document.createElement('span');
+            wordSpan.textContent = word;
+            wordSpan.style.display = 'inline-block';
+            wordSpan.style.marginRight = '0.2em';
+            title.appendChild(wordSpan);
+        });
+
+        gsap.fromTo(
+            title.querySelectorAll('span'),
+            {
+                opacity: 0,
+                y: 30,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                stagger: 0.15,
+                ease: 'power3.out',
+            }
+        );
+    }
+
+    // Animation du descriptif
+    gsap.fromTo(
+        '.hero-description',
+        {
+            opacity: 0,
+            y: 50,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.3,
+            ease: 'power3.out',
+        }
+    );
+
+    // Animation du bouton
+    gsap.fromTo(
+        '.hero-button',
+        {
+            opacity: 0,
+            scale: 0.8,
+        },
+        {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            delay: 0.6,
+            ease: 'back.out',
+        }
+    );
+
+    // Animation du blob (floating)
+    gsap.to('.hero-blob', {
+        y: -20,
+        duration: 4,
+        ease: 'sine.inOut',
+        repeat: -1,
+        yoyo: true,
+    });
+});
 </script>
 
 <template>
 
     <section
-        class="flex justify-center items-center flex-col pt-[15em] px-3.5
+        class="flex justify-center items-center flex-col pt-[15em] px-3.5 overflow-hidden relative z-10"
+    >
 
-    ">
-
-        <div class="absolute top-10 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
+        <div class="hero-blob absolute top-10 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-10"></div>
 
         <div
-            class="max-w-4xl text-center flex justify-center items-center flex-col gap-6"
+            class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
         >
 
-            <h1 class="font-bold text-[30px] flex gap-2 md:text-[48px] xl:text-[60px]">
+            <h1 class="hero-title font-bold text-[28px] leading-tight sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] max-w-3xl break-words">
                 {{ hero_config.title }}
             </h1>
 
-            <div class="mb-4 max-w-lg text-[16px]
+            <div class="hero-description mb-4 max-w-lg text-[16px]
                 xl:text-[18px]
             ">
                 {{ hero_config.description }}
             </div>
 
-            <SButton
-                content="Nos services"
-                premium
-                href="#services"
-            />
+            <div class="hero-button pb-6">
+              <SButton
+                  content="Nos services"
+                  premium
+                  href="#services"
+              />
+            </div>
 
         </div>
     </section>

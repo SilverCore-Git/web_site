@@ -8,6 +8,10 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const scrollWrapper = ref<HTMLElement | null>(null);
 const scrollContent = ref<HTMLElement | null>(null);
@@ -24,7 +28,7 @@ onMounted(() => {
 
     let current = 0;
     let target = 0;
-    const ease = 0.2;
+    const ease = 0.15;
 
     const animate = () => {
       target = window.scrollY;
@@ -36,6 +40,21 @@ onMounted(() => {
     };
 
     animate();
+
+    // Effet parallaxe sur le scroll
+    document.addEventListener('scroll', () => {
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      
+      // Animation douce du background starry au scroll
+      const starryBg = document.querySelector('.starry-bg') as HTMLElement;
+      if (starryBg) {
+        gsap.to(starryBg, {
+          backgroundPosition: `${scrollPercent * 100}% ${scrollPercent * 100}%`,
+          duration: 0.5,
+          ease: 'none',
+        });
+      }
+    });
 });
 </script>
 

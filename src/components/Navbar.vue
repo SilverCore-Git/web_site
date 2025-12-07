@@ -2,13 +2,84 @@
 import { useRouter } from "vue-router";
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
+import gsap from "gsap";
+import { onMounted, ref } from "vue";
 
 const router = useRouter();
 const navbar_btn = navbar_config.btn;
+const navbarRef = ref<HTMLElement | null>(null);
 
 const scrollTo = (href: string) => {
     router.push(href);
 }
+
+onMounted(() => {
+  // Animation d'apparition du navbar
+  gsap.fromTo(
+    '#NavBar',
+    {
+      opacity: 0,
+      y: -50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power3.out',
+    }
+  );
+
+  // Animation des liens au hover
+  const links = document.querySelectorAll('.navbar-link');
+  links.forEach((link: any) => {
+    link.addEventListener('mouseenter', () => {
+      gsap.to(link, {
+        color: '#512FEB',
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    });
+
+    link.addEventListener('mouseleave', () => {
+      gsap.to(link, {
+        color: '#fff',
+        duration: 0.3,
+        ease: 'power2.out',
+      });
+    });
+  });
+
+  // Effect de glow au scroll
+  let lastScrollY = 0;
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const navbar = document.getElementById('NavBar');
+    
+    if (navbar) {
+      if (scrollY > 50) {
+        gsap.to(navbar, {
+          boxShadow: '0 10px 40px rgba(81, 47, 235, 0.3)',
+          backdropFilter: 'blur(20px)',
+          duration: 0.5,
+          ease: 'power2.out',
+        });
+      } else {
+        gsap.to(navbar, {
+          boxShadow: '0 0px 0px rgba(81, 47, 235, 0)',
+          duration: 0.5,
+          ease: 'power2.out',
+        });
+      }
+    }
+    lastScrollY = scrollY;
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+});
 
 </script>
 
@@ -46,8 +117,8 @@ const scrollTo = (href: string) => {
 
             <a
                 v-for="Nav in navbar_config.tab"
-                class="p-[15px] text-white cursor-pointer Body_XS
-                        hidden lg:flex
+                class="navbar-link p-[15px] text-white cursor-pointer Body_XS
+                        hidden lg:flex transition-colors duration-300
                     "
                 @click="scrollTo(Nav.href)"
 

@@ -2,21 +2,25 @@
   <button
     :type="type as any"
     @click="open(href)"
+    @mouseenter="onHover"
+    @mouseleave="onHoverLeave"
+    class="sbtn-ripple"
     :class="[
       `relative inline-flex items-center justify-center
       rounded-lg shadow-md transition-all duration-300`,
       premium ? 'premium-btn' : 'normal-btn'
     ]"
     :style="buttonStyle"
+    ref="buttonEl"
   >
     <span 
-      class="text-white text-center font-outfit"
+      class="text-white text-center font-outfit relative z-10"
       :class="premium ? 'text-[18px] font-bold' : 'text-[14px]'"
     >
       {{ content }}
     </span>
 
-    <span v-if="!premium && arrow" class="ml-2 inline-flex">
+    <span v-if="!premium && arrow" class="ml-2 inline-flex relative z-10">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -27,7 +31,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="w-[20px] h-[20px]"
+        class="w-[20px] h-[20px] arrow-icon"
       >
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>
@@ -37,10 +41,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from "vue-router";
+import gsap from "gsap";
 
 const router = useRouter();
+const buttonEl = ref<HTMLButtonElement | null>(null);
 
 const props = defineProps({
   content: { type: String, default: "Nos services" },
@@ -63,6 +69,45 @@ const open = (href: string) => {
   if (href.startsWith('http')) return window.open(href);
   router.push(href);
 }
+
+const onHover = () => {
+  if (!buttonEl.value) return;
+  
+  gsap.to(buttonEl.value, {
+    scale: 1.05,
+    duration: 0.3,
+    ease: 'power2.out',
+  });
+
+  // Animation de l'arrow
+  const arrow = buttonEl.value?.querySelector('.arrow-icon');
+  if (arrow) {
+    gsap.to(arrow, {
+      x: 3,
+      duration: 0.3,
+      ease: 'power2.out',
+    });
+  }
+};
+
+const onHoverLeave = () => {
+  if (!buttonEl.value) return;
+  
+  gsap.to(buttonEl.value, {
+    scale: 1,
+    duration: 0.3,
+    ease: 'power2.out',
+  });
+
+  const arrow = buttonEl.value?.querySelector('.arrow-icon');
+  if (arrow) {
+    gsap.to(arrow, {
+      x: 0,
+      duration: 0.3,
+      ease: 'power2.out',
+    });
+  }
+};
 </script>
 
 <style scoped>
