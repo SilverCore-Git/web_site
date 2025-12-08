@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import SButton from '../../components/SButton.vue';
 import hero_config from "../../config/hero_config.json"
-import { useGsapTextFill, useGsapFadeInUp, useGsapFloat } from '../../composables/useGsapAnimations';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
 
@@ -111,5 +110,7 @@ onMounted(() => {
             </div>
 
         </div>
+        
     </section>
+
 </template>
