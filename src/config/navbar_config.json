@@ -16,6 +16,14 @@
         {
             "name": "Politiques",
             "href": "/#politiques"
+        },
+        {
+            "name": "FAQ",
+            "href": "/#faq"
+        },
+        {
+            "name": "Blog",
+            "href": "/blog"
         }
     ],
 

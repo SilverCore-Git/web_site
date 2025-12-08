@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
+import Blog from './views/Blog.vue';
+import BlogArticle from './views/BlogArticle.vue';
 import StructuredContent from './components/StructuredContent/StructuredContent-component.vue';
 import mention_legales_config from './config/mentions_legales_config.json';
 import politique_config from "./config/politique_de_confidentialite.json";
@@ -36,6 +38,18 @@ const routes = [
     name: 'Contact',
     component: Contact,
     meta: { title: 'Contact - silvercore' }
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: Blog,
+    meta: { title: 'Blog - Silvercore' }
+  },
+  {
+    path: '/blog/:slug',
+    name: 'BlogArticle',
+    component: BlogArticle,
+    meta: { title: 'Article - Silvercore' }
   }
 ]
 

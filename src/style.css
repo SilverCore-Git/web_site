@@ -16,6 +16,9 @@
   --primary: #646cff;
 }
 
+body {
+  overflow-x: hidden;
+}
 
 
 a {
