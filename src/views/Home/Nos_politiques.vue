@@ -10,71 +10,76 @@ gsap.registerPlugin(ScrollTrigger);
 const politiques = home_config.politiques;
 
 onMounted(() => {
-  // Animation du titre
-  gsap.fromTo(
-    '.politiques-title',
-    {
-      opacity: 0,
-      y: 50,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.politiques-title',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
-      },
-    }
-  );
+        
+    // Animation du titre
+    gsap.fromTo(
+        '.politiques-title',
+        {
+            opacity: 0,
+            y: 50,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.politiques-title',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse',
+            },
+        }
+    );
 
-  // Animation des cartes
-  gsap.fromTo(
-    '.politique-card-item',
-    {
-      opacity: 0,
-      x: -50,
-      rotateY: -20,
-    },
-    {
-      opacity: 1,
-      x: 0,
-      rotateY: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.politiques-cards-container',
-        start: 'top 70%',
-        toggleActions: 'play none none reverse',
-      },
-    }
-  );
+    // Animation des cartes
+    gsap.fromTo(
+        '.politique-card-item',
+        {
+            opacity: 0,
+            x: -50,
+            rotateY: -20,
+        },
+        {
+            opacity: 1,
+            x: 0,
+            rotateY: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.politiques-cards-container',
+                start: 'top 70%',
+                toggleActions: 'play none none reverse',
+            },
+        }
+    );
 
-  // Hover effect
-  const cards = document.querySelectorAll('.politique-card-item');
-  cards.forEach((card: any) => {
-    card.addEventListener('mouseenter', () => {
-      gsap.to(card, {
-        y: -10,
-        boxShadow: '0 20px 40px rgba(81, 47, 235, 0.3)',
-        duration: 0.3,
-        ease: 'power2.out',
-      });
+    // Hover effect
+    const cards = document.querySelectorAll('.politique-card-item');
+
+    cards.forEach((card: any) => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card, {
+                y: -10,
+                boxShadow: '0 20px 40px rgba(81, 47, 235, 0.3)',
+                duration: 0.3,
+                ease: 'power2.out',
+            });
+        });
+
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, {
+                y: 0,
+                boxShadow: '0 0px 0px rgba(0, 0, 0, 0)',
+                duration: 0.3,
+                ease: 'power2.out',
+            });
+        });
+
     });
 
-    card.addEventListener('mouseleave', () => {
-      gsap.to(card, {
-        y: 0,
-        boxShadow: '0 0px 0px rgba(0, 0, 0, 0)',
-        duration: 0.3,
-        ease: 'power2.out',
-      });
-    });
-  });
 });
+
 </script>
 
 <template>
