@@ -1,0 +1,48 @@
+{
+    "faq": {
+        "title": "Questions Fréquemment Posées",
+        "description": "Trouvez les réponses à vos questions sur SilverCore et nos services",
+        "faqs": [
+            {
+                "id": 1,
+                "question": "Mes données sont-elles vraiment chiffrées de bout en bout ?",
+                "answer": "Oui, absolument ! Tous nos services utilisent le chiffrement de bout en bout (E2E). Cela signifie que vos données sont chiffrées sur votre appareil avant d'être envoyées, et déchiffrées uniquement sur l'appareil du destinataire. Même SilverCore ne peut pas accéder à vos données."
+            },
+            {
+                "id": 2,
+                "question": "Où sont stockées mes données ?",
+                "answer": "Toutes nos données sont stockées exclusivement sur des serveurs en France, respectant la législation RGPD et les normes de confidentialité européennes. Nous ne transférons jamais vos données en dehors de l'UE."
+            },
+            {
+                "id": 3,
+                "question": "SilverCore vend-il mes données à des tiers ?",
+                "answer": "Non, jamais. C'est un engagement fondamental de SilverCore. Nous ne vendons, ne partageons et ne louvoyons jamais vos données personnelles. Notre modèle économique repose sur la qualité de nos services, pas sur la monétisation de vos données."
+            },
+            {
+                "id": 4,
+                "question": "Vos services sont-ils gratuits ?",
+                "answer": "Oui, nos services core (SilverNote et SilverTransfert) sont gratuits et sans limitation de publicité. Nous proposons également des plans premium pour les utilisateurs qui souhaitent des fonctionnalités avancées."
+            },
+            {
+                "id": 5,
+                "question": "Comment puis-je signaler un problème de sécurité ?",
+                "answer": "Si vous découvrez une vulnérabilité, merci de nous la signaler via security@silvercore.fr au lieu de la publier. Nous prendrons votre rapport au sérieux et vous remercierons."
+            },
+            {
+                "id": 6,
+                "question": "Êtes-vous open source ?",
+                "answer": "Certains de nos projets sont open source sur GitHub. Nous croyons en la transparence et à l'audit communautaire. Visitez notre GitHub pour consulter les projets disponibles."
+            },
+            {
+                "id": 7,
+                "question": "Puis-je utiliser SilverCore en entreprise ?",
+                "answer": "Absolument ! Nous proposons des solutions enterprise avec support dédié, déploiement on-premise et SLA garantis. Contactez-nous à enterprise@silvercore.fr pour plus de détails."
+            },
+            {
+                "id": 8,
+                "question": "Que se passe-t-il si SilverCore ferme ?",
+                "answer": "Vos données vous appartiennent. En cas de fermeture, nous vous fournirons vos données dans un format standard exploitable. Nous nous engageons à respecter ce droit fondamental."
+            }
+        ]
+    }
+}
