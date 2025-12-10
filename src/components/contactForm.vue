@@ -42,7 +42,7 @@
 
             <form
                 class="contact-form space-y-6 backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10 relative"
-                action="https://formsubmit.co/contact@silvercore.fr" method="POST"
+                action="https://formsubmit.co/807e6bfd89490e670055d8795f8341ce" method="POST"
             >
 
                 <div>
