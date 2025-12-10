@@ -87,14 +87,14 @@ onMounted(() => {
         <img
           v-else
           src="../assets/img/file.svg"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-contain invert-50"
         />
       </div>
       
     </section>
 
-    <section class="max-w-3xl mx-auto px-4 mb-20">
-
+    <section class="max-w-3xl mx-auto px-4 mb-20 relative ">
+ 
       <div class="prose prose-invert max-w-none">
         <p class="text-lg text-white/80 leading-relaxed whitespace-pre-wrap">
           {{ article.content }}
