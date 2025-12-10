@@ -42,7 +42,7 @@
 
             <form
                 class="contact-form space-y-6 backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10 relative"
-                action="https://formsubmit.co/807e6bfd89490e670055d8795f8341ce" method="POST"
+                action="https://getform.io/f/bllglzrb" method="POST"
             >
 
                 <div>
@@ -50,6 +50,7 @@
                     <input 
                         v-model="form.name" required 
                         placeholder="Jean Moulin"
+                        type="text" name="name"
                         class="form-input
                             w-full px-4 py-2 rounded 
                             bg-white/10 text-white placeholder-white/40
@@ -62,6 +63,7 @@
                     <label class="block text-white mb-2">Email</label>
                     <input 
                         type="email" 
+                        name="email"
                         v-model="form.email" 
                         required 
                         placeholder="moi@silvercore.fr"
@@ -78,6 +80,7 @@
                     <textarea 
                         v-model="form.message" 
                         required 
+                        name="message"
                         placeholder="Bonjour, je cherche un..."
                         class="form-textarea
                             w-full px-4 py-2 h-32 rounded outline-none
@@ -85,6 +88,8 @@
                             focus:ring-2 focus:ring-[#512FEB] transition-all duration-300"
                     ></textarea>
                 </div>
+
+                <input type="hidden" name="_gotcha" style="display:none !important">
 
              
                 <SButton
@@ -96,6 +101,7 @@
 
                 <p v-if="sent" class="text-green-400 text-sm mt-2">Message envoyé ✔</p>
             </form>
+
 
         </div>
 
