@@ -79,8 +79,14 @@ onMounted(() => {
 
       <div class="rounded-xl overflow-hidden h-96 mb-12">
         <img 
+          v-if="article.image != 'none'"
           :src="article.image"
           :alt="article.title"
+          class="w-full h-full object-cover"
+        />
+        <img
+          v-else
+          src="../assets/img/file.svg"
           class="w-full h-full object-cover"
         />
       </div>
@@ -130,8 +136,14 @@ onMounted(() => {
         >
           <div class="h-40 overflow-hidden">
             <img 
+              v-if="related.image != 'none'"
               :src="related.image"
               :alt="related.title"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            />
+            <img 
+              v-else
+              src="../assets/img/file.svg"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
             />
           </div>

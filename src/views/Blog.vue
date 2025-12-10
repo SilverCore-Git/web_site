@@ -35,11 +35,17 @@
 
                 <div class="grid md:grid-cols-2 gap-8 p-8">
                         
-                    <div class="rounded-lg overflow-hidden h-80 md:h-auto">
+                    <div class="rounded-lg overflow-hidden max-h-80 md:h-auto">
                         <img 
+                            v-if="articles[0]?.image != 'none'"
                             :src="articles[0]?.image"
                             :alt="articles[0]?.title"
                             class="w-full h-full object-cover"
+                        />
+                        <img
+                            v-else
+                            src="../assets/img/file.svg"
+                            class="w-full h-full object-contain invert-60"
                         />
                     </div>
 
@@ -109,9 +115,15 @@
                     
                     <div class="h-48 overflow-hidden">
                         <img 
+                            v-if="article.image !== 'none'"
                             :src="article.image"
                             :alt="article.title"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                        <img
+                            v-else
+                            src="../assets/img/file.svg"
+                            class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 invert-50"
                         />
                     </div>
 
