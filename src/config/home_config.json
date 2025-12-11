@@ -1,5 +1,4 @@
 {
-
     "hero": {
         "title": "Des services numériques pensés pour votre confidentialité",
         "description": "Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée.",
@@ -9,27 +8,24 @@
         }
     },
 
-
     "services": {
-
         "title": {
             "text": "Des services",
             "keyWords": [
-                "simple",
+                "simples",
                 "intuitifs",
-                "complet",
-                "sécurisé"
+                "complets",
+                "sécurisés"
             ]
         },
         "description": null,
 
         "services": [
-
             {
                 "name": "Silvernote",
                 "logo": "/assets/logo/snote/favicon.svg",
-                "title": "Votre app de prise de note gratuite.",
-                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. <br/> <span class=\"font-bold\">Attention app en beta !!</span>",
+                "title": "Votre application de prise de notes gratuite.",
+                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. <br/> <span class=\"font-bold\">Attention : application en bêta !</span>",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvernote.fr",
@@ -41,8 +37,8 @@
             {
                 "name": "Silvertransfert",
                 "logo": "/assets/logo/stransfert/favicon.png",
-                "title": "Des transferts gratuit et sécurisé.",
-                "description": "Marre des services qui promettent la sécurité sans la chiffrer vraiment ? SilverTransfert chiffre tes fichiers de bout en bout : personne ne peut voir, même pas nous. Simple. Rapide. Français. Envoie jusqu’à 10 Go, sereinement. Le partage qui respecte ta confidentialité.",
+                "title": "Des transferts gratuits et sécurisés.",
+                "description": "Marre des services qui promettent la sécurité sans la garantir réellement ? SilverTransfert chiffre vos fichiers de bout en bout : personne ne peut les consulter, pas même nous. Simple. Rapide. Français. Envoyez jusqu’à 10 Go en toute sérénité. Le partage qui respecte votre confidentialité.",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvertransfert.fr",
@@ -50,91 +46,71 @@
                 },
                 "baner": "/assets/img/mockup_phone_silvertransfert_extend.png"
             }
-
         ]
-
     },
 
-
     "politiques": {
-
         "title": "Nos politiques",
         "politique": [
-
             {
-                "title": "Durable et écologie",
+                "title": "Durabilité et écologie",
                 "icon": "bi-recycle",
                 "content": "Nous concevons nos services et nos infrastructures dans une optique durable et respectueuse de l’environnement. Silvercore s’engage à réduire au maximum son empreinte carbone et à compenser ses émissions de gaz à effet de serre. Nous encourageons également la réutilisation et l’optimisation des ressources numériques afin de limiter le gaspillage et de prolonger la durée de vie des équipements."
             },
 
             {
-                "title": "Ethique et transparente",
+                "title": "Éthique et transparence",
                 "icon": "bi-eye",
-                "content": "Silvercore adopte une approche éthique fondée sur la transparence, l’équité et la responsabilité. Nous veillons à ce que nos décisions et nos pratiques respectent à la fois nos utilisateurs et partenaires. Notre objectif est de développer des solutions technologiques qui apportent une réelle valeur ajoutée sans compromis sur nos principes : neutralité, honnêteté et respect de chacun."
+                "content": "Silvercore adopte une approche éthique fondée sur la transparence, l’équité et la responsabilité. Nous veillons à ce que nos décisions et nos pratiques respectent à la fois nos utilisateurs et nos partenaires. Notre objectif est de développer des solutions technologiques apportant une réelle valeur ajoutée, sans compromis sur nos principes : neutralité, honnêteté et respect de chacun."
             },
 
             {
-                "title": "Durable et écologie",
+                "title": "Sécurité et confidentialité",
                 "icon": "bi-shield-lock",
-                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle l’accès à ses bases et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
+                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle strictement l’accès à ses bases et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs situés en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
             }
-
         ]
-
     },
 
-
     "contact": {
-
         "title": "Demandez tout ce qui vous passe par la tête.",
         "description": "Contactez Silvercore dès maintenant : nous répondons à toutes vos questions et levons vos doutes.",
 
         "link": [
-
             {
                 "icon": "bi-icon",
                 "content": "contact@silvercore.fr",
                 "href": "mailto:contact@silvercore.fr"
             },
-
             {
                 "icon": "bi-icon",
                 "content": "support@silvercore.fr",
                 "href": "mailto:support@silvercore.fr"
             }
-
         ],
 
         "form": {
-
             "inputs": [
-
                 {
                     "name": "Nom",
                     "placeholder": "Jean Moulin",
                     "type": "text"
                 },
-
                 {
                     "name": "Email",
                     "placeholder": "moi@silvercore.fr",
-                    "type": "mail"
+                    "type": "email"
                 },
-
                 {
                     "name": "Message",
                     "placeholder": "Bonjour, je cherche un...",
                     "type": "textarea"
                 }
-
             ],
 
             "btn": {
                 "content": "Envoyer"
             }
-
         }
-
     }
-
 }
