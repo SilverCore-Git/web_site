@@ -91,7 +91,7 @@ onMounted(() => {
             class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
         >
 
-            <h1 class="hero-title font-bold text-[28px] leading-tight sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] max-w-3xl break-words">
+            <h1 class="hero-title font-bold text-[28px] leading-tight sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] max-w-4xl break-words">
                 {{ hero_config.title }}
             </h1>
 
