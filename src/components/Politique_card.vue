@@ -3,7 +3,7 @@
     <div
         v-fade
         class="
-            service_card h-[345px] max-w-85 md:w-100 backdrop-blur-2xl
+            service_card h-[350px] max-w-85 md:w-100 backdrop-blur-2xl
         "
     >
 
