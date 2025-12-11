@@ -3,11 +3,10 @@ import { useRouter } from "vue-router";
 import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
 import gsap from "gsap";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 
 const router = useRouter();
 const navbar_btn = navbar_config.btn;
-const navbarRef = ref<HTMLElement | null>(null);
 
 const scrollTo = (href: string) => {
     router.push(href);
@@ -50,7 +49,6 @@ onMounted(() => {
   });
 
   // Effect de glow au scroll
-  let lastScrollY = 0;
   const handleScroll = () => {
     const scrollY = window.scrollY;
     const navbar = document.getElementById('NavBar');
@@ -71,7 +69,6 @@ onMounted(() => {
         });
       }
     }
-    lastScrollY = scrollY;
   };
 
   window.addEventListener('scroll', handleScroll);
