@@ -1,13 +1,4 @@
 {
-    "hero": {
-        "title": "Des services numériques pensés pour votre confidentialité",
-        "description": "Silvercore conçoit des outils numériques innovants, éthiques et respectueux de la vie privée.",
-        "btn": {
-            "content": "Nos services",
-            "href": "#services"
-        }
-    },
-
     "services": {
         "title": {
             "text": "Des services",
@@ -24,8 +15,8 @@
             {
                 "name": "Silvernote",
                 "logo": "/assets/logo/snote/favicon.svg",
-                "title": "Votre application de prise de notes gratuite.",
-                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. <br/> <span class=\"font-bold\">Attention : application en bêta !</span>",
+                "title": "Votre app de prise de notes gratuite.",
+                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. Accédez à vos notes partout, sur tous vos appareils, et partagez-les en un clic. Collaborez en temps réel, organisez vos projets et restez toujours synchronisé. <br/> <span class=\"font-bold\">Application en bêta.</span>",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvernote.fr",
@@ -38,7 +29,7 @@
                 "name": "Silvertransfert",
                 "logo": "/assets/logo/stransfert/favicon.png",
                 "title": "Des transferts gratuits et sécurisés.",
-                "description": "Marre des services qui promettent la sécurité sans la garantir réellement ? SilverTransfert chiffre vos fichiers de bout en bout : personne ne peut les consulter, pas même nous. Simple. Rapide. Français. Envoyez jusqu’à 10 Go en toute sérénité. Le partage qui respecte votre confidentialité.",
+                "description": "Marre des services qui promettent la sécurité sans la chiffrer vraiment ? SilverTransfert chiffre vos fichiers de bout en bout : personne ne peut les voir, même pas nous. Simple. Rapide. Français. Envoyez jusqu’à 10 Go, sereinement. Le partage qui respecte votre confidentialité.",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvertransfert.fr",
@@ -61,13 +52,13 @@
             {
                 "title": "Éthique et transparence",
                 "icon": "bi-eye",
-                "content": "Silvercore adopte une approche éthique fondée sur la transparence, l’équité et la responsabilité. Nous veillons à ce que nos décisions et nos pratiques respectent à la fois nos utilisateurs et nos partenaires. Notre objectif est de développer des solutions technologiques apportant une réelle valeur ajoutée, sans compromis sur nos principes : neutralité, honnêteté et respect de chacun."
+                "content": "Silvercore adopte une approche éthique fondée sur la transparence, l’équité et la responsabilité. Nous veillons à ce que nos décisions et nos pratiques respectent à la fois nos utilisateurs et nos partenaires. Notre objectif est de développer des solutions technologiques qui apportent une réelle valeur ajoutée sans compromis sur nos principes : neutralité, honnêteté et respect de chacun."
             },
 
             {
                 "title": "Sécurité et confidentialité",
                 "icon": "bi-shield-lock",
-                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle strictement l’accès à ses bases et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs situés en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
+                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle l’accès à ses bases et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
             }
         ]
     },
@@ -99,7 +90,7 @@
                 {
                     "name": "Email",
                     "placeholder": "moi@silvercore.fr",
-                    "type": "email"
+                    "type": "mail"
                 },
                 {
                     "name": "Message",
@@ -107,7 +98,6 @@
                     "type": "textarea"
                 }
             ],
-
             "btn": {
                 "content": "Envoyer"
             }
