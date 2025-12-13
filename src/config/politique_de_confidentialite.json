@@ -11,7 +11,7 @@
                 "Responsable de la publication : Félix Cornudet"
             ],
             "lien": {
-                "text": "Email : ",
+                "before": "Email : ",
                 "value": "contact@silvercore.fr",
                 "href": "mailto:contact@silvercore.fr"
             }

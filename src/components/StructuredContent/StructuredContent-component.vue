@@ -32,7 +32,7 @@ defineProps<{
                     class="mt-6 bg-[#ffffff27] p-6 rounded-lg shadow-md backdrop-blur-xs"
                 >
                     <!-- Category title -->
-                    <h2 class="text-xl font-bold mb-4">{{ section.title }}</h2>
+                    <h3 class="text-xl font-bold mb-4">{{ section.title }}</h3>
 
                     <!-- Description paragraphs -->
                     <p
@@ -44,7 +44,7 @@ defineProps<{
                     </p>
 
                     <!-- Link text -->
-                    <p v-if="section.lien" class="mb-2 text-base">
+                    <p v-if="section.lien" class="mb-2 ml-2 text-base">
                         {{ section.lien.before }}
                         <a :href="section.lien.href" class="text-blue-400 hover:underline">
                             {{ section.lien.value }}
