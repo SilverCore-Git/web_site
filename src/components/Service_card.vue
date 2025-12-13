@@ -1,7 +1,6 @@
 <template>
 
     <div
-        v-fade
         class="
             service_card flex justify-start gap-6
             items-start text-start flex-col p-6
