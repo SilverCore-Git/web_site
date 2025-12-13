@@ -11,12 +11,12 @@
             {
                 "id": 2,
                 "question": "Où sont stockées mes données ?",
-                "answer": "Toutes nos données sont stockées exclusivement sur nos serveurs en France, respectant la législation RGPD et les normes de confidentialité européennes. Nous ne transférons jamais vos données en dehors de l'UE."
+                "answer": "Toutes vos données sont stockées exclusivement sur nos serveurs en France, respectant la législation RGPD et les normes de confidentialité européennes. Nous ne transférons jamais vos données en dehors de l'UE."
             },
             {
                 "id": 3,
                 "question": "Silvercore vend-il mes données à des tiers ?",
-                "answer": "Non, jamais. C'est un engagement fondamental de Silvercore. Nous ne vendons, ne partageons et ne louvoyons jamais vos données personnelles. Notre modèle économique repose sur la qualité de nos services, pas sur la monétisation de vos données."
+                "answer": "Non, jamais. C'est un engagement fondamental de Silvercore. Nous ne vendons, ne partageons et ne louons jamais vos données personnelles. Notre modèle économique repose sur la qualité de nos services, pas sur la monétisation de vos données."
             },
             {
                 "id": 5,

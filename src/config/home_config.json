@@ -58,7 +58,7 @@
             {
                 "title": "Sécurité et confidentialité",
                 "icon": "bi-shield-lock",
-                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle l’accès à ses bases et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
+                "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle l’accès à ses bases de données et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
             }
         ]
     },
