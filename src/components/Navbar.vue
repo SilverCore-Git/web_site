@@ -85,7 +85,7 @@ onMounted(() => {
     <nav
 
         class="
-                    fixed top-6 inset-x-[10%] 2xl:inset-x-[20%] z-50
+                    fixed top-6 inset-x-3 lg:inset-x-[10%] 2xl:inset-x-[20%] z-50
                     rounded-[7px] flex justify-between items-center
                     border border-gray-400/50 bg-black/70 backdrop-blur-xl
                     px-[13px] md:px-[25px]
@@ -115,7 +115,7 @@ onMounted(() => {
             <a
                 v-for="Nav in navbar_config.tab"
                 class="navbar-link p-[15px] text-white cursor-pointer Body_XS
-                        hidden lg:flex transition-colors duration-300
+                        hidden md:flex transition-colors duration-300
                     "
                 @click="scrollTo(Nav.href)"
 

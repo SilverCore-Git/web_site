@@ -93,6 +93,7 @@
 
              
                 <SButton
+                    @click="router.push('#contact')"
                     type="submit"
                     content="Envoyer"
                     :arrow="false"
@@ -117,6 +118,7 @@ import { ref, onMounted } from "vue";
 import SButton from "./SButton.vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRouter } from "vue-router";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,7 +128,8 @@ const form = ref({
   message: "",
 })
 
-const sent = ref(false)
+const router = useRouter();
+const sent = ref<boolean>(false);
 
 onMounted(() => {
   // Animation du titre

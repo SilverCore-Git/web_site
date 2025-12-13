@@ -88,10 +88,10 @@ onMounted(() => {
         <div class="hero-blob absolute top-10 right-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-10"></div>
 
         <div
-            class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
+            class="max-w-4xl text-center flex justify-center items-center flex-col gap-6"
         >
 
-            <h1 class="hero-title font-bold text-[28px] leading-tight sm:text-[36px] md:text-[48px] lg:text-[56px] xl:text-[64px] max-w-4xl break-words">
+            <h1 class="hero-title font-bold leading-tight max-w-3xl">
                 {{ hero_config.title }}
             </h1>
 

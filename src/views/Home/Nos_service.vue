@@ -115,7 +115,7 @@ onMounted(() => {
         <div 
             class="mb-10 services-title"
         >
-            <h2 class="min-w-xl text-[28px] flex justify-center items-center gap-2 sm:text-[40px] md:text-[50px] font-bold">
+            <h2 class="min-w-xl flex justify-center items-center gap-2 font-bold">
                 {{ services.title.text }}
                 <TextWriter
                     :words="services.title.keyWords"
