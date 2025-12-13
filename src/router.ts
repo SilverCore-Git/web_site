@@ -13,7 +13,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    meta: { title: 'Accueil - Silvercore' }
+    meta: { title: 'Silvercore - Des services numériques pensés pour votre confidentialité' }
   },
   {
     path: '/mentions-legales',
@@ -47,6 +47,7 @@ const routes = [
   },
   {
     path: '/blog/:slug',
+    props: true,
     name: 'BlogArticle',
     component: BlogArticle,
     meta: { title: 'Article - Silvercore' }
