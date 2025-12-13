@@ -114,7 +114,8 @@ onMounted(() => {
 
             <a
                 v-for="Nav in navbar_config.tab"
-                class="navbar-link p-[15px] text-white cursor-pointer Body_XS
+                class="navbar-link p-[15px] text-white cursor-pointer 
+                        text-[16px] font-bold font-outfit 
                         hidden md:flex transition-colors duration-300
                     "
                 @click="scrollTo(Nav.href)"
