@@ -4,8 +4,8 @@
         v-fade
         class="
             service_card flex justify-start gap-6
-            items-start text-start flex-col p-6 h-[620px] 
-            w-[93%] sm:w-[95%] md:w-[640px] backdrop-blur-2xl
+            items-start text-start flex-col p-6
+             backdrop-blur-2xl   h-[660px] 
         "
     >
 
@@ -28,7 +28,6 @@
 
         <div
             class="
-                max-h-[340px] max-w-[497px]
                 flex justify-center items-center relative
             "
         >
