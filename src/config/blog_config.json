@@ -5,69 +5,14 @@
     "articles": [
       {
         "id": 1,
-        "slug": "pourquoi-confidentialite-importante",
-        "title": "Pourquoi la confidentialité est plus importante que jamais",
+        "slug": "untitled",
+        "title": "untitled",
         "author": "Équipe SilverCore",
         "date": "2024-12-05",
         "category": "Confidentialité",
         "image": "none",
-        "excerpt": "À l'ère du numérique, nos données sont devenues une commodity précieuse. Découvrez pourquoi protéger votre vie privée est essentiel.",
-        "content": "À l'ère du numérique, nos données sont devenues une commodity précieuse. Les grandes entreprises technologiques collectent, analysent et vendent nos informations personnelles chaque jour. Cet article explore pourquoi protéger votre vie privée est devenu essentiel et comment SilverCore vous aide à reprendre le contrôle."
-      },
-      {
-        "id": 2,
-        "slug": "guide-chiffrement-e2e",
-        "title": "Guide Complet du Chiffrement de Bout en Bout",
-        "author": "Alice Dupont",
-        "date": "2024-12-03",
-        "category": "Tutoriel",
-        "image": "none",
-        "excerpt": "Comprendre le chiffrement E2E en 10 minutes. Un guide simple et efficace pour sécuriser vos communications.",
-        "content": "Le chiffrement de bout en bout (E2E) est la clé de la sécurité numérique. Dans ce tutoriel détaillé, nous expliquons comment il fonctionne, pourquoi c'est important, et comment l'utiliser avec SilverTransfert et SilverNote."
-      },
-      {
-        "id": 3,
-        "slug": "rgpd-droits-donnees",
-        "title": "RGPD : Connaître vos droits face à vos données",
-        "author": "Marc Legrand",
-        "date": "2024-11-28",
-        "category": "Légal",
-        "image": "none",
-        "excerpt": "Le RGPD vous donne des droits. Découvrez comment les exercer et protéger votre vie privée en ligne.",
-        "content": "Le Règlement Général sur la Protection des Données (RGPD) est un pilier de la protection de la vie privée en Europe. Explorez vos droits : droit d'accès, droit à l'oubli, droit de portabilité, et comment SilverCore les respecte."
-      },
-      {
-        "id": 4,
-        "slug": "silvernote-productivite",
-        "title": "Maximiser votre Productivité avec SilverNote",
-        "author": "Emma Leclerc",
-        "date": "2024-11-22",
-        "category": "Produit",
-        "image": "none",
-        "excerpt": "5 astuces pour utiliser SilverNote comme un pro et organiser votre vie numérique.",
-        "content": "SilverNote n'est pas qu'une simple app de prise de notes. Découvrez comment l'utiliser pour organiser votre vie personnelle et professionnelle, collaborer avec votre équipe, et rester productif."
-      },
-      {
-        "id": 5,
-        "slug": "empreinte-carbone-numerique",
-        "title": "L'Empreinte Carbone du Numérique",
-        "author": "Équipe SilverCore",
-        "date": "2024-11-18",
-        "category": "Durabilité",
-        "image": "none",
-        "excerpt": "Le numérique consomme plus que vous ne le pensez. Apprenez comment réduire votre impact environnemental.",
-        "content": "Chaque requête, chaque serveur, chaque transfert de données consomme de l'énergie. SilverCore s'engage à minimiser son empreinte carbone et à développer des services durables. Découvrez nos initiatives et comment vous pouvez contribuer."
-      },
-      {
-        "id": 6,
-        "slug": "securite-mots-passe",
-        "title": "Mots de Passe : Le Guide de Sécurité Complet",
-        "author": "Alex Moreau",
-        "date": "2024-11-12",
-        "category": "Sécurité",
-        "image": "none",
-        "excerpt": "Créer et gérer des mots de passe forts n'a jamais été aussi important. Nos conseils pour sécuriser vos comptes.",
-        "content": "Les mots de passe faibles sont la cause de 80% des violations de données. Apprenez comment créer des mots de passe robustes, utiliser un gestionnaire de mots de passe, et protéger vos comptes en ligne."
+        "excerpt": "...",
+        "content": "..."
       }
     ]
   }
