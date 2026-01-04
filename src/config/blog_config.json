@@ -1,0 +1,19 @@
+{
+  "blog": {
+    "title": "Blog Silvercore",
+    "description": "Actualités, tutoriels et insights sur la confidentialité numérique",
+    "articles": [
+      {
+        "id": 1,
+        "slug": "untitled",
+        "title": "untitled",
+        "author": "Équipe SilverCore",
+        "date": "2024-12-05",
+        "category": "Confidentialité",
+        "image": "none",
+        "excerpt": "...",
+        "content": "..."
+      }
+    ]
+  }
+}

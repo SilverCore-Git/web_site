@@ -1,0 +1,75 @@
+{
+    "title": "Politique de Confidentialité",
+    "lastUpdate": "2025-12-06",
+    "selection": {
+        "introduction": {
+            "title": "1. Introduction",
+            "description": [
+                "Silvercore",
+                "Organisation sans structure juridique actuellement déclarée.",
+                "Basée à Lyon - France",
+                "Responsable de la publication : Félix Cornudet"
+            ],
+            "lien": {
+                "before": "Email : ",
+                "value": "contact@silvercore.fr",
+                "href": "mailto:contact@silvercore.fr"
+            }
+        },
+        "donnees_collectees": {
+            "title": "2. Données collectées",
+            "description": [
+                "Nous ne collectons aucune donnée personnelle lors de la navigation sur le site www.silvercore.fr.",
+                "Aucune information personnelle n'est stockée, transmise ou exploitée à des fins commerciales."
+            ]
+        },
+        "hebergement_et_securite": {
+            "title": "3. Hébergement et sécurité",
+            "description": [
+                "Le site est hébergé en France, à Lyon, sur infrastructure auto-hébergée.",
+                "Les connexions sont sécurisées via HTTPS et renforcées par HSTS.",
+                "Ce site utilise les protections Cloudflare (anti-bot, anti-DDoS, cache, proxy).",
+                "Nous mettons en œuvre des mesures raisonnables pour protéger le site contre les accès non autorisés."
+            ]
+        },
+        "cookies": {
+            "title": "4. Cookies",
+            "description": [
+                "Aucun cookie n'est utilisé sur ce site.",
+                "Aucune technologie de suivi, publicité ou analyse n’est mise en place."
+            ]
+        },
+        "vos_droits": {
+            "title": "5. Vos droits",
+            "liste": {
+                "before": [
+                    "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant vos données personnelles, si un jour des données venaient à être collectées :"
+                ],
+                "puce": [
+                    "Droit d’accès à vos données",
+                    "Droit de rectification",
+                    "Droit de suppression (effacement)",
+                    "Droit d’opposition",
+                    "Droit à la portabilité des données",
+                    "Droit de limiter un traitement"
+                ],
+                "after": [
+                    "Nous rappelons que ces droits ne s'appliquent pas actuellement car aucune donnée personnelle n'est collectée."
+                ]
+            }
+        },
+        "transparence_cloudflare": {
+            "title": "6. Transparence Cloudflare",
+            "description": [
+                "Cloudflare peut collecter des données techniques (IP, User-Agent, informations de connexion réseau) à des fins de sécurité et d’anti-abus.",
+                "Ces données ne sont pas exploitées par Silvercore et servent uniquement à protéger le site contre les attaques."
+            ]
+        },
+        "mise_a_jour": {
+            "title": "7. Mise à jour de cette politique",
+            "description": [
+                "Cette politique peut être modifiée à tout moment afin de rester conforme à la législation en vigueur."
+            ]
+        }
+    }
+}

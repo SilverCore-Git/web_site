@@ -1,0 +1,31 @@
+{
+
+    "logo": "/assets/logo/score/silvercore_logo.svg",
+    "title": "Silvercore",
+    "valeur": [{"rotation": "45deg"},{"rotation": "-45deg"}],
+
+    "tab": [
+        {
+            "name": "Accueil",
+            "href": "/#hero"
+        },
+        {
+            "name": "Services",
+            "href": "/#services"
+        },
+        {
+            "name": "Politiques",
+            "href": "/#politiques"
+        },
+        {
+            "name": "FAQ",
+            "href": "/#faq"
+        }
+    ],
+
+    "btn": {
+        "content": "Contact",
+        "href": "/contact"
+    }
+
+}

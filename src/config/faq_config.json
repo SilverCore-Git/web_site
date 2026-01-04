@@ -1,0 +1,28 @@
+{
+    "faq": {
+        "title": "Questions Fréquemment Posées",
+        "description": "Trouvez les réponses à vos questions sur Silvercore et nos services",
+        "faqs": [
+            {
+                "id": 6,
+                "question": "Êtes-vous open source ?",
+                "answer": "La plupart de nos projets sont accessibles sur GitHub. Cependant, nous n'acceptons pas de contributions externes et l'ensemble du code reste la propriété exclusive de Silvercore."
+            },
+            {
+                "id": 2,
+                "question": "Où sont stockées mes données ?",
+                "answer": "Toutes vos données sont stockées exclusivement sur nos serveurs en France, respectant la législation RGPD et les normes de confidentialité européennes. Nous ne transférons jamais vos données en dehors de l'UE."
+            },
+            {
+                "id": 3,
+                "question": "Silvercore vend-il mes données à des tiers ?",
+                "answer": "Non, jamais. C'est un engagement fondamental de Silvercore. Nous ne vendons, ne partageons et ne louons jamais vos données personnelles. Notre modèle économique repose sur la qualité de nos services, pas sur la monétisation de vos données."
+            },
+            {
+                "id": 5,
+                "question": "Comment puis-je signaler un problème de sécurité ?",
+                "answer": "Si vous découvrez une vulnérabilité, merci de nous la signaler via contact@silvercore.fr ou sur le discord support au lieu de la publier. Nous prendrons votre rapport au sérieux et vous remercierons."
+            }
+        ]
+    }
+}

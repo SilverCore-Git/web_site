@@ -1,0 +1,78 @@
+{
+    "title": "Mentions légales",
+    "lastUpdate": "2025-12-06",
+    "selection": {
+        "editeur": {
+            "title": "1. Éditeur du site",
+            "description": [
+                "Silvercore",
+                "Organisation sans structure juridique actuellement déclarée.",
+                "Basée à Lyon - France",
+                "Directeur de la publication : Félix Cornudet"
+            ],
+            "lien": {
+                "before": "Email : ",
+                "value": "contact@silvercore.fr",
+                "href": "mailto:contact@silvercore.fr",
+                "after": "."
+            }
+        },
+        "hebergeur": {
+            "title": "2. Hébergeur",
+            "description": [
+                "Le site est auto-hébergé par Silvercore",
+                "Adresse : 69004 - Lyon - France",
+                "Protection et sécurité renforcées via Cloudflare (anti-bot, anti-DDoS, cache, proxy)"
+            ]
+        },
+        "responsabilite": {
+            "title": "3. Responsabilité",
+            "description": [
+                "Les informations présentes sur le site sont fournies à titre indicatif.",
+                "Silvercore ne saurait être tenu responsable des dommages liés à l'utilisation du site ou à des erreurs de contenu.",
+                "L'utilisation du site se fait sous la responsabilité de l'utilisateur."
+            ]
+        },
+        "donnees_personnelles": {
+            "title": "4. Données personnelles",
+            "description": [
+                "Lorsque vous utilisez le formulaire de contact, nous collectons les informations suivantes : nom, email et message.",
+                "Ces données sont utilisées uniquement pour répondre à vos demandes et ne sont pas partagées avec des tiers.",
+                "Les informations collectées sont conservées pendant la durée nécessaire au traitement de votre demande, puis supprimées.",
+                "Les logs techniques collectés par le serveur et Cloudflare sont utilisés uniquement à des fins de sécurité et ne sont pas exploités par Silvercore.",
+                "Conformément au RGPD, vous disposez des droits d'accès, de rectification, de suppression, d'opposition et de limitation du traitement de vos données personnelles."
+            ]
+        },
+        "cookies": {
+            "title": "5. Cookies",
+            "description": [
+                "Aucun cookie publicitaire, marketing ou de suivi personnel n'est utilisé."
+            ]
+        },
+        "contact": {
+            "title": "6. Contact",
+            "description": [
+                "Pour toute question ou demande, vous pouvez nous contacter :"
+            ],
+            "liste": {
+                "before": [
+                    "Voici les moyens pour nous joindre :"
+                ],
+                "puce": [
+                    "Email : contact@silvercore.fr",
+                    "Discord : serveur de support",
+                    "Discord : serveur général"
+                ],
+                "after": [
+                    "Nous nous efforçons de répondre dans les plus brefs délais."
+                ]
+            }
+        },
+        "mise_a_jour": {
+            "title": "7. Mise à jour",
+            "description": [
+                "Ces mentions légales peuvent être modifiées à tout moment afin de rester conformes à la législation en vigueur."
+            ]
+        }
+    }
+}

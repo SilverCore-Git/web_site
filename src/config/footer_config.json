@@ -1,0 +1,74 @@
+{
+
+    "logo": "/assets/logo/score/silvercore_logo.svg",
+    "title": "Silvercore",
+    "description": "SilverCore vous offre des services de divertissement et utilitaires originaux, respectueux de votre vie privée et accessibles à tous.",
+    "social": [
+        {
+            "icon": "bi-instagram",
+            "href": "https://taap.it/silvercore.insta"
+        },
+        {
+            "icon": "bi-discord",
+            "href": "https://taap.it/silvercore.discord"
+        }
+    ],
+
+
+    "categories": [
+
+        {
+            "title": "Information",
+            "content": [
+                {
+                    "name": "Confidentialité",
+                    "href": "/politique-de-confidentialite"
+                },
+                {
+                    "name": "Mentions legales",
+                    "href": "/mentions-legales"
+                }
+            ]
+        },
+
+        {
+            "title": "Contact",
+            "content": [
+                {
+                    "name": "Formulaire",
+                    "href": "/contact"
+                },
+                {
+                    "name": "Discord silvercore",
+                    "href": "https://taap.it/silvercore.discord"
+                },
+                {
+                    "name": "Discord support",
+                    "href": "https://taap.it/silvercore.discord.support"
+                }
+            ]
+        },
+
+        {
+            "title": "Nos services",
+            "content": [
+                {
+                    "name": "Silvernote",
+                    "href": "https://www.silvernote.fr"
+                },
+                {
+                    "name": "Silvertransfert",
+                    "href": "https://www.silvertransfert.fr"
+                }
+            ]
+        }
+
+    ],
+
+    "droits_reserves": [
+        {
+            "text": "© 2025 Silvercore. Tous droits réservés.",
+            "href": ""
+        }
+    ]
+}
