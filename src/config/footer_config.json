@@ -11,6 +11,10 @@
         {
             "icon": "bi-discord",
             "href": "https://taap.it/silvercore.discord"
+        },
+        {
+            "icon": "bi-github",
+            "href": "https://github.com/SilverCore-Git"
         }
     ],
 
