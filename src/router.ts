@@ -6,6 +6,7 @@ import StructuredContent from './components/StructuredContent/StructuredContent-
 import mention_legales_config from './config/mentions_legales_config.json';
 import politique_config from "./config/politique_de_confidentialite.json";
 import Contact from './views/Contact.vue';
+import Status from './views/Status/Status.vue';
 
 
 const routes = [
@@ -38,6 +39,12 @@ const routes = [
     name: 'Contact',
     component: Contact,
     meta: { title: 'Contact - silvercore' }
+  },
+  {
+    path: '/status',
+    name: 'Status',
+    component: Status,
+    meta: { title: 'Status - silvercore' }
   },
   {
     path: '/blog',
