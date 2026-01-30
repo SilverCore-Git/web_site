@@ -22,7 +22,7 @@ const article = computed(() => {
 const relatedArticles = computed(() => {
   if (!article.value) return [];
   return blog_config.blog.articles
-    .filter((a: any) => a.category === article.value.category && a.id !== article.value?.id)
+    .filter((a: any) => a.category === article.value?.category && a.id !== article.value?.id)
     .slice(0, 3);
 });
 
