@@ -4,15 +4,15 @@
     "description": "Actualités, tutoriels et insights sur la confidentialité numérique",
     "articles": [
       {
-        "id": 1,
-        "slug": "untitled",
-        "title": "untitled",
-        "author": "Équipe SilverCore",
-        "date": "2024-12-05",
-        "category": "Confidentialité",
-        "image": "none",
-        "excerpt": "...",
-        "content": "..."
+        "id": 4,
+        "slug": "transparence-totale-nouvelle-page-status-silvercore",
+        "title": "Transparence totale : Lancement de notre nouvelle page d'état des services",
+        "author": "Équipe Silvercore",
+        "date": "2026-01-30",
+        "category": "Infrastructure",
+        "image": "/assets/img/blog/2909691_400.jpg",
+        "excerpt": "Parce que la confiance est le pilier de notre relation, nous lançons une page de statut en temps réel pour suivre la santé de Silvernote, Silvertransfert et nos infrastructures.",
+        "content": "Chez Silvercore, nous savons que vous comptez sur nos outils pour vos moments les plus critiques : une prise de note en réunion ou un transfert de fichiers urgent. C'est pourquoi nous avons décidé d'aller encore plus loin dans notre démarche de transparence en lançant notre nouvelle **Status Page** officielle.\n\nAccessible à tous, cette interface centralisée offre une vue complète sur la santé de nos services. Vous pouvez désormais vérifier en un clin d'œil l'état opérationnel de **Silvernote**, **Silvertransfert**, ainsi que de nos API et bases de données auprès de l'url : [www.silvercore.fr/status](https://www.silvercore.fr/status).\n\nCette nouvelle infrastructure de monitoring, propulsée par Cronitor, renforce notre promesse : vous offrir une technologie fiable, robuste et surtout, une équipe qui n'a rien à vous cacher."
       }
     ]
   }

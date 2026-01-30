@@ -167,35 +167,6 @@
 
         </section>
 
-        <section 
-            class="
-                max-w-2xl mx-auto px-4 py-16 rounded-xl 
-                border border-white/10 bg-gradient-to-r 
-                from-[#512FEB]/20 to-[#512FEB]/10 text-center
-            "
-        >
-                
-            <h2 class="text-2xl font-bold mb-4">Ne manquez aucun article</h2>
-            <p class="text-white/70 mb-6">Inscrivez-vous à notre newsletter pour recevoir les dernières actualités SilverCore.</p>
-            
-            <div class="flex gap-2 max-w-md mx-auto">
-
-                <input 
-                    type="email" 
-                    placeholder="Votre email"
-                    class="flex-1 px-4 py-2 rounded-lg bg-white/10 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[#512FEB]"
-                />
-
-                <button 
-                    class="px-6 py-2 bg-[#512FEB] rounded-lg font-semibold hover:bg-[#512FEB]/90 transition-all hover:scale-105"
-                >
-                    S'abonner
-                </button>
-
-            </div>
-
-        </section>
-
     </div>
 
 </template>

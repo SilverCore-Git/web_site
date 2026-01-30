@@ -10,16 +10,12 @@
             "href": "/#hero"
         },
         {
-            "name": "Services",
-            "href": "/#services"
+            "name": "Blog",
+            "href": "/blog"
         },
         {
-            "name": "Politiques",
-            "href": "/#politiques"
-        },
-        {
-            "name": "FAQ",
-            "href": "/#faq"
+            "name": "Statut",
+            "href": "/status"
         }
     ],
 

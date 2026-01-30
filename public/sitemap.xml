@@ -8,6 +8,24 @@
   </url>
 
   <url>
+    <loc>https://www.silvercore.fr/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.silvercore.fr/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.silvercore.fr/status</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7/priority>
+  </url>
+
+  <url>
     <loc>https://www.silvercore.fr/mentions-legales</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -20,21 +38,7 @@
   </url>
 
   <url>
-    <loc>https://www.silvercore.fr/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.silvercore.fr/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ⚠ articles dynamiques -->
-  <!-- À générer automatiquement depuis une source JSON/BDD -->
-  <url>
-    <loc>https://www.silvercore.fr/blog/</loc>
+    <loc>https://www.silvercore.fr/blog/transparence-totale-nouvelle-page-status-silvercore</loc>
     <changefreq>weekly</changefreq>
   </url>
 

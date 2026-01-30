@@ -4,18 +4,25 @@ import { useRoute } from 'vue-router';
 import blog_config from '../config/blog_config.json';
 import { computed, onMounted } from 'vue';
 import gsap from 'gsap';
+import MarkdownIt from 'markdown-it';
+
+const md = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+});
 
 const route = useRoute();
 const slug = route.params.slug as string;
 
 const article = computed(() => {
-  return blog_config.blog.articles.find(a => a.slug === slug);
+  return blog_config.blog.articles.find((a: any) => a.slug == slug);
 });
 
 const relatedArticles = computed(() => {
   if (!article.value) return [];
   return blog_config.blog.articles
-    .filter(a => a.category === article.value?.category && a.id !== article.value?.id)
+    .filter((a: any) => a.category === article.value.category && a.id !== article.value?.id)
     .slice(0, 3);
 });
 
@@ -93,17 +100,18 @@ onMounted(() => {
       
     </section>
 
-    <section class="max-w-3xl mx-auto px-4 mb-20 relative ">
+    <section class="max-w-4xl mx-auto px-4 mb-20 relative ">
  
       <div class="prose prose-invert max-w-none">
-        <p class="text-lg text-white/80 leading-relaxed whitespace-pre-wrap">
-          {{ article.content }}
-        </p>
+        <p 
+          class="text-lg text-white/80 leading-relaxed whitespace-pre-wrap"
+          v-html="md.render(article.content)"
+        ></p>
       </div>
 
       <div class="mt-16 pt-8 border-t border-white/10">
 
-        <p class="text-white/70 mb-4">Partager cet article :</p>
+        <!-- <p class="text-white/70 mb-4">Partager cet article :</p>
         <div class="flex gap-4">
           <a href="#" class="p-3 rounded-lg bg-white/10 hover:bg-white/20 transition">
             <i class="bi bi-twitter text-white" />
@@ -114,7 +122,7 @@ onMounted(() => {
           <a href="#" class="p-3 rounded-lg bg-white/10 hover:bg-white/20 transition">
             <i class="bi bi-linkedin text-white" />
           </a>
-        </div>
+        </div> -->
 
       </div>
 

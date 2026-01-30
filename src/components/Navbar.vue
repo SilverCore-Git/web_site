@@ -116,7 +116,7 @@ onMounted(() => {
                 v-for="Nav in navbar_config.tab"
                 class="navbar-link p-[15px] text-white cursor-pointer 
                         text-[16px] font-bold font-outfit 
-                        hidden md:flex transition-colors duration-300
+                        hidden md:flex 
                     "
                 @click="scrollTo(Nav.href)"
 
@@ -147,12 +147,3 @@ onMounted(() => {
 
 
 </template>
-
-
-<style scoped>
-
-.menu_hamburger_active {
-    background-color: red;
-}
-
-</style>

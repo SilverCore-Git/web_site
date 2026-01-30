@@ -5,8 +5,8 @@
     </div>
   </div>
 </template>
-
-<!-- <script lang="ts" setup>
+<!-- 
+<script lang="ts" setup>
 
 import { ref, onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
@@ -87,8 +87,8 @@ onMounted(() => {
     });
 });
 
-</script> -->
-<!-- 
+</script> 
+
 <style scoped>
 
 body {
