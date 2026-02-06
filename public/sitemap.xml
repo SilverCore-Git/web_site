@@ -42,4 +42,14 @@
     <changefreq>weekly</changefreq>
   </url>
 
+  <url>
+    <loc>https://www.silvercore.fr/blog/pourquoi-heberger-en-france</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.silvercore.fr/blog/chiffrement-de-bout-en-bout-explique</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
 </urlset>

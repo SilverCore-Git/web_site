@@ -4,6 +4,28 @@
     "description": "Actualités, tutoriels et insights sur la confidentialité numérique",
     "articles": [
       {
+        "id": 8,
+        "slug": "chiffrement-de-bout-en-bout-explique",
+        "title": "Le chiffrement de bout en bout : Pourquoi vos données vous appartiennent vraiment",
+        "author": "Équipe Silvercore",
+        "date": "2026-02-01",
+        "category": "Sécurité",
+        "image": "/assets/img/blog/3255.jpg",
+        "excerpt": "Comprendre le chiffrement E2E et pourquoi c'est la garantie ultime de votre confidentialité sur internet.",
+        "content": "Le chiffrement de bout en bout (E2E) est plus qu'un buzzword marketing : c'est une garantie technique que **personne d'autre que vous** ne peut lire vos données.\n\n### Comment ça marche ?\n\nLors d'une communication chiffrée E2E, vos données sont convertie en code illisible avant de quitter votre appareil, et seul le destinataire possède la clé pour les déchiffrer. Même les serveurs intermédiaires ne peuvent pas y accéder.\n\n### Pourquoi Silvercore utilise E2E ?\n\nC'est simple : **nous ne voulons pas avoir accès à vos données**. Avec SilverTransfert, vos fichiers sont protégés par du chiffrement AES-256, l'un des standards les plus robustes au monde. Cela signifie que même si nos serveurs étaient piratés, les données resteraient inaccessibles.\n\nVotre vie privée n'est pas une option : c'est notre fondation."
+      },
+      {
+        "id": 7,
+        "slug": "pourquoi-heberger-en-france",
+        "title": "Hébergement en France : Un choix éthique et légal",
+        "author": "Équipe Silvercore",
+        "date": "2026-01-25",
+        "category": "Infrastructure",
+        "image": "/assets/img/blog/10146681.png",
+        "excerpt": "Découvrez pourquoi nous hébergeons nos services exclusivement en France et les avantages que cela représente pour vous.",
+        "content": "Alors que la plupart des services en ligne confient leurs données à des géants technologiques américains, Silvercore a fait un choix différent : **héberger 100% de ses services en France**.\n\n### Les avantages légaux\n\nL'hébergement français garantit que vos données sont soumises au **RGPD européen**, la réglementation la plus stricte au monde en matière de protection des données. Aucun gouvernement étranger ne peut y accéder sans démarche légale stricte.\n\n### Souveraineté numérique\n\nVous gardez le contrôle. Vos données ne sont pas dispersées sur plusieurs continents, stockées sur des serveurs opérés par d'autres. Elles restent dans l'UE, sous la juridiction française.\n\n### Performance et fiabilité\n\nUn hébergement local signifie aussi une meilleure réactivité et une latence réduite pour nos utilisateurs français et européens.\n\nChoisir Silvercore, c'est choisir la confiance et la souveraineté."
+      },
+      {
         "id": 4,
         "slug": "transparence-totale-nouvelle-page-status-silvercore",
         "title": "Transparence totale : Lancement de notre nouvelle page d'état des services",

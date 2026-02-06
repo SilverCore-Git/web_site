@@ -9,20 +9,28 @@
                 "sécurisés"
             ]
         },
-        "description": null,
+        "description": "Silvercore propose des outils numériques modernes qui respectent votre vie privée. Nos services sont gratuits, chiffrés de bout en bout, et hébergés en France.",
 
         "services": [
             {
                 "name": "Silvernote",
                 "logo": "/assets/logo/snote/favicon.svg",
                 "title": "Votre app de prise de notes gratuite.",
-                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. Accédez à vos notes partout, sur tous vos appareils, et partagez-les en un clic. Collaborez en temps réel, organisez vos projets et restez toujours synchronisé. <br/> <span class=\"font-bold\">Application en bêta.</span>",
+                "description": "Organisez votre travail, vos courses, vos loisirs et bien plus encore avec Silvernote. Accédez à vos notes partout, sur tous vos appareils, et partagez-les en un clic. Collaborez en temps réel, organisez vos projets et restez toujours synchronisé. Chaque note est chiffrée et vos données restent vôtres. <br/> <span class=\"font-bold\">Application en bêta.</span>",
                 "btn": {
                     "content": "Découvrir",
                     "href": "https://www.silvernote.fr",
                     "color": "#F28C28"
                 },
-                "baner": "/assets/img/mockup_mcbook_silvernote.png"
+                "baner": "/assets/img/mockup_mcbook_silvernote.png",
+                "features": [
+                    "✓ Synchronisation en temps réel",
+                    "✓ Collaboration illimitée",
+                    "✓ Chiffrement de bout en bout",
+                    "✓ Accès hors ligne",
+                    "✓ Import/Export gratuit",
+                    "✓ Sans limite de stockage"
+                ]
             },
 
             {
@@ -35,7 +43,40 @@
                     "href": "https://www.silvertransfert.fr",
                     "color": "#7F6CFF"
                 },
-                "baner": "/assets/img/mockup_phone_silvertransfert_extend.png"
+                "baner": "/assets/img/mockup_phone_silvertransfert_extend.png",
+                "features": [
+                    "✓ Jusqu'à 10 Go par transfert",
+                    "✓ Chiffrement AES-256",
+                    "✓ Pas d'enregistrement requis",
+                    "✓ Lien unique et expiration",
+                    "✓ Téléchargement multiple",
+                    "✓ 100% gratuit"
+                ]
+            }
+        ]
+    },
+
+    "about": {
+        "title": "À propos de Silvercore",
+        "subtitle": "Qui sommes-nous et pourquoi nous le faisons",
+        "story": "Silvercore est née d'une frustration simple : les services numériques qui promettent la confidentialité mais la compromettent en vendant vos données. En 2022, nous avons décidé de faire différemment.",
+        "mission": "Notre mission est de démontrer qu'il est possible de créer des outils numériques modernes, gratuits et à fort potentiel sans sacrifier la vie privée des utilisateurs.",
+        "values": [
+            {
+                "title": "🔒 Sécurité absolue",
+                "description": "Vos données sont chiffrées et nous n'avons jamais accès à leur contenu. Même une fuite de nos serveurs ne compromettrait pas votre confidentialité."
+            },
+            {
+                "title": "🌍 Souveraineté française",
+                "description": "100% hébergé en France, soumis au RGPD européen. Vos données restent sous juridiction française, loin des lois de surveillance américaines."
+            },
+            {
+                "title": "💰 Gratuité durable",
+                "description": "Tous nos services sont gratuits et illimités. Pas de freemium, pas de publicités, pas de vente de données. Notre qualité, c'est notre valeur."
+            },
+            {
+                "title": "🔍 Transparence radicale",
+                "description": "Nous publions notre page de statut en temps réel, nos politiques sont claires et notre code source est visible. Rien à cacher."
             }
         ]
     },
@@ -60,12 +101,12 @@
                 "icon": "bi-shield-lock",
                 "content": "La protection de vos données est au cœur de nos priorités. Silvercore contrôle l’accès à ses bases de données et garantit l’absence de transferts non autorisés vers des tiers. Vos informations sont stockées exclusivement sur nos serveurs en France et, lorsque l’architecture du service le permet, elles sont systématiquement chiffrées."
             }
-        ]
+         ]
     },
 
     "contact": {
         "title": "Demandez tout ce qui vous passe par la tête.",
-        "description": "Contactez Silvercore dès maintenant : nous répondons à toutes vos questions et levons vos doutes.",
+        "description": "Contactez Silvercore dès maintenant : nous répondons à toutes vos questions et levons vos doutes. Notre équipe est disponible pour vous aider.",
 
         "link": [
             {
@@ -77,6 +118,11 @@
                 "icon": "bi-icon",
                 "content": "support@silvercore.fr",
                 "href": "mailto:support@silvercore.fr"
+            },
+            {
+                "icon": "bi-icon",
+                "content": "security@silvercore.fr",
+                "href": "mailto:security@silvercore.fr"
             }
         ],
 
@@ -91,6 +137,18 @@
                     "name": "Email",
                     "placeholder": "moi@silvercore.fr",
                     "type": "mail"
+                },
+                {
+                    "name": "Sujet",
+                    "placeholder": "Sélectionnez un sujet",
+                    "type": "select",
+                    "options": [
+                        "Question générale",
+                        "Support technique",
+                        "Partenariat",
+                        "Feedback produit",
+                        "Rapport de sécurité"
+                    ]
                 },
                 {
                     "name": "Message",

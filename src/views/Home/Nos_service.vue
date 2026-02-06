@@ -113,7 +113,7 @@ onMounted(() => {
         <div class="absolute top-40 left-0 opacity-40 w-[600px] h-[200px] bg-[#512FEB]/50 rounded-full blur-[120px] -z-1"></div>
 
         <div 
-            class="mb-10 services-title"
+            class="mb-10 services-title space-y-4"
         >
             <h2 class="min-w-xl flex justify-center items-center gap-2 font-bold">
                 {{ services.title.text }}
@@ -121,7 +121,7 @@ onMounted(() => {
                     :words="services.title.keyWords"
                 />
             </h2>
-            <p class="services-description">
+            <p class="services-description max-w-2xl">
                 {{ services.description }}
             </p>
         </div>

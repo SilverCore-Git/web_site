@@ -20,7 +20,7 @@
 
         <!-- last article -->
         <section 
-            class="max-w-6xl mx-auto px-4 mt-20 mb-20 "
+            class="max-w-6xl w-full mx-auto px-4 mt-20 mb-20 "
         >
 
             <div 
@@ -62,7 +62,7 @@
 
                         </div>
                         
-                        <h2 class="text-[28px] font-bold mb-4">
+                        <h2 class="text-lg font-bold mb-4">
                             {{ articles[0]?.title }}
                         </h2>
                         <p class="text-white/70 mb-6">
