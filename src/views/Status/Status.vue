@@ -21,6 +21,12 @@
 
 </template>
 
+<script lang="ts" setup>
+
+window.location.href = 'https://status.silvercore.fr';
+
+</script>
+
 <style scoped>
 .iframe-container {
   width: 100%;
