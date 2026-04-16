@@ -1,12 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './views/Home/Home.vue';
-import Blog from './views/Blog.vue';
-import BlogArticle from './views/BlogArticle.vue';
-import StructuredContent from './components/StructuredContent/StructuredContent-component.vue';
-import mention_legales_config from './config/mentions_legales_config.json';
-import politique_config from "./config/politique_de_confidentialite.json";
-import Contact from './views/Contact.vue';
-import Status from './views/Status/Status.vue';
+import Home from './views/Home.vue';
 
 
 const routes = [
@@ -16,49 +9,6 @@ const routes = [
     component: Home,
     meta: { title: 'Silvercore - Des services numériques pensés pour votre confidentialité' }
   },
-  {
-    path: '/mentions-legales',
-    name: 'mentions_legales',
-    component: StructuredContent,
-    props: {
-      config: mention_legales_config
-    },
-    meta: { title: 'Mentions legales - Silvercore' }
-  },
-  {
-    path: '/politique-de-confidentialite',
-    name: 'politique',
-    component: StructuredContent,
-    props: {
-      config: politique_config
-    },
-    meta: { title: 'Politique de confidentialite - Silvercore' }
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: Contact,
-    meta: { title: 'Contact - silvercore' }
-  },
-  {
-    path: '/status',
-    name: 'Status',
-    component: Status,
-    meta: { title: 'Status - silvercore' }
-  },
-  {
-    path: '/blog',
-    name: 'Blog',
-    component: Blog,
-    meta: { title: 'Blog - Silvercore' }
-  },
-  {
-    path: '/blog/:slug',
-    props: true,
-    name: 'BlogArticle',
-    component: BlogArticle,
-    meta: { title: 'Article - Silvercore' }
-  }
 ]
 
 
