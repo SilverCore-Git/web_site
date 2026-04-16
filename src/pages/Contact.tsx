@@ -40,8 +40,18 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-1">Email</h4>
-                  <p className="text-white/50">contact@silvercore.fr</p>
-                  <p className="text-white/50">support@silvercore.fr</p>
+                  <p className="text-white/50">
+                    <a href="mailto:contact@silvercore.fr">contact@silvercore.fr</a>
+                    <span> {`=>`} contact général</span>
+                  </p>
+                  <p className="text-white/50">
+                    <a href="mailto:support@silvercore.fr">support@silvercore.fr</a>
+                    <span> {`=>`} service client</span>
+                  </p>
+                  <p className="text-white/50">
+                    <a href="mailto:host@silvercore.fr">host@silvercore.fr</a>
+                    <span> {`=>`} service infrastructures</span>
+                  </p>
                 </div>
               </div>
 
@@ -49,30 +59,16 @@ export function Contact() {
                 <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-secondary shrink-0">
                   <MessageSquare size={24} />
                 </div>
-                <div>
+                <div className='flex flex-col'>
                   <h4 className="font-bold text-lg mb-1">Discord</h4>
                   <p className="text-white/50">Rejoignez notre communauté pour un support rapide.</p>
-                  <a href="#" className="text-secondary hover:underline text-sm font-bold">Ouvrir Discord</a>
+                  <a href="https://taap.it/silvercore.discord" className="text-secondary hover:underline text-sm font-bold">Discord Silvercore</a>
+                  <a href="https://taap.it/silvercore.discord.support" className="text-secondary hover:underline text-sm font-bold">Discord Silvercore support</a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="w-12 h-12 glass rounded-xl flex items-center justify-center text-white shrink-0">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-1">Localisation</h4>
-                  <p className="text-white/50">Hébergé et géré avec fierté en France.</p>
-                </div>
-              </div>
             </div>
 
-            <div className="mt-16 p-6 glass-dark rounded-2xl border-white/5 flex items-center gap-4">
-               <ShieldCheck className="text-primary" size={32} />
-               <p className="text-sm text-white/40">
-                 Vos messages sont transmis via une connexion sécurisée et ne sont jamais partagés avec des tiers.
-               </p>
-            </div>
           </div>
 
           <div className="relative">
@@ -89,7 +85,7 @@ export function Contact() {
                     <Send size={40} />
                   </div>
                   <h2 className="text-3xl font-display font-bold mb-4">Message envoyé !</h2>
-                  <p className="text-white/50 mb-8">Merci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.</p>
+                  <p className="text-white/50 mb-8">Merci de nous avoir contacté.<br/>Nous vous répondrons dans les plus brefs délais.</p>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="text-primary font-bold hover:underline"
