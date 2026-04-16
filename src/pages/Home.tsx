@@ -29,15 +29,6 @@ export function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-primary text-sm font-medium mb-8"
-          >
-            <Shield size={16} />
-            <span>Hébergé en France • Chiffré de bout en bout</span>
-          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +45,7 @@ export function Home() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Silvercore conçoit des outils numériques basés sur la simplicité et l'intuitivité tout en restant complets et sécurisés.
+            Silvercore conçoit des outils numériques basés sur la simplicité et l'intuitivité tout en garant une sécurisés maximal.
           </motion.p>
 
           <motion.div
@@ -151,12 +142,17 @@ export function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 viewport={{ once: true }}
-                className="group relative p-1 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-transparent hover:from-primary/50 hover:to-secondary/50 transition-all duration-500"
+                className="
+                  group relative p-1 rounded-[2.5rem] 
+                  bg-gradient-to-br from-white/10 to-transparent 
+                  hover:from-primary/50 hover:to-secondary/50 
+                  transition-all duration-500
+                "
               >
                 <div className="bg-dark rounded-[2.4rem] p-10 h-full flex flex-col">
                   <div className="flex justify-between items-start mb-8">
                     <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      {service.icon === 'StickyNote' ? <Shield className="w-8 h-8 text-primary" /> : <Zap className="w-8 h-8 text-secondary" />}
+                      <img src={ service.icon } className='rounded-xl' />
                     </div>
                     <span className="px-4 py-1 rounded-full bg-white/5 text-xs font-bold uppercase tracking-widest text-white/40">
                       {service.status}
@@ -217,7 +213,7 @@ export function Home() {
               Prêt à reprendre le contrôle ?
             </h2>
             <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
-              Rejoignez des milliers d'utilisateurs qui font confiance à Silvercore pour leurs outils quotidiens.
+              Rejoignez les utilisateurs qui font confiance à Silvercore pour leurs outils quotidiens.
             </p>
             <Link
               to="/contact"

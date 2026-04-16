@@ -29,10 +29,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <Shield className="text-white w-6 h-6" />
-          </div>
-          <span className="text-xl font-display font-bold tracking-tight">{SITE_NAME}</span>
+          <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
         </Link>
 
         {/* Desktop Nav */}
@@ -49,12 +46,6 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105 active:scale-95"
-          >
-            Démarrer
-          </Link>
         </div>
 
         {/* Mobile Toggle */}

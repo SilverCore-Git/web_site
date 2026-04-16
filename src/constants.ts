@@ -15,18 +15,20 @@ export const SERVICES = [
     name: "Silvernote",
     description: "Votre app de prise de notes gratuite. Organisez votre travail, vos courses, vos loisirs et bien plus encore.",
     details: "Chaque note est chiffrée et vos données restent vôtres. Collaborez en temps réel et restez synchronisé.",
-    status: "Bêta",
-    link: "https://note.silvercore.fr",
-    icon: "StickyNote"
+    status: "Disponible",
+    link: "https://www.silvernote.fr",
+    icon: "/assets/logo/snote/favicon.svg",
+    preview: "/assets/img/mockup_mcbook_silvernote.png"
   },
   {
     id: "silvertransfert",
     name: "Silvertransfert",
     description: "Des transferts gratuits et sécurisés jusqu'à 10 Go.",
     details: "Chiffrement de bout en bout. Personne ne peut voir vos fichiers, même pas nous. Simple, rapide et français.",
-    status: "Disponible",
-    link: "https://transfert.silvercore.fr",
-    icon: "Send"
+    status: "Obsolete",
+    link: "https://www.silvertransfert.fr",
+    icon: "/assets/logo/stransfert/favicon.png",
+    preview: "/assets/img/mockup_phone_silvertransfert.png"
   }
 ];
 

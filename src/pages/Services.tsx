@@ -21,7 +21,7 @@ export function Services() {
             className="text-xl text-white/50 max-w-3xl"
           >
             Silvercore propose des outils numériques modernes qui respectent votre vie privée. 
-            Nos services sont gratuits, chiffrés de bout en bout, et hébergés en France.
+            Nos services sont simple, sécurisé et hébergés en France.
           </motion.p>
         </header>
 
@@ -37,7 +37,7 @@ export function Services() {
               <div className="lg:w-1/2 p-12 md:p-16 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-14 h-14 bg-primary/20 rounded-2xl flex items-center justify-center">
-                    {service.icon === 'StickyNote' ? <Shield className="text-primary" /> : <Zap className="text-secondary" />}
+                    <img src={ service.icon } className='rounded-xl' />
                   </div>
                   <div>
                     <h2 className="text-4xl font-display font-bold">{service.name}</h2>
@@ -58,10 +58,6 @@ export function Services() {
                     <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
                     <p className="text-white/50">Hébergement souverain en France</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="text-secondary shrink-0 mt-1" size={20} />
-                    <p className="text-white/50">Chiffrement de bout en bout</p>
-                  </div>
                 </div>
 
                 <a
@@ -77,7 +73,7 @@ export function Services() {
               <div className="lg:w-1/2 bg-gradient-to-br from-primary/20 to-secondary/20 relative min-h-[400px] flex items-center justify-center p-12">
                  <div className="w-full aspect-video glass rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
                     <div className="text-white/20 font-display font-black text-4xl rotate-[-10deg] select-none">
-                       {service.name.toUpperCase()} PREVIEW
+                       <img src={ service.preview } />
                     </div>
                  </div>
               </div>
