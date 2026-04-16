@@ -91,13 +91,10 @@ export function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Shield className="text-white w-5 h-5" />
-            </div>
-            <span className="text-xl font-display font-bold">{SITE_NAME}</span>
+            <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
           </Link>
           <p className="text-white/50 max-w-md mb-8">
-            SilverCore vous offre des services de divertissement et utilitaires originaux, 
+            SilverCore vous offre des services utilitaires originaux, 
             respectueux de votre vie privée et accessibles à tous.
           </p>
           <div className="flex gap-4">
@@ -126,7 +123,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
         <p>© {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.</p>
-        <p>Hébergé avec ❤️ en France</p>
+        <p>Hébergé en France avec les solutions SCORE HOST</p>
       </div>
     </footer>
   );

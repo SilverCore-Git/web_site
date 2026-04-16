@@ -50,14 +50,38 @@ export const POLICIES = [
 export const FAQS = [
   {
     question: "Qu'est-ce que Silvercore ?",
-    answer: "Silvercore est un collectif français qui conçoit des outils numériques basés sur la simplicité, l'intuitivité et le respect de la vie privée."
+    answer: "Silvercore est une organisation française qui conçoit des outils numériques basés sur la simplicité, l'intuitivité et le respect de la vie privée."
+  },
+  {
+    question: "Quelle est la place de la sécurité chez Silvercore ?",
+    answer: "Elle est centrale. Silvercore a pour objectif de proposer des services sécurisés et de lutter contre les GAFAM qui exploitent vos données et vous traquent sur Internet. Pour cela, chez Silvercore, tout est chiffré. Les quelques services externes utilisés sont français ou européens, et soumis à la réglementation RGPD."
   },
   {
     question: "Mes données sont-elles vraiment sécurisées ?",
-    answer: "Oui, nous utilisons le chiffrement de bout en bout pour nos services majeurs. De plus, toutes les données sont hébergées en France."
+    answer: "Oui, nous utilisons le chiffrement de bout en bout pour nos services majeurs. Pour les services qui ne le permettent pas, les données sont systématiquement chiffrées en base de données. De plus, elles sont hébergées en France."
   },
   {
     question: "Les services sont-ils gratuits ?",
-    answer: "La plupart de nos services de base sont gratuits. Nous croyons que la confidentialité ne devrait pas être un luxe."
+    answer: "La plupart de nos services fonctionnent sur un modèle freemium : une version de base est accessible gratuitement, avec des fonctionnalités supplémentaires disponibles via un abonnement."
+  },
+  {
+    question: "Pourquoi choisir Silvercore plutôt qu'un autre service ?",
+    answer: "Silvercore se distingue par son engagement fort en faveur de la confidentialité, sa transparence et la simplicité de ses outils. Contrairement à de nombreux services, nous ne monétisons pas vos données."
+  },
+  {
+    question: "Où sont hébergées mes données ?",
+    answer: "Toutes les données sont hébergées en France ou en Europe, dans des infrastructures respectant strictement les normes de sécurité et le RGPD."
+  },
+  {
+    question: "Silvercore revend-il mes données ?",
+    answer: "Non, jamais ! Vos données vous appartiennent. Silvercore ne les vend pas et ne les exploite pas à des fins publicitaires."
+  },
+  {
+    question: "Puis-je utiliser les services sans créer de compte ?",
+    answer: "Certains services peuvent être utilisés sans compte, mais la création d'un compte permet de sauvegarder vos données et d'accéder à toutes les fonctionnalités."
+  },
+  {
+    question: "Comment contacter le support ?",
+    answer: "Vous pouvez contacter le support via le formulaire de contact, les email contact et support, sur nos reseau sociaux et sur nos serveurs discords (que demandé de plus ?). Nous faisons notre maximum pour répondre rapidement à toutes les demandes."
   }
 ];
