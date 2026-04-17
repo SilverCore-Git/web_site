@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X, Github, Instagram } from 'lucide-react';
 import { NAV_LINKS, SITE_NAME } from '@/src/constants';
 import { cn } from '@/src/lib/utils';
 
@@ -98,7 +98,40 @@ export function Footer() {
             respectueux de votre vie privée et accessibles à tous.
           </p>
           <div className="flex gap-4">
-             {/* Social icons could go here */}
+            
+            <a 
+              className='
+                bg-dark w-10 h-10 cursor-pointer 
+                hover:scale-110 transition-all duration-300 
+                rounded-lg flex justify-center items-center
+              '
+              href='https://taap.it/silvercore.insta'
+            >
+              <Instagram size={20} />
+            </a>
+
+            <a 
+              className='
+                bg-dark w-10 h-10 cursor-pointer 
+                hover:scale-110 transition-all duration-300 
+                rounded-lg flex justify-center items-center
+              '
+              href='https://taap.it/silvercore.discord'
+            >
+              <i className='bi bi-discord text-xl' />
+            </a>
+
+            <a 
+              className='
+                bg-dark w-10 h-10 cursor-pointer 
+                hover:scale-110 transition-all duration-300 
+                rounded-lg flex justify-center items-center
+              '
+              href='https://taap.it/silvercore.github'
+            >
+              <Github size={20} />
+            </a>
+
           </div>
         </div>
 
@@ -123,7 +156,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
         <p>© {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.</p>
-        <p>Hébergé en France avec les solutions SCORE HOST</p>
+        <p>Hébergé en France</p>
       </div>
     </footer>
   );
