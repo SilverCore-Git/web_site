@@ -7,13 +7,15 @@ import { BlogPost } from '@/src/pages/BlogPost';
 import { Admin } from '@/src/pages/Admin';
 import { FAQ } from '@/src/pages/FAQ';
 import { Contact } from '@/src/pages/Contact';
+import { Legal } from './pages/Legal';
+import { Privacy } from './pages/Privacy';
 
 export default function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-grow">
+        <main className="grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path='/legal' element={<Legal />} />
+            <Route path='/privacy' element={<Privacy />} />
           </Routes>
         </main>
         <Footer />
