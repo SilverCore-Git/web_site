@@ -149,7 +149,7 @@ export function Home() {
                   transition-all duration-500
                 "
               >
-                <div className="bg-dark rounded-[2.4rem] p-10 h-full flex flex-col">
+                <a href={service.link} className="bg-dark rounded-[2.4rem] p-10 h-full flex flex-col">
                   <div className="flex justify-between items-start mb-8">
                     <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <img src={ service.icon } className='rounded-xl' />
@@ -170,7 +170,7 @@ export function Home() {
                   >
                     Accéder au service <ArrowRight size={20} />
                   </a>
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>
