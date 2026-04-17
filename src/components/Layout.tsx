@@ -88,7 +88,7 @@ export function Navbar() {
 export function Footer() {
   return (
     <footer className="bg-dark-lighter border-t border-white/5 pt-20 pb-10 px-6 mt-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
         <div className="col-span-1 md:col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-6">
             <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
@@ -136,22 +136,36 @@ export function Footer() {
         </div>
 
         <div>
+
           <h4 className="font-display font-bold mb-6">Information</h4>
           <ul className="space-y-4 text-white/50 text-sm">
             <li><Link to="/privacy" className="hover:text-primary transition-colors">Confidentialité</Link></li>
             <li><Link to="/legal" className="hover:text-primary transition-colors">Mentions légales</Link></li>
-            <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-            <li><a href="https://discord.gg/silvercore" className="hover:text-primary transition-colors">Discord Silvercore</a></li>
           </ul>
+
         </div>
 
         <div>
+
+          <h4 className="font-display font-bold mb-6">Contact</h4>
+          <ul className="space-y-4 text-white/50 text-sm">
+            <li><Link to="/contact" className="hover:text-primary transition-colors">Formulaire</Link></li>
+            <li><a href="https://taap.it/silvercore.discord" className="hover:text-primary transition-colors">Discord Silvercore</a></li>
+            <li><a href="https://taap.it/silvercore.discord.support" className="hover:text-primary transition-colors">Discord support</a></li>
+          </ul>
+
+        </div>
+
+        <div>
+
           <h4 className="font-display font-bold mb-6">Nos services</h4>
           <ul className="space-y-4 text-white/50 text-sm">
-            <li><a href="https://note.silvercore.fr" className="hover:text-primary transition-colors">Silvernote</a></li>
-            <li><a href="https://transfert.silvercore.fr" className="hover:text-primary transition-colors">Silvertransfert</a></li>
+            <li><a href="https://www.silvernote.fr" className="hover:text-primary transition-colors">Silvernote</a></li>
+            <li><a href="https://www.silvertransfert.fr" className="hover:text-primary transition-colors">Silvertransfert</a></li>
           </ul>
+          
         </div>
+
       </div>
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
