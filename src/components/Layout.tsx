@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Instagram } from 'lucide-react';
+import { Menu, X, Github, Instagram, ExternalLink } from 'lucide-react';
 import { NAV_LINKS, SITE_NAME } from '@/src/constants';
 import { cn } from '@/src/lib/utils';
 
@@ -21,13 +21,15 @@ export function Navbar() {
   }, [location]);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        scrolled ? "bg-dark/80 backdrop-blur-lg py-3" : "bg-transparent"
-      )}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
+      
+      <div className={cn(
+        "absolute inset-0 transition-all duration-300",
+        scrolled ? "bg-dark/80 backdrop-blur-lg" : "bg-transparent"
+      )} />
+
+      <div className="relative max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
         </Link>
@@ -39,11 +41,12 @@ export function Navbar() {
               key={link.path}
               to={link.path}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary flex flex-row gap-2 justify-center items-center",
                 location.pathname === link.path ? "text-primary" : "text-white/70"
               )}
             >
-              {link.name}
+                { link.redirect ? <ExternalLink size={16} /> : undefined }
+                {link.name}
             </Link>
           ))}
         </div>
@@ -64,17 +67,19 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-dark-lighter border-b border-white/5 p-6 flex flex-col gap-4 md:hidden"
+            className="absolute top-full inset-x-0 border-b border-white/5 p-6 flex flex-col gap-4 md:hidden"
           >
+            <div className="absolute inset-0 transition-all duration-300 z-10 bg-dark/80 backdrop-blur-lg" />
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  "text-lg font-medium py-2 border-b border-white/5",
+                  "text-lg font-medium py-2 border-b border-white/5 flex flex-row gap-2 justify-center items-center z-20",
                   location.pathname === link.path ? "text-primary" : "text-white/70"
                 )}
               >
+                { link.redirect ? <ExternalLink size={16} /> : undefined }
                 {link.name}
               </Link>
             ))}
@@ -90,9 +95,26 @@ export function Footer() {
     <footer className="bg-dark-lighter border-t border-white/5 pt-20 pb-10 px-6 mt-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
         <div className="col-span-1 md:col-span-2">
-          <Link to="/" className="flex items-center gap-2 mb-6">
-            <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
-          </Link>
+
+          <div className='flex justify-between max-w-sm'>
+
+            <Link to="/" className="flex items-center gap-2 mb-6">
+              <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
+            </Link>
+
+            <iframe 
+              src="https://status.silvercore.fr/embed-badges/live-status?align=start&background-dark=1a1a1a&text-dark=ffffff" 
+              width="190" 
+              height="30" 
+              loading="lazy"
+              title="Statut des services Silvercore"
+              className="mb-6 "
+              frameBorder={0}
+              scrolling='no'
+            />
+
+          </div>
+          
           <p className="text-white/50 max-w-md mb-8">
             SilverCore vous offre des services utilitaires originaux, 
             respectueux de votre vie privée et accessibles à tous.

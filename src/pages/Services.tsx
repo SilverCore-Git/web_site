@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { SERVICES } from '@/src/constants';
-import { Shield, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function Services() {
   return (

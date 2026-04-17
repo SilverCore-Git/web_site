@@ -7,6 +7,7 @@ export const NAV_LINKS = [
   { name: "Blog", path: "/blog" },
   { name: "FAQ", path: "/faq" },
   { name: "Contact", path: "/contact" },
+  { name: "Status", path: "https://status.silvercore.fr", redirect: true },
 ];
 
 export const SERVICES = [
