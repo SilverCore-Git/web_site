@@ -190,7 +190,7 @@ export function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white/30 text-xs">
+      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white text-xs ">
         <p>© {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.</p>
         <p>Hébergé en France</p>
       </div>
