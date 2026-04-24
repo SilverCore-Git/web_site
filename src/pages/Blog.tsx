@@ -48,34 +48,40 @@ export function Blog() {
               transition={{ delay: index * 0.1 }}
               className="glass-dark rounded-3xl overflow-hidden border-white/5 group hover:border-primary/30 transition-all"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative">
-                 <div className="absolute inset-0 flex items-center justify-center text-white/10 font-display font-bold text-2xl">
-                    {post.category}
-                 </div>
-              </div>
               
-              <div className="p-8">
-                <div className="flex items-center gap-4 text-xs text-white/40 mb-4 font-medium uppercase tracking-wider">
-                  <span className="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
-                  <span className="flex items-center gap-1"><User size={14} /> {post.author}</span>
+              <Link to={`/blog/${post.id}`}>
+
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative">
+                  <div className="absolute inset-0 flex items-center justify-center text-white/10 font-display font-bold text-2xl">
+                      {post.category}
+                  </div>
                 </div>
                 
-                <h2 className="text-2xl font-display font-bold mb-4 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h2>
-                
-                <p className="text-white/50 mb-8 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <Link
-                  to={`/blog/${post.id}`}
-                  className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
-                >
-                  Lire la suite <ArrowRight size={18} />
-                </Link>
-              </div>
+                <div className="p-8">
+                  <div className="flex items-center gap-4 text-xs text-white/40 mb-4 font-medium uppercase tracking-wider">
+                    <span className="flex items-center gap-1"><Calendar size={14} /> {post.date}</span>
+                    <span className="flex items-center gap-1"><User size={14} /> {post.author}</span>
+                  </div>
+                  
+                  <h2 className="text-2xl font-display font-bold mb-4 group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-white/50 mb-8 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div
+                    className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                  >
+                    Lire la suite <ArrowRight size={18} />
+                  </div>
+                </div>
+
+              </Link>
+
             </motion.article>
+          
           ))}
         </div>
       </div>

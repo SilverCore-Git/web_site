@@ -56,7 +56,7 @@ export function BlogPost() {
           >
             <span className="flex items-center gap-2"><Calendar size={18} /> {post.date}</span>
             <span className="flex items-center gap-2"><User size={18} /> {post.author}</span>
-            <button className="flex items-center gap-2 hover:text-primary transition-colors ml-auto">
+            <button className=" cursor-pointer flex items-center gap-2 hover:text-primary transition-colors ml-auto">
               <Share2 size={18} /> Partager
             </button>
           </motion.div>

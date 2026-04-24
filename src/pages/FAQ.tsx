@@ -11,14 +11,6 @@ export function FAQ() {
     <div className="pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-primary text-sm font-medium mb-6"
-          >
-            <HelpCircle size={16} />
-            <span>Questions Fréquemment Posées</span>
-          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
