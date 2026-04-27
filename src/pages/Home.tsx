@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Shield, ArrowRight, Lock, Zap, Globe, Leaf, Heart, CheckCircle2 } from 'lucide-react';
+import { Shield, ArrowRight, Lock, Zap, Globe, Leaf, Heart, CheckCircle2, Server, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SERVICES, POLICIES, SITE_NAME } from '@/src/constants';
 
@@ -204,26 +204,83 @@ export function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Self-Hosting Approach */}
       <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto rounded-[3rem] bg-gradient-to-br from-primary to-secondary p-12 md:p-20 text-center relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-0" />
-          <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8">
-              Prêt à reprendre le contrôle ?
-            </h2>
-            <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
-              Rejoignez les utilisateurs qui font confiance à Silvercore pour leurs outils quotidiens.
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">Notre démarche d'auto-hébergement</h2>
+            <p className="text-white/50 text-lg max-w-2xl mx-auto">
+              Découvrez pourquoi nous avons choisi de contrôler nos propres infrastructures et ce que cela signifie pour vous.
             </p>
-            <Link
-              to="/contact"
-              className="inline-flex bg-white text-dark px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform"
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              viewport={{ once: true }}
+              className="p-8 rounded-3xl glass-dark border-white/5"
             >
-              Nous contacter
-            </Link>
+              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <Server className="text-primary" />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-4">Souveraineté numérique</h3>
+              <p className="text-white/50 leading-relaxed">
+                En hébergeant nos services en France sur nos propres serveurs, nous ne dépendons d'aucun géant technologique américain ou chinois. Vos données restent sous contrôle français.
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="p-8 rounded-3xl glass-dark border-white/5"
+            >
+              <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+                <CheckCircle2 className="text-secondary" />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-4">RGPD strict</h3>
+              <p className="text-white/50 leading-relaxed">
+                En tant qu'acteur français, nous appliquons le Règlement Général de Protection des Données de façon rigoureuse. Aucune vente de données, aucun suivi invasif.
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="p-8 rounded-3xl glass-dark border-white/5"
+            >
+              <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                <Lock className="text-white" />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-4">Transparence totale</h3>
+              <p className="text-white/50 leading-relaxed">
+                Vous savez exactement où sont hébergées vos données, comment elles sont traitées, et qui y a accès. Pas de mystère, pas de surprises.
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="p-8 rounded-3xl glass-dark border-white/5"
+            >
+              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <Shield className="text-primary" />
+              </div>
+              <h3 className="text-2xl font-display font-bold mb-4">Performance garantie</h3>
+              <p className="text-white/50 leading-relaxed">
+                L'auto-hébergement nous permet d'optimiser chaque aspect de nos services pour vous offrir une latence minimale et une disponibilité maximale.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
+
     </div>
   );
 }
