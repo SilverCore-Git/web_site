@@ -56,9 +56,9 @@ export function BlogPost() {
           >
             <span className="flex items-center gap-2"><Calendar size={18} /> {post.date}</span>
             <span className="flex items-center gap-2"><User size={18} /> {post.author}</span>
-            <button className=" cursor-pointer flex items-center gap-2 hover:text-primary transition-colors ml-auto">
+            {/* <button className=" cursor-pointer flex items-center gap-2 hover:text-primary transition-colors ml-auto">
               <Share2 size={18} /> Partager
-            </button>
+            </button> */}
           </motion.div>
         </header>
 
@@ -76,10 +76,14 @@ export function BlogPost() {
         <footer className="mt-20 pt-10 border-t border-white/5">
            <div className="bg-dark-lighter p-8 rounded-3xl flex items-center gap-6">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-xl">
-                 SC
+                {post.author
+                  .split(" ")
+                  .map(word => word[0])
+                  .join("")
+                }
               </div>
               <div>
-                 <h4 className="font-display font-bold text-lg">L'équipe Silvercore</h4>
+                 <h4 className="font-display font-bold text-lg">{post.author}</h4>
                  <p className="text-white/50 text-sm">Nous écrivons sur la vie privée, la sécurité et l'avenir du web.</p>
               </div>
            </div>

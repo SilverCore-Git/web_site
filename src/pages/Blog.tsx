@@ -29,24 +29,24 @@ export function Blog() {
             </motion.p>
           </div>
           
-          <Link
+          {/* <Link
             to="/admin"
             className="flex items-center gap-2 text-white/30 hover:text-primary transition-colors text-sm font-medium"
           >
             <PlusCircle size={18} />
             Espace Admin
-          </Link>
+          </Link> */}
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
+          {posts.sort((a, b) => b.date.localeCompare(a.date)).map((post, index) => (
             <motion.article
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-dark rounded-3xl overflow-hidden border-white/5 group hover:border-primary/30 transition-all"
+              className="group glass-dark rounded-3xl overflow-hidden border-white/5 group hover:border-primary/30 transition-all"
             >
               
               <Link to={`/blog/${post.id}`}>
@@ -72,7 +72,7 @@ export function Blog() {
                   </p>
                   
                   <div
-                    className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                    className="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all"
                   >
                     Lire la suite <ArrowRight size={18} />
                   </div>
