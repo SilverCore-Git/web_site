@@ -94,11 +94,12 @@ export function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formspree.io/f/xvzdjvoy" method="POST" className="space-y-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-white/50 uppercase tracking-wider">Nom complet</label>
                     <input
                       type="text"
+                      name='name'
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all"
                       placeholder="Jean Dupont"
@@ -108,6 +109,7 @@ export function Contact() {
                     <label className="text-sm font-bold text-white/50 uppercase tracking-wider">Email</label>
                     <input
                       type="email"
+                      name='email'
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all"
                       placeholder="jean@exemple.fr"
@@ -116,6 +118,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-white/50 uppercase tracking-wider">Message</label>
                     <textarea
+                      name='message'
                       required
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all h-40 resize-none"
                       placeholder="Comment pouvons-nous vous aider ?"
