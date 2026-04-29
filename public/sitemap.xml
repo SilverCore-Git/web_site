@@ -20,19 +20,26 @@
   </url>
 
   <url>
-    <loc>https://www.silvercore.fr/status</loc>
+    <loc>https://www.silvercore.fr/services</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.silvercore.fr/mentions-legales</loc>
+    <loc>https://www.silvercore.fr/faq</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://www.silvercore.fr/legal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.silvercore.fr/politique-de-confidentialite</loc>
+    <loc>https://www.silvercore.fr/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -49,6 +56,11 @@
 
   <url>
     <loc>https://www.silvercore.fr/blog/chiffrement-de-bout-en-bout-explique</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.silvercore.fr/blog/nouveau-site-web-silvercore</loc>
     <changefreq>weekly</changefreq>
   </url>
 
