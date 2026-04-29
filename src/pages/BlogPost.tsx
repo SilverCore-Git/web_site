@@ -4,7 +4,9 @@ import Markdown from 'react-markdown';
 import { BlogService } from '@/src/services/blogService';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
 
-export function BlogPost() {
+export function BlogPost() 
+{
+  
   const { id } = useParams();
   const navigate = useNavigate();
   const post = BlogService.getPostById(id || "");
