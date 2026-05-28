@@ -3,15 +3,29 @@ import { motion } from 'motion/react';
 import Markdown from 'react-markdown';
 import { BlogService } from '@/src/services/blogService';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
+import remarkGfm from 'remark-gfm';
 
 export function BlogPost() 
 {
-  
+
   const { id } = useParams();
   const navigate = useNavigate();
   const post = BlogService.getPostById(id || "");
 
-  if (!post) {
+  const markdownComponents = {
+    h1: ({ node, ...props }) => <h1 className="text-4xl font-bold mt-12 mb-6" {...props} />,
+    h2: ({ node, ...props }) => <h2 className="text-2xl font-bold mt-10 mb-4 text-white" {...props} />,
+    p: ({ node, ...props }) => <p className="leading-relaxed mb-6 text-white/80" {...props} />,
+    a: ({ node, ...props }) => <a className="text-primary hover:underline underline-offset-4" {...props} />,
+    ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-6 space-y-2 text-white/80" {...props} />,
+    code: ({ node, ...props }) => <code className="bg-white/10 px-1.5 py-0.5 rounded font-mono text-sm" {...props} />,
+    blockquote: ({ node, ...props }) => (
+      <blockquote className="border-l-4 border-primary pl-4 italic text-white/60 my-8" {...props} />
+    ),
+  };
+
+  if (!post) 
+  {
     return (
       <div className="pt-40 text-center">
         <h1 className="text-4xl font-display font-bold mb-8">Article non trouvé</h1>
@@ -70,9 +84,12 @@ export function BlogPost()
           transition={{ delay: 0.3 }}
           className="prose prose-invert prose-primary max-w-none"
         >
-          <div className="markdown-body">
-            <Markdown>{post.content}</Markdown>
-          </div>
+          <Markdown 
+            remarkPlugins={[remarkGfm]}
+            components={markdownComponents}
+          >
+            {post.content}
+          </Markdown>
         </motion.div>
         
         <footer className="mt-20 pt-10 border-t border-white/5">
