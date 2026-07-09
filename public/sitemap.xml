@@ -32,7 +32,7 @@
   </url>
   
 
-  <url>
+  <!-- <url>
     <loc>https://www.silvercore.fr/legal</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
@@ -42,31 +42,40 @@
     <loc>https://www.silvercore.fr/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-  </url>
+  </url> -->
 
   <url>
     <loc>https://www.silvercore.fr/blog/transparence-totale-nouvelle-page-status-silvercore</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/pourquoi-heberger-en-france</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/chiffrement-de-bout-en-bout-explique</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/bun-runtime-performance-silvercore</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/nouveau-site-web-silvercore</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.silvercore.fr/blog/chat-control-danger-silvercore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
