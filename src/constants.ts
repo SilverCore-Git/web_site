@@ -26,7 +26,7 @@ export const SERVICES = [
     name: "Silvertransfert",
     description: "Des transferts gratuits et sécurisés jusqu'à 10 Go.",
     details: "Chiffrement de bout en bout. Personne ne peut voir vos fichiers, même pas nous. Simple, rapide et français.",
-    status: "Obsolete",
+    status: "Nouveau",
     link: "https://www.silvertransfert.fr",
     icon: "/assets/logo/stransfert/favicon.png",
     preview: "/assets/img/mockup_phone_silvertransfert.png"
