@@ -27,7 +27,7 @@ export function Navbar() {
     >
       <motion.div
         style={{ width: navWidth, y: navY, backgroundColor: navBg, borderColor: navBorder }}
-        className="pointer-events-auto border rounded-full backdrop-blur-xl transition-shadow shadow-sm flex items-center justify-between px-6 py-3 max-w-7xl"
+        className="pointer-events-auto border rounded-2xl backdrop-blur-xl transition-shadow shadow-sm flex items-center justify-between px-6 py-3 max-w-7xl"
       >
         <Link to="/" className="flex items-center gap-2 group relative overflow-hidden">
           <motion.img

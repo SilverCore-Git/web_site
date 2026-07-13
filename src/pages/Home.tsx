@@ -63,22 +63,7 @@ export function Home() {
           </motion.div>
         </motion.div>
         
-        {/* Scroll Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-xs tracking-widest uppercase text-dark/40">Scroll</span>
-          <div className="w-[1px] h-12 bg-black/10 overflow-hidden relative">
-            <motion.div 
-              className="absolute top-0 w-full h-1/2 bg-primary"
-              animate={{ y: ['0%', '200%'] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-            />
-          </div>
-        </motion.div>
+
       </section>
 
       {/* Features Grid */}

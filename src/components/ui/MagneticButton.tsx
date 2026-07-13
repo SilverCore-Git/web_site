@@ -12,7 +12,7 @@ export function MagneticButton({ children, className, ...props }: MagneticButton
     <motion.button
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className={cn('relative inline-flex items-center justify-center px-6 py-3 font-medium rounded-full border border-transparent transition-all duration-300 focus:outline-none', className)}
+      className={cn('relative inline-flex items-center justify-center px-6 py-3 font-medium rounded-2xl border border-transparent transition-all duration-300 focus:outline-none', className)}
       {...props}
     >
       <span className="relative z-10 flex items-center gap-2">{children}</span>
