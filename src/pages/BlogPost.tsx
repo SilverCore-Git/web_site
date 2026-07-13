@@ -111,27 +111,7 @@ export function BlogPost()
             </Markdown>
           </motion.div>
           
-          <motion.footer 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-32 pt-12 border-t border-black/5 relative"
-          >
-             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
-             <div className="bg-black/[0.02] border border-black/5 p-10 rounded-3xl flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-3xl shadow-[0_0_30px_rgba(100,108,255,0.1)] border border-primary/20">
-                  {post.author
-                    .split(" ")
-                    .map(word => word[0])
-                    .join("")
-                  }
-                </div>
-                <div>
-                   <h4 className="font-display font-bold text-2xl mb-2 text-dark">{post.author}</h4>
-                   <p className="text-dark/60 text-lg max-w-md">Nous écrivons sur la vie privée, la sécurité et l'avenir du web libre.</p>
-                </div>
-             </div>
-          </motion.footer>
+
         </div>
       </div>
     </>

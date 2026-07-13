@@ -54,8 +54,8 @@ export function Blog() {
                       <div className="absolute inset-0 flex items-center justify-center text-dark/10 font-display font-black text-4xl tracking-widest transform -rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500">
                           {post.category}
                       </div>
-                      <div className="absolute bottom-4 left-4">
-                        <span className="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-black/5 text-xs font-bold uppercase tracking-widest text-dark/80">
+                      <div className="absolute bottom-4 left-4 right-4 flex justify-start">
+                        <span className="px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-black/5 text-xs font-bold uppercase tracking-widest text-dark/80 truncate max-w-full">
                           {post.category}
                         </span>
                       </div>
