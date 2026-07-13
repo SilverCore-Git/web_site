@@ -50,7 +50,7 @@ export function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto"
           >
             <Link to="/services" className="w-full sm:w-auto">
-              <MagneticButton className="w-full bg-primary hover:bg-primary-dark text-white shadow-[0_4px_20px_rgba(100,108,255,0.3)]">
+              <MagneticButton className="w-full bg-primary hover:bg-primary-dark text-white">
                 Découvrir nos services
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </MagneticButton>

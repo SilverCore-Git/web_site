@@ -52,8 +52,8 @@ export function AnimatedText({ text, className, once = true, delay = 0, wordAnim
     >
       {wordAnimation
         ? words.map((word, index) => (
-            <motion.span variants={child} key={index} className="mr-1 mb-1">
-              {word}
+            <motion.span variants={child} key={index} className="inline-block whitespace-pre">
+              {word}{index !== words.length - 1 ? ' ' : ''}
             </motion.span>
           ))
         : characters.map((character, index) => (

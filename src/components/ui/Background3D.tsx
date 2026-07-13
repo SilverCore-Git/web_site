@@ -1,57 +1,11 @@
-import { useEffect } from 'react';
-import { motion, useMotionValue, useSpring } from 'motion/react';
+import { motion } from 'motion/react';
 
 export function Background3D() {
-  // Use framer-motion values to track mouse position without re-rendering React
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  // Apply spring physics for that "organic / viscous" trailing effect
-  // We use different springs for different layers to create depth and fluidity
-  const springConfig1 = { damping: 30, stiffness: 50 };
-  const springConfig2 = { damping: 40, stiffness: 40 };
-  const springConfig3 = { damping: 50, stiffness: 30 };
-
-  const x1 = useSpring(mouseX, springConfig1);
-  const y1 = useSpring(mouseY, springConfig1);
-
-  const x2 = useSpring(mouseX, springConfig2);
-  const y2 = useSpring(mouseY, springConfig2);
-
-  const x3 = useSpring(mouseX, springConfig3);
-  const y3 = useSpring(mouseY, springConfig3);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
-    };
-
-    // Set initial position to center of screen (using window innerWidth safely)
-    if (typeof window !== 'undefined') {
-      mouseX.set(window.innerWidth / 2);
-      mouseY.set(window.innerHeight / 2);
-      window.addEventListener('mousemove', handleMouseMove);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('mousemove', handleMouseMove);
-      }
-    };
-  }, [mouseX, mouseY]);
-
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#fafafa]">
       
       {/* Blob 1: Fast follower, primary color */}
       <motion.div
-        style={{
-          x: x1,
-          y: y1,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
         animate={{
           borderRadius: [
             "60% 40% 30% 70% / 60% 30% 70% 40%",
@@ -59,24 +13,20 @@ export function Background3D() {
             "50% 50% 20% 80% / 25% 80% 20% 75%",
             "60% 40% 30% 70% / 60% 30% 70% 40%",
           ],
-          rotate: [0, 90, 180, 360]
+          rotate: [0, 90, 180, 360],
+          x: ["-10%", "10%", "-5%", "-10%"],
+          y: ["-10%", "-5%", "10%", "-10%"],
         }}
         transition={{
-          duration: 15,
+          duration: 25,
           repeat: Infinity,
-          ease: "linear"
+          ease: "easeInOut"
         }}
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/20 blur-[80px]"
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 blur-[80px]"
       />
 
       {/* Blob 2: Medium follower, softer color */}
       <motion.div
-        style={{
-          x: x2,
-          y: y2,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
         animate={{
           borderRadius: [
             "40% 60% 70% 30% / 40% 50% 60% 50%",
@@ -84,24 +34,20 @@ export function Background3D() {
             "30% 70% 30% 70% / 60% 40% 60% 40%",
             "40% 60% 70% 30% / 40% 50% 60% 50%",
           ],
-          rotate: [360, 180, 90, 0]
+          rotate: [360, 180, 90, 0],
+          x: ["10%", "-10%", "5%", "10%"],
+          y: ["5%", "10%", "-10%", "5%"],
         }}
         transition={{
-          duration: 20,
+          duration: 30,
           repeat: Infinity,
-          ease: "linear"
+          ease: "easeInOut"
         }}
-        className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-400/10 blur-[100px]"
+        className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-blue-400/10 blur-[100px]"
       />
 
       {/* Blob 3: Slowest follower, accent color */}
       <motion.div
-        style={{
-          x: x3,
-          y: y3,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
         animate={{
           borderRadius: [
             "50% 50% 50% 50% / 50% 50% 50% 50%",
@@ -109,14 +55,16 @@ export function Background3D() {
             "40% 60% 60% 40% / 60% 40% 40% 60%",
             "50% 50% 50% 50% / 50% 50% 50% 50%",
           ],
-          scale: [1, 1.2, 0.8, 1]
+          scale: [1, 1.2, 0.8, 1],
+          x: ["0%", "20%", "-20%", "0%"],
+          y: ["20%", "0%", "-20%", "20%"],
         }}
         transition={{
-          duration: 12,
+          duration: 35,
           repeat: Infinity,
-          ease: "linear"
+          ease: "easeInOut"
         }}
-        className="absolute top-0 left-0 w-[400px] h-[400px] bg-secondary/10 blur-[90px]"
+        className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] bg-secondary/10 blur-[90px]"
       />
       
       {/* Subtle base glow to prevent complete white screen if mouse is far */}
