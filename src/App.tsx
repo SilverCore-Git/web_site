@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Footer } from '@/src/components/Layout';
 import { Home } from '@/src/pages/Home';
@@ -10,9 +10,12 @@ import { Contact } from '@/src/pages/Contact';
 import { Legal } from '@/src/pages/Legal';
 import { Privacy } from '@/src/pages/Privacy';
 import { startKit } from '@/src/kit';
+import { startTransitions, enter } from '@/src/transitions';
 
 export default function App() {
   useEffect(() => { startKit(); }, []);
+  // before the first paint, so the blocks start hidden and rise in instead of flashing
+  useLayoutEffect(() => { startTransitions(); enter(); }, []);
 
   return (
     <Router>
