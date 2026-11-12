@@ -33,8 +33,7 @@
 .eu-map__line { fill: none; stroke: rgb(198 193 255 / .35); stroke-width: .08; }
 .eu-map__packet { fill: none; stroke: #fff; stroke-width: .2; stroke-linecap: round; stroke-dasharray: 3 100; stroke-dashoffset: 103; opacity: 0; }
 .eu-map__city { fill: #c6c1ff; }
-.eu-map__route--you .eu-map__line { stroke: rgb(255 255 255 / .8); stroke-width: .12; }
-.eu-map__you circle, .eu-map__servers circle { fill: #fff; }
+.eu-map__servers circle { fill: #fff; }
 .eu-map__ring { fill: none !important; stroke: #fff; stroke-width: .12; transform-box: fill-box; transform-origin: center; opacity: 0; }
 .eu-map__caption { position: absolute; z-index: 1; left: var(--s-7); top: var(--s-7); max-width: 400px; }
 .eu-map__title { margin: 0; font: var(--display-weight) clamp(24px, 2.3vw, 34px)/1.1 var(--font-display); letter-spacing: var(--display-tracking); color: #fff; }
@@ -44,10 +43,8 @@
 .eu-map__legend i { width: 9px; height: 9px; border-radius: 50%; }
 .eu-map__legend .is-fr { background: #fff; }
 .eu-map__legend .is-eu { background: #8d84ff; }
-.eu-map__legend .is-you { background: transparent; box-shadow: 0 0 0 2px #fff; width: 7px; height: 7px; margin-inline: 1px; }
 @media (prefers-reduced-motion: no-preference) {
   .eu-map__packet { animation: eu-packet 3.2s cubic-bezier(.45, 0, .55, 1) calc(var(--i, 0) * .41s + .8s) infinite; }
-  .eu-map__route--you .eu-map__packet { animation-duration: 2.4s; animation-delay: .4s; }
   .eu-map__ring { animation: eu-ring 2.8s ease-out infinite; }
   .eu-map__ring--late { animation-delay: 1.4s; }
   @keyframes eu-packet { 0% { stroke-dashoffset: 103; opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
