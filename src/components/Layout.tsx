@@ -20,7 +20,7 @@ export function Navbar() {
       <div className="wrap nav__bar">
         <a className="skip-link" href="#top">Aller au contenu</a>
         <a className="nav__logo" href="/" aria-label="Silvercore, accueil">
-          <img className="logo-img" src="/assets/logo/scoreV2/silvercore_logo_text_white.svg" alt="Silvercore" width="131" height="30" />
+          <img className="logo-img" src="/assets/logo/scoreV2/silvercore_logo_text_nobg.svg" alt="Silvercore" width="124" height="33" />
         </a>
         <nav className="nav__links" aria-label="Principale">
           <div className="nav__item">
@@ -42,10 +42,12 @@ export function Navbar() {
                   <a href="/#souverainete">Souveraineté<span>Nos propres serveurs</span></a>
                   <a href={STATUS_URL}>Statut<span>L’état des serveurs en direct</span></a>
                 </div>
-                <a className="menu-card span-3 start-10" href="/services#silvertransfert">
-                  <div className="panel"><img className="frame__img" src="/assets/img/mockup_phone_silvertransfert_little.png" alt="L’écran d’accueil de Silvertransfert sur un téléphone" /></div>
-                  <span className="t-card">Silvertransfert</span>
-                  <span className="t-small muted">Envois chiffrés jusqu’à 10 Go</span>
+                <a className="menu-card span-3 start-10" href="/#souverainete">
+                  <div className="panel menu-card__pair">
+                    {SERVICES.map((s) => <img key={s.id} src={s.icon} alt="" width="56" height="56" />)}
+                  </div>
+                  <span className="t-card">Souverains et européens</span>
+                  <span className="t-small muted">Chiffrés, hébergés sur nos serveurs en France</span>
                 </a>
               </div>
             </div>
@@ -84,9 +86,9 @@ export function Footer() {
           <div className="grid">
             <div className="span-4 stack-4">
               <a className="nav__logo footer__mark" href="/" aria-label="Silvercore, accueil">
-                <img className="logo-img logo-img--lg" src="/assets/logo/scoreV2/silvercore_logo_text_white.svg" alt="Silvercore" width="168" height="39" />
+                <img className="logo-img logo-img--lg" src="/assets/logo/scoreV2/silvercore_logo_text_nobg.svg" alt="Silvercore" width="181" height="48" />
               </a>
-              <p className="footer__lede">Des outils chiffrés, hébergés en France.</p>
+              <p className="footer__lede">Des services européens, souverains et sécurisés.</p>
             </div>
             <div className="span-2 footer__col">
               <h3>Services</h3>

@@ -4,22 +4,6 @@ import { Arrow, Check, formatDate } from '@/src/components/ui';
 
 const [note, transfer] = SERVICES;
 
-const STATUS = [
-  { logo: '/assets/logo/snote/favicon.svg', name: 'Silvernote', role: 'Notes chiffrées', st: 'Opérationnel' },
-  { logo: '/assets/logo/stransfert/favicon.png', name: 'Silvertransfert', role: 'Transferts jusqu’à 10 Go', st: 'Opérationnel' },
-  { logo: '/assets/logo/scoreV2/silvercore_logo.svg', name: 'silvercore.fr', role: 'Site et blog', st: 'Vérification' },
-  { logo: '/assets/logo/scoreV2/silvercore_logo.svg', name: 'Page d’état', role: 'status.silvercore.fr', st: 'Vérification' },
-];
-
-const FILES = [
-  { name: 'Contrat de location.pdf', kind: 'PDF', icon: 'pdf' },
-  { name: 'Mémoire final.docx', kind: 'Word', icon: 'docx' },
-  { name: 'Budget 2026.xlsx', kind: 'Excel', icon: 'xlsx' },
-  { name: 'Photos Lisbonne.zip', kind: 'ZIP', icon: 'zip' },
-  { name: 'Plan cuisine.png', kind: 'Image', icon: 'image' },
-  { name: 'Notes réunion.md', kind: 'Markdown', icon: 'md' },
-];
-
 const E2E = JSON.stringify({
   layout: 'lanes',
   curve: 'curve',
@@ -50,58 +34,29 @@ export function Home() {
 
   return (
     <>
-      {/* HERO: centred. The company in one line, then the state of its services in one window */}
+      {/* HERO: centred. The company in one line, then its two products at work (real screenshots) */}
       <section className="hero hero--centred" data-enter aria-labelledby="hero-h">
         <div className="wrap">
           <div className="hero-text">
             <div className="hero__c">
-              <a className="pill" href={`/services#${transfer.id}`}><span>Nouveau : Silvertransfert</span><span className="muted">Envois chiffrés jusqu’à 10&nbsp;Go</span></a>
               <h1 id="hero-h" aria-label="Services souverains et sécurisés">
                 <img className="h1-mark" src="/assets/logo/scoreV2/silvercore_logo.svg" alt="" aria-hidden="true" /> Services souverains et sécurisés
               </h1>
               <p className="hero__lead">
-                Silvercore conçoit des outils du quotidien pour vos notes et vos fichiers, chiffrés et hébergés sur
-                nos propres serveurs en France. Sans pisteurs, sans revente de données.
+                Silvercore conçoit des services numériques européens et souverains, pensés d’abord pour la sécurité :
+                chiffrés, hébergés sur nos propres serveurs en France, sans pisteurs ni revente.
               </p>
               <div className="btn-row">
                 <a className="btn btn--primary" href={MAIN_ACTION.href}>{MAIN_ACTION.label}<Arrow /></a>
                 <a className="btn btn--secondary" href="#engagements">Lire nos engagements</a>
               </div>
             </div>
-            <div className="hero__window" role="img" aria-label="La page d’état de Silvercore : Silvernote, Silvertransfert, le site et la page d’état, tous opérationnels et hébergés en France">
-              <div className="ly-piece" aria-hidden="true" data-ui-loop>
-                <div className="ui ui-panel ui-win" data-ui="window" data-open="Vérification" data-work="Test en cours" data-done="Opérationnel">
-                  <div className="ui-win__bar">
-                    <span className="ui-dots"><i></i><i></i><i></i></span>
-                    <span className="ui-win__crumb"><img className="ui-brand" src="/assets/logo/scoreV2/silvercore_logo.svg" alt="" />Silvercore <i>/</i> <b>État des services</b></span>
-                    <span className="ui-spacer"></span>
-                    <span className="ui-win__search"><svg className="ui-icon" viewBox="0 0 16 16"><path d="M8 1.8 13 4v3.6c0 3-2.1 5.4-5 6.6-2.9-1.2-5-3.6-5-6.6V4z" /></svg><span className="ui-win__ph">Hébergé en France</span></span>
-                  </div>
-                  <div className="ui-win__body">
-                    <nav className="ui-win__side">
-                      <span className="ui-win__nav is-on"><svg className="ui-icon" viewBox="0 0 16 16"><path d="M2 8h3l2-4 2 8 2-4h3" /></svg>Services</span>
-                      <span className="ui-win__nav"><svg className="ui-icon" viewBox="0 0 16 16"><rect x="2.5" y="3" width="11" height="4" rx="1" /><rect x="2.5" y="9" width="11" height="4" rx="1" /></svg>Serveurs</span>
-                      <span className="ui-win__nav"><svg className="ui-icon" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5" /><path d="M8 5v3l2 1.5" /></svg>Historique</span>
-                      <span className="ui-win__label">Hébergement</span>
-                      <span className="ui-win__nav"><span className="ui-win__hash">#</span>France</span>
-                    </nav>
-                    <div className="ui-win__main">
-                      <div className="ui-win__cols"><span>Service</span><span>Rôle</span><span>État</span><span>Lieu</span></div>
-                      <ul className="ui-win__rows">
-                        {STATUS.map((s) => (
-                          <li className="ui-win__row" data-row key={s.name}>
-                            <span className="ui-avatar ui-avatar--logo"><img src={s.logo} alt="" /></span>
-                            <span className="ui-win__who">{s.name}</span>
-                            <span className="ui-win__sub">{s.role}</span>
-                            <span className={s.st === 'Opérationnel' ? 'ui-win__st is-done' : 'ui-win__st'} data-st>{s.st}</span>
-                            <span className="ui-win__age">France</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="hero__window hero-shots">
+              <figure className="hero-shot hero-shot--note">
+                <div className="hero-shot__bar" aria-hidden="true"><span className="hero-shot__dots"><i></i><i></i><i></i></span><img src={note.icon} alt="" />Silvernote</div>
+                <img src="/assets/img/products/silvernote-home.webp" alt="Silvernote : la liste des notes, avec une note épinglée et les notes récentes classées par étiquette" width="1352" height="759" fetchPriority="high" />
+              </figure>
+              <img className="hero-shot hero-shot--transfer" src="/assets/img/products/silvertransfert-card-files.webp" alt="Silvertransfert : trois fichiers prêts à partir, 20,3 Mo, chiffrés de bout en bout et supprimés après 30 jours" width="960" height="1000" />
             </div>
           </div>
         </div>
@@ -120,25 +75,7 @@ export function Home() {
               <p>Prenez vos notes, classez-les par dossier et écrivez à plusieurs en temps réel. Chaque note est chiffrée.</p>
               <a className="link" href={note.link}>{note.action}</a>
               <div className="panel">
-                <div className="stage stage--fade-b" aria-hidden="true">
-                  <div className="at-corner to-edge" style={{ '--ax': '40px', '--ay': '40px' } as React.CSSProperties} data-ui-loop>
-                    <div className="ui ui-doc" data-ui="doc">
-                      <article className="ui-doc__page">
-                        <div className="ui-doc__label">Projets · partagée avec 2 personnes</div>
-                        <div className="ui-doc__title">Todo de la semaine</div>
-                        <div className="ui-doc__text">Lundi : finir le <mark className="ui-doc__mark is-on">dossier de stage</mark> et l’envoyer avant 18 h.</div>
-                        <div className="ui-doc__text">Mardi : réviser le chapitre 4, puis <mark className="ui-doc__mark" data-kind="Ajout" data-msg="Ligne ajoutée depuis un autre téléphone." data-where="Synchronisée sur 3 appareils">réserver la salle pour jeudi</mark>.</div>
-                        <div className="ui-doc__text">Mercredi : courses pour samedi, la liste est dans le dossier Maison.</div>
-                        <div className="ui-doc__text">Jeudi : répétition à 19 h, prendre les partitions.</div>
-                      </article>
-                      <aside className="ui-doc__note ui-panel is-on">
-                        <div className="ui-doc__kind"><span className="ui-doc__dot"></span><span data-doc-kind>Modifiée</span></div>
-                        <div className="ui-doc__msg" data-doc-msg>Une personne du dossier écrit dans cette note.</div>
-                        <div className="ui-doc__where" data-doc-where>Chiffrée avant l’enregistrement</div>
-                      </aside>
-                    </div>
-                  </div>
-                </div>
+                <div className="shot-crop shot-crop--note"><img src="/assets/img/products/silvernote-note.webp" alt="Une note Silvernote ouverte : une liste de courses avec des cases à cocher" width="1100" height="759" loading="lazy" /></div>
               </div>
             </article>
             <article className="card card--row card--open span-6 service-card">
@@ -146,24 +83,7 @@ export function Home() {
               <p>Envoyez jusqu’à 10&nbsp;Go par un simple lien. Chiffré de bout en bout, supprimé après 30 jours.</p>
               <a className="link" href={transfer.link}>{transfer.action}</a>
               <div className="panel">
-                <div className="stage stage--fade-br" aria-hidden="true">
-                  <div className="at-corner wide" style={{ '--ax': '40px', '--ay': '40px', '--w': '560px' } as React.CSSProperties}>
-                    <div className="ui ui-files" data-ui="files" data-reading="Chiffrement de {n} sur {total}">
-                      <div className="ui-files__status"><span className="ui-dot"></span><span data-files-status>6 fichiers chiffrés</span></div>
-                      <ul className="ui-files__grid">
-                        {FILES.map((f) => (
-                          <li className="ui-file is-done" key={f.name}>
-                            <span className="ui-file__icon"><img src={`/assets/kit/icons/${f.icon}.svg`} alt="" /></span>
-                            <span className="ui-file__name">{f.name}</span>
-                            <span className="ui-file__kind">{f.kind}</span>
-                            <span className="ui-file__bar"><i></i></span>
-                            <span className="ui-file__check"><Check /></span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <div className="shot-crop shot-crop--transfer"><img src="/assets/img/products/silvertransfert-card-drop.webp" alt="La zone d’envoi de Silvertransfert : glissez vos fichiers, 10 Go par envoi, chiffré de bout en bout, supprimé après 30 jours" width="960" height="612" loading="lazy" /></div>
               </div>
             </article>
           </div>

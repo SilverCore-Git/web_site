@@ -8,7 +8,7 @@ export function Services() {
         <PageHead
           id="services-h"
           title="Les services Silvercore"
-          lead="Des outils du quotidien, chiffrés et hébergés sur nos serveurs en France. Chacun a une version gratuite, et des options en plus par abonnement."
+          lead="Des services européens et souverains, pensés pour la sécurité : chiffrés et hébergés sur nos serveurs en France. Chacun a une version gratuite, et des options en plus par abonnement."
         />
         <div className="stack-services">
           {SERVICES.map((s) => (

@@ -43,15 +43,15 @@ export const SERVICES = [
     action: 'Envoyer un fichier',
     link: 'https://www.silvertransfert.fr',
     icon: '/assets/logo/stransfert/favicon.png',
-    preview: '/assets/img/mockup_phone_silvertransfert_little.png',
-    previewAlt: 'L’écran d’accueil de Silvertransfert sur un téléphone, avec le bouton Faire un transfert',
+    preview: '/assets/img/products/silvertransfert-phone.webp',
+    previewAlt: 'Silvertransfert sur un téléphone : trois fichiers prêts à partir, chiffrés de bout en bout et supprimés après 30 jours',
   },
 ];
 
 export const FAQS = [
   {
     question: 'Qu’est-ce que Silvercore ?',
-    answer: 'Une organisation française basée à Lyon qui conçoit des outils numériques simples et respectueux de la vie privée : Silvernote pour les notes, Silvertransfert pour les fichiers.',
+    answer: 'Une organisation française basée à Lyon qui conçoit des services numériques européens et souverains, centrés sur la sécurité : Silvernote pour les notes, Silvertransfert pour les fichiers.',
   },
   {
     question: 'Les services sont-ils gratuits ?',
