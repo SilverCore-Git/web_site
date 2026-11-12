@@ -1,198 +1,133 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Instagram, ExternalLink } from 'lucide-react';
-import { NAV_LINKS, SITE_NAME } from '@/src/constants';
-import { cn } from '@/src/lib/utils';
+import { SERVICES, MAIN_ACTION, STATUS_URL, SOCIALS } from '@/src/constants';
+import { Arrow } from '@/src/components/ui';
+
+const NAV = [
+  { name: 'Engagements', path: '/#engagements' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'FAQ', path: '/faq' },
+  { name: 'Contact', path: '/contact' },
+];
+
+function current(path: string): 'page' | undefined {
+  if (typeof window === 'undefined') return undefined;
+  const here = window.location.pathname;
+  return path !== '/' && !path.includes('#') && (here === path || here.startsWith(path + '/')) ? 'page' : undefined;
+}
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
   return (
-
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      
-      <div className={cn(
-        "absolute inset-0 transition-all duration-300",
-        scrolled ? "bg-dark/80 backdrop-blur-lg" : "bg-transparent"
-      )} />
-
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary flex flex-row gap-2 justify-center items-center",
-                location.pathname === link.path ? "text-primary" : "text-white/70"
-              )}
-            >
-                { link.redirect ? <ExternalLink size={16} /> : undefined }
-                {link.name}
-            </Link>
+    <header className="nav">
+      <div className="wrap nav__bar">
+        <a className="skip-link" href="#top">Aller au contenu</a>
+        <a className="nav__logo" href="/" aria-label="Silvercore, accueil">
+          <img className="logo-img" src="/assets/logo/scoreV2/silvercore_logo_text_white.svg" alt="Silvercore" width="131" height="30" />
+        </a>
+        <nav className="nav__links" aria-label="Principale">
+          <div className="nav__item">
+            <a className="nav__link" href="/services" aria-current={current('/services')}>
+              Services
+              <svg className="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </a>
+            <div className="nav__menu">
+              <div className="wrap grid">
+                <div className="menu-col span-3">
+                  <p className="t-label">Nos outils</p>
+                  {SERVICES.map((s) => (
+                    <a key={s.id} href={`/services#${s.id}`}>{s.name}<span>{s.short}</span></a>
+                  ))}
+                </div>
+                <div className="menu-col span-3">
+                  <p className="t-label">Silvercore</p>
+                  <a href="/#engagements">Engagements<span>Chiffrement, France, RGPD</span></a>
+                  <a href="/#souverainete">Souveraineté<span>Nos propres serveurs</span></a>
+                  <a href={STATUS_URL}>Statut<span>L’état des serveurs en direct</span></a>
+                </div>
+                <a className="menu-card span-3 start-10" href="/services#silvertransfert">
+                  <div className="panel"><img className="frame__img" src="/assets/img/mockup_phone_silvertransfert_little.png" alt="L’écran d’accueil de Silvertransfert sur un téléphone" /></div>
+                  <span className="t-card">Silvertransfert</span>
+                  <span className="t-small muted">Envois chiffrés jusqu’à 10 Go</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          {NAV.map((l) => (
+            <div className="nav__item" key={l.path}>
+              <a className="nav__link" href={l.path} aria-current={current(l.path)}>{l.name}</a>
+            </div>
           ))}
+        </nav>
+        <div className="nav__actions">
+          <a className="nav__link" href={STATUS_URL}>Statut</a>
+          <a className="btn btn--primary" href={MAIN_ACTION.href}>{MAIN_ACTION.label}</a>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white p-2"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
+        <button className="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
         </button>
       </div>
-
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full inset-x-0 border-b border-white/5 p-6 flex flex-col gap-4 md:hidden"
-          >
-            <div className="absolute inset-0 transition-all duration-300 z-10 bg-dark/80 backdrop-blur-lg" />
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  "text-lg font-medium py-2 border-b border-white/5 flex flex-row gap-2 justify-center items-center z-20",
-                  location.pathname === link.path ? "text-primary" : "text-white/70"
-                )}
-              >
-                { link.redirect ? <ExternalLink size={16} /> : undefined }
-                {link.name}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+    </header>
   );
 }
 
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-dark-lighter border-t border-white/5 pt-20 pb-10 px-6 mt-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
-        <div className="col-span-1 md:col-span-2">
-
-          <div className='flex justify-between max-w-sm'>
-
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src='/assets/logo/score/silvercore_logo_text.png' className='h-9' />
-            </Link>
-
-            <iframe 
-              src="https://status.silvercore.fr/embed-badges/live-status?align=start&background-dark=1a1a1a&text-dark=ffffff" 
-              width="190" 
-              height="30" 
-              loading="lazy"
-              title="Statut des services Silvercore"
-              className="mb-6 "
-              frameBorder={0}
-              scrolling='no'
-            />
-
+    <footer className="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+      <div className="wrap">
+        <div className="closing__cta close--type">
+          <div className="section-head">
+            <h2 id="close-h">Des outils qui restent en France</h2>
+            <p className="t-small muted">Silvernote et Silvertransfert, gratuits pour l’essentiel, chiffrés et hébergés chez nous.</p>
           </div>
-          
-          <p className="text-white/50 max-w-md mb-8">
-            SilverCore vous offre des services utilitaires originaux, 
-            respectueux de votre vie privée et accessibles à tous.
-          </p>
-          <div className="flex gap-4">
-            
-            <a 
-              className='
-                bg-dark w-10 h-10 cursor-pointer 
-                hover:scale-110 transition-all duration-300 
-                rounded-lg flex justify-center items-center
-              '
-              href='https://taap.it/silvercore.insta'
-            >
-              <Instagram size={20} />
-            </a>
-
-            <a 
-              className='
-                bg-dark w-10 h-10 cursor-pointer 
-                hover:scale-110 transition-all duration-300 
-                rounded-lg flex justify-center items-center
-              '
-              href='https://taap.it/silvercore.discord'
-            >
-              <i className='bi bi-discord text-xl' />
-            </a>
-
-            <a 
-              className='
-                bg-dark w-10 h-10 cursor-pointer 
-                hover:scale-110 transition-all duration-300 
-                rounded-lg flex justify-center items-center
-              '
-              href='https://taap.it/silvercore.github'
-            >
-              <Github size={20} />
-            </a>
-
+          <a className="btn btn--primary btn--xl btn--wide" href={MAIN_ACTION.href}>{MAIN_ACTION.label}<Arrow /></a>
+        </div>
+        <div className="closing__links">
+          <div className="grid">
+            <div className="span-4 stack-4">
+              <a className="nav__logo footer__mark" href="/" aria-label="Silvercore, accueil">
+                <img className="logo-img logo-img--lg" src="/assets/logo/scoreV2/silvercore_logo_text_white.svg" alt="Silvercore" width="168" height="39" />
+              </a>
+              <p className="footer__lede">Des outils chiffrés, hébergés en France.</p>
+            </div>
+            <div className="span-2 footer__col">
+              <h3>Services</h3>
+              <ul>
+                {SERVICES.map((s) => <li key={s.id}><a href={s.link}>{s.name}</a></li>)}
+                <li><a href={STATUS_URL}>Statut</a></li>
+              </ul>
+            </div>
+            <div className="span-2 footer__col">
+              <h3>Silvercore</h3>
+              <ul>
+                <li><a href="/#engagements">Engagements</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/faq">FAQ</a></li>
+              </ul>
+            </div>
+            <div className="span-2 footer__col">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="/contact">Formulaire</a></li>
+                <li><a href={SOCIALS.discord}>Discord</a></li>
+                <li><a href={SOCIALS.discordSupport}>Discord support</a></li>
+              </ul>
+            </div>
+            <div className="span-2 footer__col">
+              <h3>Légal</h3>
+              <ul>
+                <li><a href="/privacy">Confidentialité</a></li>
+                <li><a href="/legal">Mentions légales</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer__legal">
+            <span>© {year} Silvercore · Hébergé en France</span>
+            <div className="socials">
+              <a href={SOCIALS.instagram} aria-label="Instagram"><img src="/assets/kit/icons/instagram.svg" alt="" width="20" height="20" /></a>
+              <a href={SOCIALS.discord} aria-label="Discord"><img src="/assets/kit/icons/discord.svg" alt="" width="20" height="20" /></a>
+              <a href={SOCIALS.github} aria-label="GitHub"><img src="/assets/kit/icons/github.svg" alt="" width="20" height="20" /></a>
+            </div>
           </div>
         </div>
-
-        <div>
-
-          <h4 className="font-display font-bold mb-6">Information</h4>
-          <ul className="space-y-4 text-white/50 text-sm">
-            <li><Link to="/privacy" className="hover:text-primary transition-colors">Confidentialité</Link></li>
-            <li><Link to="/legal" className="hover:text-primary transition-colors">Mentions légales</Link></li>
-          </ul>
-
-        </div>
-
-        <div>
-
-          <h4 className="font-display font-bold mb-6">Contact</h4>
-          <ul className="space-y-4 text-white/50 text-sm">
-            <li><Link to="/contact" className="hover:text-primary transition-colors">Formulaire</Link></li>
-            <li><a href="https://taap.it/silvercore.discord" className="hover:text-primary transition-colors">Discord Silvercore</a></li>
-            <li><a href="https://taap.it/silvercore.discord.support" className="hover:text-primary transition-colors">Discord support</a></li>
-          </ul>
-
-        </div>
-
-        <div>
-
-          <h4 className="font-display font-bold mb-6">Nos services</h4>
-          <ul className="space-y-4 text-white/50 text-sm">
-            <li><a href="https://www.silvernote.fr" className="hover:text-primary transition-colors">Silvernote</a></li>
-            <li><a href="https://www.silvertransfert.fr" className="hover:text-primary transition-colors">Silvertransfert</a></li>
-          </ul>
-          
-        </div>
-
-      </div>
-
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-white text-xs ">
-        <p>© {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.</p>
-        <p>Hébergé en France</p>
       </div>
     </footer>
   );

@@ -1,73 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" data-type="software" data-radius="soft" data-tone="dark" data-buttons="solid" data-motion>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-     
-    <!-- Meta de base -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Silvercore - Des services numériques pensés pour votre confidentialité</title>
-    
-    <!-- SEO -->
+    <title>Silvercore : services numériques souverains et chiffrés, hébergés en France</title>
     <meta
       name="description"
-      content="Silvercore conçoit des services numériques simples, sécurisés et respectueux de la vie privée. Notes, transferts de fichiers chiffrés et outils modernes, hébergés en France."
-    />
-    <meta
-      name="keywords"
-      content="Silvercore, services numériques, confidentialité, sécurité, Silvernote, Silvertransfert, chiffrement, transfert de fichiers, notes en ligne, RGPD, données en France"
+      content="Silvercore conçoit des services numériques souverains : chiffrés, hébergés sur ses propres serveurs en France, sans pisteurs ni revente de données."
     />
     <meta name="author" content="Silvercore" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.silvercore.fr" />
 
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    
-    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Silvercore" />
-    <meta
-      property="og:title"
-      content="Silvercore - Des services numériques pensés pour votre confidentialité"
-    />
-    <meta
-      property="og:description"
-      content="Notes, transferts de fichiers et outils numériques sécurisés. Chiffrement, hébergement en France et respect total de la vie privée."
-    />
+    <meta property="og:title" content="Silvercore : services numériques souverains et chiffrés" />
+    <meta property="og:description" content="Des outils du quotidien chiffrés et hébergés en France, sans pisteurs ni revente de données." />
     <meta property="og:url" content="https://www.silvercore.fr" />
-    <meta
-      property="og:image"
-      content="https://www.silvercore.fr/assets/img/og-banner.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Silvercore - Services numériques sécurisés"
-    />
-
-    <!-- Twitter / X -->
+    <meta property="og:image" content="https://www.silvercore.fr/assets/img/og-banner.png" />
+    <meta property="og:image:alt" content="Silvercore, services numériques chiffrés" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Silvercore - Services numériques sécurisés"
-    />
-    <meta
-      name="twitter:description"
-      content="Des outils simples et sécurisés pour vos notes et transferts de fichiers, conçus pour protéger vos données."
-    />
-    <meta
-      name="twitter:image"
-      content="https://www.silvercore.fr/assets/img/og-banner.png"
-    />
+    <meta name="twitter:title" content="Silvercore : services numériques souverains et chiffrés" />
+    <meta name="twitter:description" content="Des outils du quotidien chiffrés et hébergés en France, sans pisteurs ni revente de données." />
+    <meta name="twitter:image" content="https://www.silvercore.fr/assets/img/og-banner.png" />
 
-    <!-- UI / Mobile -->
-    <meta name="theme-color" content="#646cff" />
+    <meta name="theme-color" content="#0b0b12" />
+    <meta name="site-kind" content="software" />
+    <meta name="page-type" content="software" />
 
-    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -78,29 +42,12 @@
         "description": "Silvercore conçoit des services numériques simples, sécurisés et respectueux de la vie privée. Notes, transferts de fichiers chiffrés et outils modernes, hébergés en France.",
         "foundingLocation": {
           "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Lyon",
-            "addressCountry": "FR"
-          }
+          "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" }
         },
-        "areaServed": {
-          "@type": "Country",
-          "name": "France"
-        },
+        "areaServed": { "@type": "Country", "name": "France" },
         "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "support@silvercore.fr",
-            "availableLanguage": ["French"]
-          },
-          {
-            "@type": "ContactPoint",
-            "contactType": "general inquiries",
-            "email": "contact@silvercore.fr",
-            "availableLanguage": ["French"]
-          }
+          { "@type": "ContactPoint", "contactType": "customer support", "email": "support@silvercore.fr", "availableLanguage": ["French"] },
+          { "@type": "ContactPoint", "contactType": "general inquiries", "email": "contact@silvercore.fr", "availableLanguage": ["French"] }
         ],
         "sameAs": [
           "https://taap.it/silvercore.discord",
@@ -112,12 +59,52 @@
 
     <script defer src="https://u.silvercore.fr/script.js" data-website-id="f4e27a66-7b5b-41f6-beb4-25c37f35f678"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
+    <!-- design system (tasteskill kit in public/assets/kit): fonts, kit CSS, then the dealt palette -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..700&family=Funnel+Sans:wght@400..600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/kit/system.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/cards.css" />
+    <link rel="stylesheet" href="/assets/kit/motion/motion.css" />
+    <link rel="stylesheet" href="/assets/kit/backgrounds/backgrounds.css" />
+    <link rel="stylesheet" href="/assets/kit/layout/layout.css" />
+    <link rel="stylesheet" href="/assets/kit/icons/icon.css" />
+    <style>
+      :root {
+        --p-bg: #0b0b12; --p-surface: #15151f; --p-ink: #f4f4f8; --p-muted: #808086;
+        --p-accent: #6356e5; --p-accent-ink: #ffffff; --p-action: #6356e5; --p-action-ink: #ffffff;
+        --p-inv-bg: #f4f4f8; --p-inv-surface: #e1e1e6; --p-inv-ink: #0b0b12; --p-inv-muted: #58585f;
+        --p-inv-accent: #6356e5; --p-inv-accent-ink: #ffffff; --p-inv-action: #6356e5; --p-inv-action-ink: #ffffff;
+        --font-display: "Funnel Display", system-ui, sans-serif;
+        --font-text: "Funnel Sans", system-ui, sans-serif;
+        --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        --display-weight: 400;
+        --display-tracking: -0.03em;
+        --display-tracking-xl: -0.04em;
+        --ly-scale: 0.98;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/kit/ui/base.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/window/fragment.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/doc/fragment.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/files/fragment.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/toggles/fragment.css" />
+    <link rel="stylesheet" href="/assets/kit/ui/checklist/fragment.css" />
+    <link rel="stylesheet" href="/assets/kit/diagrams/diagram.css" />
+    <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+    <script src="/assets/kit/backgrounds/backgrounds.js"></script>
+    <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+    <link rel="modulepreload" href="/assets/kit/moments/moments.js" />
+    <link rel="modulepreload" href="/assets/kit/moments/lib.js" />
+    <link rel="modulepreload" href="/assets/kit/moments/liquid-type/moment.js" />
   </head>
+  <!-- type: software (site-kind software): the Silvercore company site
+       deal: hero centred, nav nav-mega, close close-type, footer footer-dark, rhythm surface-pairs, buttons solid,
+             mark: the client logo. Palette: the client brand (start.mjs brand), dark ground #0b0b12 and the logo violet
+             #6356E5 as primary, by the client request (overrides the skill rule against violet); type funnel, radius soft.
+       moments: liquid-type in #souverainete (the statement section) -->
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

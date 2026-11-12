@@ -1,0 +1,192 @@
+[
+  {
+    "file": "discord.svg",
+    "icon": "si:discord",
+    "name": "Discord",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
+    "file": "docx.svg",
+    "icon": "file:file-type-word",
+    "name": "Word document",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  },
+  {
+    "file": "github.svg",
+    "icon": "si:github",
+    "name": "GitHub",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
+    "file": "image.svg",
+    "icon": "file:file-type-image",
+    "name": "Image",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  },
+  {
+    "file": "instagram.svg",
+    "icon": "si:instagram",
+    "name": "Instagram",
+    "kind": "mono",
+    "source": "simple-icons@16.30.0",
+    "author": "Simple Icons Collaborators",
+    "licence": "CC0-1.0",
+    "url": "https://github.com/simple-icons/simple-icons",
+    "trademark": true,
+    "colour": "one-colour fallback in the brand hex"
+  },
+  {
+    "file": "md.svg",
+    "icon": "file:file-type-markdown",
+    "name": "Markdown",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  },
+  {
+    "file": "pdf.svg",
+    "icon": "file:file-type-pdf2",
+    "name": "PDF",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  },
+  {
+    "file": "ui-activity.svg",
+    "icon": "ui:activity",
+    "name": "Activity",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-file-lock.svg",
+    "icon": "ui:file-lock",
+    "name": "File Lock",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-globe.svg",
+    "icon": "ui:globe",
+    "name": "Globe",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-key-round.svg",
+    "icon": "ui:key-round",
+    "name": "Key Round",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-link.svg",
+    "icon": "ui:link",
+    "name": "Link",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-lock.svg",
+    "icon": "ui:lock",
+    "name": "Lock",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-server.svg",
+    "icon": "ui:server",
+    "name": "Server",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "ui-shield-check.svg",
+    "icon": "ui:shield-check",
+    "name": "Shield Check",
+    "kind": "line",
+    "source": "@iconify-json/lucide@1.2.100",
+    "author": "Lucide Contributors",
+    "licence": "ISC",
+    "url": "https://github.com/lucide-icons/lucide",
+    "trademark": false
+  },
+  {
+    "file": "xlsx.svg",
+    "icon": "file:file-type-excel",
+    "name": "Excel workbook",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  },
+  {
+    "file": "zip.svg",
+    "icon": "file:file-type-zip",
+    "name": "ZIP archive",
+    "kind": "colour",
+    "source": "@iconify-json/vscode-icons@1.2.30",
+    "author": "Roberto Huertas",
+    "licence": "MIT",
+    "url": "https://github.com/vscode-icons/vscode-icons",
+    "trademark": false
+  }
+]
