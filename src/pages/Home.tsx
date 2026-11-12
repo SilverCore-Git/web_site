@@ -1,6 +1,7 @@
 import { MAIN_ACTION, SERVICES, FAQS, STATUS_URL } from '@/src/constants';
 import { BlogService } from '@/src/services/blogService';
 import { Arrow, Check, formatDate } from '@/src/components/ui';
+import { EuropeMap } from '@/src/components/EuropeMap';
 
 const [note, transfer] = SERVICES;
 
@@ -34,7 +35,7 @@ export function Home() {
 
   return (
     <>
-      {/* HERO: centred. The company in one line, then its two products at work (real screenshots) */}
+      {/* HERO: centred. The company in one line, then Europe, with our servers in France, as the banner */}
       <section className="hero hero--centred" data-enter aria-labelledby="hero-h">
         <div className="wrap">
           <div className="hero-text">
@@ -51,13 +52,7 @@ export function Home() {
                 <a className="btn btn--secondary" href="#engagements">Lire nos engagements</a>
               </div>
             </div>
-            <div className="hero__window hero-shots">
-              <figure className="hero-shot hero-shot--note">
-                <div className="hero-shot__bar" aria-hidden="true"><span className="hero-shot__dots"><i></i><i></i><i></i></span><img src={note.icon} alt="" />Silvernote</div>
-                <img src="/assets/img/products/silvernote-home.webp" alt="Silvernote : la liste des notes, avec une note épinglée et les notes récentes classées par étiquette" width="1352" height="759" fetchPriority="high" />
-              </figure>
-              <img className="hero-shot hero-shot--transfer" src="/assets/img/products/silvertransfert-card-files.webp" alt="Silvertransfert : trois fichiers prêts à partir, 20,3 Mo, chiffrés de bout en bout et supprimés après 30 jours" width="960" height="1000" />
-            </div>
+            <EuropeMap />
           </div>
         </div>
       </section>
