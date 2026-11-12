@@ -6,7 +6,11 @@
     "content": "Le chiffrement de bout en bout, ou E2EE, n'est pas un argument marketing : c'est un mécanisme qui fait en sorte que seuls l'émetteur et le destinataire peuvent lire les données échangées.\n\n### Comment cela fonctionne\n\nAvant de quitter votre appareil, vos données sont chiffrées de manière à devenir illisibles pour tout tiers. Elles transitent ensuite sur les serveurs intermédiaires sans qu'ils puissent en prendre connaissance, puis sont déchiffrées uniquement chez le destinataire.\n\n### Pourquoi c’est important chez Silvercore\n\nChez Silvercore, nous considérons que la confidentialité n’est pas une option. Avec SilverTransfert, les fichiers sont protégés par un chiffrement AES-256, un standard reconnu pour sa robustesse.\n\nConcrètement, même en cas d’accès non autorisé à nos infrastructures, le contenu des fichiers resterait protégé. Votre vie privée reste entre vos mains.",
     "date": "2026-02-01",
     "author": "Équipe Silvercore",
-    "category": "Sécurité"
+    "category": "Sécurité",
+    "image": "/assets/img/blog/covers/enigma.webp",
+    "imageAlt": "Une machine de chiffrement Enigma dans sa caisse en bois, clavier et rotors visibles",
+    "imageCredit": "Rama, CC BY-SA 2.0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Enigma-IMG_0487-black.jpg"
   },
   {
     "id": "pourquoi-heberger-en-france",
@@ -15,7 +19,11 @@
     "content": "Silvercore a choisi d’héberger ses services en France pour offrir un meilleur contrôle sur les données, une conformité solide et une expérience plus fiable.\n\n### Un cadre juridique protecteur\n\nL’hébergement en France implique que les données sont soumises au RGPD et aux règles européennes de protection des données. Cela renforce la transparence et limite les dépendances à des juridictions étrangères.\n\n### Une vraie souveraineté numérique\n\nVos données restent hébergées dans l’Union européenne, sans dispersion inutile sur plusieurs continents. Ce choix réduit les zones de risque et simplifie la compréhension de l’environnement dans lequel vos informations évoluent.\n\n### Des performances plus constantes\n\nLa proximité des infrastructures améliore souvent la latence et la réactivité, en particulier pour les utilisateurs français et européens.\n\nChoisir Silvercore, c’est choisir une technologie plus proche, plus lisible et plus responsable.",
     "date": "2026-01-25",
     "author": "Équipe Silvercore",
-    "category": "Infrastructure"
+    "category": "Infrastructure",
+    "image": "/assets/img/blog/covers/carte-de-cassini.webp",
+    "imageAlt": "La carte de Cassini, première carte générale de la France, dépliée sur une table de la Bibliothèque nationale de France",
+    "imageCredit": "CC0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Carte_de_Cassini,_index_20260724_111848.jpg"
   },
   {
     "id": "transparence-totale-status-page",
@@ -24,7 +32,11 @@
     "content": "Chez Silvercore, la confiance passe aussi par la visibilité. C’est pourquoi nous avons lancé une page d’état officielle pour suivre en temps réel la santé de nos services.\n\n### Ce que vous y trouverez\n\nCette page centralise l’état de Silvernote, SilverTransfert, ainsi que de nos API et bases de données. Vous pouvez y consulter rapidement les éventuels incidents, maintenances et retours à la normale.\n\n### Pourquoi c’est utile\n\nQuand un outil est utilisé pour prendre des notes importantes ou envoyer un fichier urgent, savoir ce qui se passe en coulisses fait toute la différence. Cette page vous donne une information claire, sans détour.\n\nNotre infrastructure de supervision renforce notre engagement : plus de transparence, plus de fiabilité, et moins d’incertitude.",
     "date": "2026-01-30",
     "author": "Équipe Silvercore",
-    "category": "Infrastructure"
+    "category": "Infrastructure",
+    "image": "/assets/img/blog/covers/salle-serveurs.webp",
+    "imageAlt": "Une salle de serveurs, rangées de machines et câbles d’alimentation et de fibre optique",
+    "imageCredit": "Esquilo, CC BY-SA 3.0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg"
   },
   {
     "id": "nouveau-site-web-silvercore",
@@ -33,7 +45,11 @@
     "content": "Nous sommes heureux d’annoncer la mise en ligne du nouveau site web Silvercore.\n\n### Une expérience repensée\n\nCe nouveau site a été conçu pour présenter nos services plus clairement, simplifier la navigation et refléter plus fidèlement notre engagement pour la vie privée, la transparence et la souveraineté numérique.\n\n### Ce qui change\n\nNous avons revu l’architecture des contenus, modernisé la présentation et amélioré la lisibilité sur tous les écrans. L’objectif est simple : vous permettre de trouver rapidement l’information utile, sans friction.\n\n### Une base plus solide pour la suite\n\nCe lancement marque une étape importante dans l’évolution de Silvercore. Il nous offre une base plus propre pour publier nos prochains contenus, présenter nos services et faire grandir notre écosystème.\n\nMerci à toutes celles et ceux qui nous accompagnent dans cette aventure.",
     "date": "2026-04-28",
     "author": "Équipe Silvercore",
-    "category": "Annonce"
+    "category": "Annonce",
+    "image": "/assets/img/blog/covers/casse-typographe.webp",
+    "imageAlt": "Une casse de typographe remplie de caractères en plomb, au musée Champollion",
+    "imageCredit": "Vigneron, CC BY 3.0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Casse_de_typographe,_Grandjean_-_mus%C3%A9e_Champollion.JPG"
   },
   {
     "id": "bun-runtime-performance-silvercore",
@@ -42,7 +58,11 @@
     "content": "Chez Silvercore, la performance et la sécurité ne sont pas des options : ce sont des exigences fondamentales. Chaque choix technologique est guidé par un objectif simple : offrir des services rapides, fiables et respectueux des données.\n\nDans cette optique, nous avons récemment expérimenté Bun, un runtime JavaScript moderne qui redéfinit les standards de performance.\n\n### Une compilation impressionnante\n\nLors de nos tests, l’une de nos API les plus volumineuses a été compilée en seulement 73 millisecondes. Le résultat : deux fichiers de 9 Mo prêts à être exécutés.\n\nCe niveau de rapidité change profondément la manière de travailler. Là où des outils classiques comme Node.js ou TSX nécessitent davantage de temps de build et d’exécution, Bun réduit drastiquement les cycles de développement.\n\n### Pourquoi Bun est différent\n\nBun n’est pas simplement un runtime : c’est un écosystème complet. Il intègre nativement un bundler, un transpileur TypeScript et un gestionnaire de paquets ultra rapide.\n\nConcrètement, cela signifie :\n- Moins de dépendances externes\n- Moins de complexité dans la chaîne de build\n- Moins de surface d’attaque potentielle\n\nCette simplicité structurelle est un avantage direct en matière de sécurité.\n\n### Performance et sécurité : un lien direct\n\nOptimiser les performances ne sert pas uniquement à aller plus vite. C’est aussi réduire les risques.\n\nUn système plus simple, avec moins d’outils intermédiaires, est plus facile à auditer, maintenir et sécuriser. En réduisant les couches techniques, on limite les points de vulnérabilité.\n\nChez Silvercore, cette approche est centrale : chaque gain de performance doit aussi renforcer la robustesse globale.\n\n### Une alternative crédible à Node.js\n\nNode.js reste une référence solide, mais son écosystème historique implique parfois une complexité importante.\n\nBun propose une approche plus moderne, avec des performances nettement supérieures dans de nombreux cas, notamment :\n- Le démarrage des applications\n- L’exécution de scripts TypeScript\n- La gestion des dépendances\n\nPour des services exigeants comme ceux de Silvercore, ces gains ne sont pas marginaux : ils sont structurants.\n\n### Vers une nouvelle génération d’infrastructure\n\nL’adoption de Bun s’inscrit dans une démarche plus large : repenser nos outils pour construire une infrastructure plus rapide, plus lisible et plus sécurisée.\n\nCe type d’innovation permet non seulement d’améliorer l’expérience utilisateur, mais aussi de renforcer la confiance. Car derrière chaque milliseconde gagnée, il y a une architecture plus maîtrisée.\n\nBun n’est pas simplement un outil performant. C’est une brique technologique qui correspond à notre vision : une technologie efficace, moderne, et alignée avec des exigences élevées en matière de sécurité.",
     "date": "2026-05-28",
     "author": "Équipe Silvercore",
-    "category": "Technologie"
+    "category": "Technologie",
+    "image": "/assets/img/blog/covers/chronometre.webp",
+    "imageAlt": "Un chronomètre ancien à gousset sur fond noir",
+    "imageCredit": "Ansgar Koreng, CC BY-SA 4.0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Stopwatch,_1810201155,_ako.jpg"
   },
   {
     "id": "chat-control-danger-silvercore",
@@ -51,6 +71,10 @@
     "content": "Chez **Silvercore**, nous plaçons la protection de la vie privée et la sécurité numérique au cœur de notre ADN. C'est pourquoi nous tenons aujourd'hui à prendre la parole sur un sujet européen crucial qui menace de bouleverser notre rapport à la confidentialité : le **Chat Control**.\n\nSi l'objectif initial de ce projet de loi est louable, les moyens techniques envisagés pour y parvenir nous paraissent profondément dangereux et inadaptés à la réalité de nos infrastructures actuelles. Voici pourquoi Silvercore s'y oppose fermement.\n\n### Qu'est-ce que le \"Chat Control\" ?\n\nLe \"Chat Control\" est une proposition de règlement de l'Union européenne visant à lutter contre la diffusion de contenus illégaux en ligne. Pour ce faire, le texte propose d'obliger les fournisseurs de services de messagerie (applications, réseaux sociaux, courriels) à analyser automatiquement l'ensemble des communications privées de leurs utilisateurs pour y détecter des infractions.\n\nConcrètement, cela signifierait la fin du secret des correspondances tel que nous le connaissons, et obligerait les plateformes à implanter des systèmes de surveillance directement dans leurs applications.\n\n### Une cause juste, mais des moyens techniques irresponsables\n\nSoyons clairs : **Silvercore soutient pleinement la lutte contre la criminalité et les actes illégaux en ligne.** L'idée de base du Chat Control part d'une bonne intention que nous saluons.\n\nCependant, imposer techniquement la mise en place de **portes dérobées (*backdoors*)** sur les applications de communication chiffrées est une approche irresponsable.\n\nCréer une faille de sécurité \"légale\" pour les autorités signifie créer une faille de sécurité tout court. Ces portes dérobées, une fois codées, deviendront inévitablement la cible privilégiée de personnes malveillantes, de pirates informatiques ou d'organisations criminelles. C'est une porte ouverte à l'espionnage de masse et à l'extorsion, fragilisant la sécurité de tous les citoyens européens.\n\n### Nos infrastructures ne sont pas prêtes pour un tel niveau de risque\n\nConfier une telle quantité de données ultra-sensibles ou les clés d'accès à nos conversations privées nécessite une infrastructure numérique absolument infaillible. Or, nous sommes contraints de constater que les infrastructures publiques françaises et européennes sont aujourd'hui loin d'être assez sécurisées pour accueillir une telle responsabilité.\n\nIl suffit de consulter l'actualité ou des plateformes de veille comme le site *Bonjour la fuite* pour mesurer l'ampleur du problème. Les fuites de données frappant le secteur public se multiplient à un rythme inquiétant :\n\n- **Le 26 juin dernier**, le Ministère des Sports, de la Jeunesse et de la Vie associative a été victime d'une fuite massive. Des IBAN, des numéros de téléphone et des adresses de messagerie se sont retrouvés accessibles à tous sur internet.\n- **L'INSEE** (Institut national de la statistique et des études économiques) a également été récemment touché par des failles compromettant des données.\n- **La Fédération Sportive de la Police Nationale (FSPN)** a elle aussi vu ses systèmes piratés.\n\n> Si des entités publiques étatiques peinent aujourd'hui à sécuriser des numéros de téléphone ou des coordonnées bancaires, comment pourrions-nous raisonnablement leur confier un accès potentiel aux messages privés de millions de citoyens à travers toute l'Europe ?\n\n### L'engagement de Silvercore\n\nFace à ce constat, Silvercore a décidé de réagir.\n\nNous sommes actuellement en plein développement de **notre propre application de messagerie instantanée**. Notre promesse est simple : concevoir un outil robuste, sécurisé, et respectueux de vos libertés fondamentales.\n\nEn tant qu'acteurs de la tech, nous affirmons notre opposition totale aux méthodes techniques imposées par le Chat Control. Nous ferons tout notre possible pour réduire au maximum l'impact de ce type de législation sur notre future application, tout en restant dans un cadre légal. Nous continuerons de militer, de sensibiliser et de concevoir des solutions techniques qui protègent les utilisateurs avant tout.\n\nLa sécurité ne doit pas se faire au détriment de la vie privée. Chez Silvercore, nous refusons de sacrifier l'une pour l'autre.",
     "date": "2026-07-09",
     "author": "Équipe Silvercore",
-    "category": "Sécurité & Vie Privée"
+    "category": "Sécurité & Vie Privée",
+    "image": "/assets/img/blog/covers/cachet-de-cire.webp",
+    "imageAlt": "Une lettre pliée et fermée par un cachet de cire rouge",
+    "imageCredit": "Contrafool, CC BY-SA 3.0, Wikimedia Commons",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Wax_seal_with_impression_of_uppercase_letter_A.jpg"
   }
 ]

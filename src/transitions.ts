@@ -5,7 +5,7 @@
 // The home hero keeps the kit's own entrance (.hero[data-enter], motion.js). Reduced motion: no travel.
 
 // the blocks that move, outermost first: a card moves as one, its title and text with it
-const BLOCK = ':is(h1, h2, h3, p, ul, ol, form, .btn-row, .card, .panel, .hero__window, .service-shot, .service-row__head, .faq__item, .post-list li, .section-head, .prose > *, .statement__type)';
+const BLOCK = ':is(h1, h2, h3, p, ul:not(.post-rows, .post-next ul), ol, form, .btn-row, .card, .panel, .hero__window, .service-shot, .service-row__head, .faq__item, .post-lead, .post-rows > li, .post-next li, .post-cover, .section-head, .prose > *, .statement__type)';
 const MAX = 14;
 const EASE_OUT = 'cubic-bezier(.2, .7, .2, 1)';
 const EASE_IN = 'cubic-bezier(.4, 0, .7, .2)';

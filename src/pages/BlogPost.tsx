@@ -20,21 +20,52 @@ export function BlogPost() {
     );
   }
 
+  const next = BlogService.getSortedPosts().filter((p) => p.id !== post.id).slice(0, 2);
+
   return (
     <article className="section section--page" aria-labelledby="post-h">
       <div className="wrap">
-        <a className="link" href="/blog">Tous les articles</a>
-        <header className="page-head post-head">
-          <p className="t-label muted">{post.category}</p>
-          <h1 id="post-h">{post.title}</h1>
-          <div className="post-meta">
+        <a className="link post-back" href="/blog">Tous les articles</a>
+        <header className="post-head">
+          <p className="post-card__meta">
+            <span className="post-card__cat">{post.category}</span>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
+            <span>{BlogService.readingMinutes(post)} min de lecture</span>
             <span>{post.author}</span>
-          </div>
+          </p>
+          <h1 id="post-h">{post.title}</h1>
+          <p className="post-head__excerpt">{post.excerpt}</p>
         </header>
-        <div className="prose">
+        {post.image && (
+          <figure className="post-cover">
+            <div className="post-pic"><img src={post.image} alt={post.imageAlt ?? ''} width="1600" height="1067" /></div>
+            {post.imageCredit && <figcaption>Photo : <a href={post.imageSource}>{post.imageCredit}</a></figcaption>}
+          </figure>
+        )}
+        <div className="prose post-body">
           <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
         </div>
+
+        {next.length > 0 && (
+          <aside className="post-next" aria-labelledby="next-h">
+            <h2 id="next-h">À lire ensuite</h2>
+            <ul>
+              {next.map((p) => (
+                <li key={p.id}>
+                  <a className="post-row post-row--small" href={`/blog/${p.id}`}>
+                    <figure className="post-pic post-row__pic">
+                      {p.image && <img src={p.image} alt={p.imageAlt ?? ''} width="1600" height="1067" loading="lazy" />}
+                    </figure>
+                    <div className="post-row__text">
+                      <p className="post-card__meta"><span className="post-card__cat">{p.category}</span><time dateTime={p.date}>{formatDate(p.date)}</time></p>
+                      <h3 className="post-row__title">{p.title}</h3>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
       </div>
     </article>
   );

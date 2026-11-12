@@ -9,6 +9,9 @@ export interface BlogPost {
   author: string;
   category: string;
   image?: string;
+  imageAlt?: string;
+  imageCredit?: string;
+  imageSource?: string;
 }
 
 // Initial mock data
@@ -19,6 +22,16 @@ export class BlogService {
 
   static getAllPosts(): BlogPost[] {
     return this.posts;
+  }
+
+  /** newest first */
+  static getSortedPosts(): BlogPost[] {
+    return [...this.posts].sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  /** about 200 words a minute, at least one */
+  static readingMinutes(post: BlogPost): number {
+    return Math.max(1, Math.round(post.content.split(/\s+/).filter(Boolean).length / 200));
   }
 
   static getPostById(id: string): BlogPost | undefined {
