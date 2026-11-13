@@ -101,65 +101,48 @@
   .app > .app__pane + .app__pane { border-top: 0; }
 }
 
-/* the engagements: three screens as three groups (the kit's .g2 knows two), every row of cards running
-   down to its screen's foot, the panels growing to meet it */
-main > section.g2.g3 { --h: 3; }
-main > section.g2.g3 > .wrap { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+/* the engagements: two screens of cards (the kit's .g2), then three more engagements in words that
+   follow them at their own height, not on a screen of their own */
 @media (min-width: 1280px) {
-  main > section.g2.g3 > .wrap > .grid { align-self: stretch; }
+  main > section.g2.eng-tail { height: auto; }
+  main > section.g2.eng-tail > .wrap { height: auto;
+    grid-template-rows: repeat(2, calc(100vh - var(--padt) - var(--padb) - var(--bar))) auto;
+    grid-template-rows: repeat(2, calc(100svh - var(--padt) - var(--padb) - var(--bar))) auto; }
+  main > section.g2.eng-tail > .wrap > .grid { align-self: stretch; }
 }
-/* below 1280 the sections take their content's height: the three groups simply follow one another */
+/* below 1280 the sections take their content's height: the groups simply follow one another */
 @media (max-width: 1279px) {
-  main > section.g2.g3 { --h: 1; }
-  main > section.g2.g3 > .wrap { display: flex; flex-direction: column; row-gap: var(--s-9); }
-  main > section.g2.g3 > .wrap > * { align-self: stretch; }
-  main > section.g2.g3 > .wrap > :last-child { margin-block: 0; }
+  main > section.g2.eng-tail > .wrap { display: flex; flex-direction: column; row-gap: var(--s-9); }
+  main > section.g2.eng-tail > .wrap > * { align-self: stretch; }
+  main > section.g2.eng-tail > .wrap > :last-child { margin-block: 0; }
 }
 /* side by side, the cards share their rows (title, lines, cases, panel), so every panel starts on one line */
 @media (min-width: 1024px) {
   #engagements .grid { grid-auto-rows: auto auto auto 1fr; row-gap: 0; }
   #engagements .grid > .card { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; }
-  #engagements .grid > .card.span-4:nth-child(n+3) { margin-top: var(--s-8); }
 }
-@media (min-width: 1280px) { #engagements .grid > .card.span-4:nth-child(n+3) { margin-top: 0; } }
 #engagements .panel { --p-h: 220px; background: var(--ground-bg); }
 @media (max-width: 639px) { #engagements .panel { --p-h: 200px; } }
-@media (min-width: 640px) and (max-width: 1023px) {
-  #engagements .panel { --p-h: 300px; }
-  #engagements .grid > .card.span-4 { grid-column: 1 / -1; }
-  #engagements .grid { row-gap: var(--s-8); }
-}
+@media (min-width: 640px) and (max-width: 1023px) { #engagements .panel { --p-h: 300px; } }
 
-/* "En pratique": each case tagged with the app it happens in */
-.eng-cases { list-style: none; padding: 0; margin: var(--s-5) 0 0; display: grid; gap: var(--s-3); align-content: start; max-width: 52ch; }
-.eng-cases li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: var(--s-3); align-items: start;
-  font-size: 15px; line-height: 22px; color: var(--muted); }
-.eng-cases img { width: 20px; height: 20px; margin-top: 1px; border-radius: 5px; }
-.eng-cases b { font-weight: 560; color: var(--ink); }
+/* "En pratique": what an engagement changes, one plain sentence per case, a short violet rule before each */
+.eng-cases { list-style: none; padding: 0; margin: var(--s-5) 0 0; display: grid; gap: var(--s-3); align-content: start; max-width: 50ch; }
+.eng-cases li { position: relative; padding-left: 22px; font-size: 15px; line-height: 22px;
+  color: color-mix(in oklab, var(--ink) 66%, var(--bg)); text-wrap: pretty; }
+.eng-cases li::before { content: ""; position: absolute; left: 0; top: 10px; width: 10px; height: 2px; border-radius: 1px; background: var(--accent); }
 .eng-cases a { color: var(--ink); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--accent) 70%, transparent); text-underline-offset: 3px; }
 .eng-cases a:hover { color: var(--accent); }
 
-/* a Silvertransfert send, its files and the thirty days it lives */
-.eng-send { width: 340px; }
-@media (max-width: 639px) { #engagements .panel.eng-send-panel { --p-h: 290px; } }
-.eng-send__mark { width: 16px; height: 16px; border-radius: 4px; }
-.eng-send__files { padding: 8px 8px 4px; }
-.eng-send__files li { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; align-items: center; height: 40px; padding: 0 8px; border-radius: var(--u-r2); }
-.eng-send__files li + li { border-top: 1px solid var(--u-line); border-radius: 0; }
-.eng-send__files span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
-.eng-send__files em { font-style: normal; color: var(--u-muted); }
-.eng-send__life { padding: 12px 16px 16px; border-top: 1px solid var(--u-line); }
-.eng-send__bar { height: 4px; border-radius: 2px; background: var(--u-fill-3); overflow: hidden; }
-.eng-send__bar i { display: block; width: 6%; height: 100%; border-radius: inherit; background: var(--u-accent); }
-.eng-send__ends { display: flex; justify-content: space-between; margin-top: 8px; color: var(--u-muted); }
-
-/* a photograph as a card's panel, its credit set small on it */
-.panel.eng-photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
-.panel.eng-photo--lock img { object-position: 50% 30%; filter: sepia(.25) saturate(.8); }
-.eng-photo__credit { position: absolute; left: var(--s-4); bottom: var(--s-4); z-index: 5; max-width: calc(100% - 2 * var(--s-4));
-  padding: 4px 8px; border-radius: 6px; font-size: 12px; line-height: 16px; color: #fff; text-decoration: none;
-  background: rgb(10 10 16 / .62); backdrop-filter: blur(6px); }
-.eng-photo__credit:hover { text-decoration: underline; }
+/* the three last engagements: words only, three columns under one rule */
+.eng-more { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-8);
+  padding-top: var(--s-7); border-top: 1px solid color-mix(in oklab, var(--ink) 12%, transparent); }
+.eng-more h3 { margin: 0; font-size: 22px; line-height: 30px; font-weight: 560; letter-spacing: -0.012em; text-wrap: balance; }
+.eng-more > article > p { margin: var(--s-3) 0 0; font-size: 16px; line-height: 24px; color: color-mix(in oklab, var(--ink) 84%, var(--bg)); max-width: 46ch; }
+@media (min-width: 1024px) {
+  .eng-more { grid-template-rows: auto auto 1fr; row-gap: 0; }
+  .eng-more > article { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+}
+@media (max-width: 1023px) { .eng-more { grid-template-columns: minmax(0, 1fr); gap: var(--s-7); } }
 
 /* the statement: one line set large, the dealt liquid-type moment, over a violet glow */
 .statement { overflow: hidden; }
