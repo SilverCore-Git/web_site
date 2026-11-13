@@ -8,15 +8,36 @@ const [note, transfer] = SERVICES;
 const E2E = JSON.stringify({
   layout: 'lanes',
   curve: 'curve',
-  alt: 'Un fichier est chiffré sur votre appareil, stocké illisible sur nos serveurs, puis déchiffré seulement par son destinataire.',
-  input: { label: 'Votre fichier', icon: 'pdf', meta: 'sur votre appareil' },
-  core: { label: 'AES-256', icon: 'ui:lock' },
+  alt: 'Une note ou un fichier est chiffré sur votre appareil, stocké illisible sur nos serveurs, puis déchiffré seulement sur vos appareils et chez les personnes que vous invitez.',
+  input: { label: 'Note ou fichier', icon: 'ui:file-text', meta: 'sur votre appareil' },
+  core: { label: 'Chiffré', icon: 'ui:lock' },
   lanes: [
     { label: 'Nos serveurs', icon: 'ui:server', meta: 'illisible', done: true },
-    { label: 'Lien de partage', icon: 'ui:link', meta: '30 jours', done: true },
-    { label: 'Destinataire', icon: 'ui:key-round', meta: 'déchiffre', done: true },
+    { label: 'Vos appareils', icon: 'ui:monitor-smartphone', meta: 'déchiffrent', done: true },
+    { label: 'Vos invités', icon: 'ui:users', meta: 'déchiffrent', done: true },
   ],
 });
+
+// the app each practical case happens in: its own mark, or ours when it holds for every service
+const APP = {
+  note: { name: 'Silvernote', icon: '/assets/logo/snote/favicon.svg' },
+  transfer: { name: 'Silvertransfert', icon: '/assets/logo/stransfert/favicon.png' },
+  all: { name: 'Tous nos services', icon: '/assets/logo/scoreV2/silvercore_logo.svg' },
+} as const;
+
+/** "En pratique": what an engagement means, case by case, inside the apps */
+function Cases({ items }: { items: [keyof typeof APP, React.ReactNode][] }) {
+  return (
+    <ul className="eng-cases" aria-label="En pratique">
+      {items.map(([app, text], i) => (
+        <li key={i}>
+          <img src={APP[app].icon} alt="" width="20" height="20" />
+          <span><b>{APP[app].name}</b> {text}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 const HOSTING = JSON.stringify({
   layout: 'hub',
@@ -99,33 +120,46 @@ export function Home() {
         </div>
       </section>
 
-      {/* ENGAGEMENTS 2x2 on the surface band, two screens as two groups */}
-      <section className="section g2 ground-surface" id="engagements" aria-labelledby="engagements-h">
+      {/* ENGAGEMENTS: seven rules that hold for every service, each with what it means inside the apps.
+          Three screens as three groups: protect, own, and the rules that follow from them */}
+      <section className="section g2 g3 ground-surface" id="engagements" aria-labelledby="engagements-h">
         <div className="wrap">
           <div className="group">
             <div className="section-head">
-              <h2 id="engagements-h">Nos engagements. <span className="muted">Ce que nous faisons de vos données, et ce que nous refusons.</span></h2>
+              <h2 id="engagements-h">Nos engagements. <span className="muted">Les mêmes pour tous nos services.</span></h2>
             </div>
             <div className="grid">
               <article className="card card--row card--open span-6">
-                <h3>Chiffre vos contenus de bout en bout</h3>
-                <p>Vos fichiers sont chiffrés en AES-256 avant de quitter votre appareil. Même nous ne pouvons pas les lire.</p>
+                <h3>Chiffrer avant de stocker</h3>
+                <p>Ce que vous confiez à nos services est chiffré : de bout en bout dès que c’est possible, sinon dans notre base de données.</p>
+                <Cases items={[
+                  ['note', 'Une note est chiffrée avant d’être enregistrée, même quand vous l’écrivez à plusieurs.'],
+                  ['transfer', 'Un envoi part chiffré en AES-256 : sur nos serveurs, il n’est qu’un bloc illisible.'],
+                ]} />
                 <div className="panel"><div className="dg" data-diagram={E2E}></div></div>
               </article>
               <article className="card card--row card--open span-6">
-                <h3>Héberge tout sur nos serveurs</h3>
-                <p>Chaque service tourne chez nous, en France. Les rares outils externes sont français ou européens.</p>
+                <h3>Tout héberger chez nous, en France</h3>
+                <p>Nos services tournent sur nos propres serveurs, pas chez un géant du cloud. Les rares outils externes sont français ou européens.</p>
+                <Cases items={[
+                  ['note', 'Vos notes passent par nos serveurs, en France, pour aller de votre téléphone à votre ordinateur.'],
+                  ['transfer', 'Votre fichier attend son destinataire sur nos serveurs, en France, et nulle part ailleurs.'],
+                ]} />
                 <div className="panel"><div className="dg" data-diagram={HOSTING}></div></div>
               </article>
             </div>
           </div>
           <div className="grid">
             <article className="card card--row card--open span-6">
-              <h3>Ne revend jamais vos données</h3>
-              <p>Pas de publicité ciblée ni de pisteurs tiers. Nos services vivent de leurs abonnements, pas de vous.</p>
+              <h3>Vivre des abonnements, pas de vos données</h3>
+              <p>Pas de publicité ciblée, pas de pisteurs tiers, jamais de revente. Nos services se financent par leurs options payantes.</p>
+              <Cases items={[
+                ['note', 'La version gratuite ne vous profile pas : rien de ce que vous écrivez ne sert à vous cibler.'],
+                ['all', 'Aucun pisteur publicitaire, ni dans nos applications ni sur ce site.'],
+              ]} />
               <div className="panel">
                 <div className="stage stage--fade-b" aria-hidden="true">
-                  <div className="at-right to-edge" style={{ '--ax': '32px', '--ay': '56px' } as React.CSSProperties}>
+                  <div className="at-right to-edge" style={{ '--ax': '32px', '--ay': '48px' } as React.CSSProperties}>
                     <div className="ui ui-panel ui-toggles" data-ui="toggles">
                       <div className="ui-head">
                         <svg className="ui-icon ui-toggles__ico" viewBox="0 0 16 16"><path d="M8 1.8 13 4v3.6c0 3-2.1 5.4-5 6.6-2.9-1.2-5-3.6-5-6.6V4z" /><path d="m5.8 8 1.6 1.6 3-3.2" /></svg>
@@ -146,8 +180,12 @@ export function Home() {
               </div>
             </article>
             <article className="card card--row card--open span-6">
-              <h3>Respecte le RGPD à la lettre</h3>
-              <p>Vos droits sur vos données s’appliquent sans détour : accès, correction, effacement, portabilité.</p>
+              <h3>Vous laisser la main sur vos données</h3>
+              <p>Vos droits RGPD s’appliquent sans détour : accès, correction, effacement, portabilité et opposition.</p>
+              <Cases items={[
+                ['note', 'Demandez une copie de vos notes ou leur effacement : nous répondons sous un mois, comme le veut le RGPD.'],
+                ['all', 'Une question sur vos données ? Écrivez à support@silvercore.fr ou passez sur notre Discord.'],
+              ]} />
               <div className="panel">
                 <div className="stage stage--fade-b" aria-hidden="true">
                   <div className="at-rise fit" style={{ '--fit-max': '340px', '--ay': '40px' } as React.CSSProperties}>
@@ -164,6 +202,63 @@ export function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </article>
+          </div>
+          <div className="grid">
+            <article className="card card--row card--open span-4">
+              <h3>Garder le strict nécessaire</h3>
+              <p>Nous ne demandons que ce qu’un service doit savoir pour fonctionner, et nous ne gardons rien plus longtemps qu’utile.</p>
+              <Cases items={[
+                ['transfer', 'Un envoi et son lien s’effacent d’eux-mêmes au bout de 30 jours.'],
+                ['all', 'Certains services s’utilisent sans compte : il ne sert qu’à sauvegarder.'],
+              ]} />
+              <div className="panel eng-send-panel">
+                <div className="stage stage--fade-b" aria-hidden="true">
+                  <div className="at-rise fit" style={{ '--fit-max': '340px', '--ay': '32px' } as React.CSSProperties}>
+                    <div className="ui ui-panel eng-send">
+                      <div className="ui-head">
+                        <img className="eng-send__mark" src={APP.transfer.icon} alt="" width="16" height="16" />
+                        <div className="ui-title">Votre envoi</div>
+                        <span className="ui-spacer"></span>
+                        <span className="ui-chip ui-chip--accent">Chiffré</span>
+                      </div>
+                      <ul className="eng-send__files">
+                        <li><img src="/assets/kit/icons/pdf.svg" alt="" width="20" height="20" /><span>devis-signé.pdf</span><em>240 Ko</em></li>
+                        <li><img src="/assets/kit/icons/zip.svg" alt="" width="20" height="20" /><span>photos-chantier.zip</span><em>1,2 Go</em></li>
+                        <li><img src="/assets/kit/icons/docx.svg" alt="" width="20" height="20" /><span>compte-rendu.docx</span><em>86 Ko</em></li>
+                      </ul>
+                      <div className="eng-send__life">
+                        <div className="eng-send__bar"><i></i></div>
+                        <div className="eng-send__ends"><span>Envoyé aujourd’hui</span><span>Effacé dans 30 jours</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article className="card card--row card--open span-4">
+              <h3>Dire ce qui se passe</h3>
+              <p>Pannes, maintenances, choix techniques : nous les publions plutôt que de les taire.</p>
+              <Cases items={[
+                ['all', <>La <a href={STATUS_URL}>page d’état</a> suit en direct Silvernote, Silvertransfert, nos API et nos bases.</>],
+                ['all', <>Nos choix d’hébergement et de chiffrement sont expliqués sur le <a href="/blog">blog</a>.</>],
+              ]} />
+              <div className="panel eng-photo">
+                <img src="/assets/img/blog/covers/salle-serveurs.webp" alt="Une salle de serveurs, rangées de machines et câbles d’alimentation et de fibre optique" width="1600" height="1067" loading="lazy" />
+                <a className="eng-photo__credit" href="https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg">Photo : Esquilo, CC BY-SA 3.0</a>
+              </div>
+            </article>
+            <article className="card card--row card--open span-4">
+              <h3>Refuser les portes dérobées</h3>
+              <p>Un accès caché, même prévu pour les autorités, est une faille pour tout le monde. Nous n’en voulons pas dans nos services.</p>
+              <Cases items={[
+                ['all', 'Ce qui est chiffré de bout en bout, nous ne pouvons pas le lire, et nous ne construisons rien pour le faire.'],
+                ['all', <>Nous l’avons dit face au projet européen <a href="/blog/chat-control-danger-silvercore">Chat Control</a>.</>],
+              ]} />
+              <div className="panel eng-photo eng-photo--lock">
+                <img src="/assets/img/engagements/serrure-et-cle.webp" alt="Une serrure de coffre française de la fin du XVIIe siècle et sa clé, en fer ciselé" width="1200" height="1183" loading="lazy" />
+                <a className="eng-photo__credit" href="https://commons.wikimedia.org/wiki/File:Coffer_lock_and_key_MET_164180.jpg">Serrure française, vers 1690 · The Met, CC0</a>
               </div>
             </article>
           </div>
