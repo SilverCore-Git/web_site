@@ -50,14 +50,14 @@ export function Blog() {
           ))}
         </ul>
 
-        <p className="post-credits">
+        {[lead, ...rest].some((p) => p?.imageCredit) && <p className="post-credits">
           Photos :{' '}
           {[lead, ...rest].filter((p) => p?.imageCredit).map((p, i, all) => (
             <span key={p.id}>
               <a href={p.imageSource}>{p.imageCredit}</a>{i < all.length - 1 ? ' · ' : ''}
             </span>
           ))}
-        </p>
+        </p>}
       </div>
     </section>
   );

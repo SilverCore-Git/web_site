@@ -7,10 +7,8 @@
     "date": "2026-02-01",
     "author": "Équipe Silvercore",
     "category": "Sécurité",
-    "image": "/assets/img/blog/covers/enigma.webp",
-    "imageAlt": "Une machine de chiffrement Enigma dans sa caisse en bois, clavier et rotors visibles",
-    "imageCredit": "Rama, CC BY-SA 2.0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Enigma-IMG_0487-black.jpg"
+    "image": "/assets/img/blog/covers/chiffrement.svg",
+    "imageAlt": "Un cadenas dessiné en points violets, sa serrure en blanc"
   },
   {
     "id": "pourquoi-heberger-en-france",
@@ -20,10 +18,8 @@
     "date": "2026-01-25",
     "author": "Équipe Silvercore",
     "category": "Infrastructure",
-    "image": "/assets/img/blog/covers/carte-de-cassini.webp",
-    "imageAlt": "La carte de Cassini, première carte générale de la France, dépliée sur une table de la Bibliothèque nationale de France",
-    "imageCredit": "CC0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Carte_de_Cassini,_index_20260724_111848.jpg"
+    "image": "/assets/img/blog/covers/france.svg",
+    "imageAlt": "La France dessinée en points violets, un point blanc pour nos serveurs"
   },
   {
     "id": "transparence-totale-status-page",
@@ -33,10 +29,8 @@
     "date": "2026-01-30",
     "author": "Équipe Silvercore",
     "category": "Infrastructure",
-    "image": "/assets/img/blog/covers/salle-serveurs.webp",
-    "imageAlt": "Une salle de serveurs, rangées de machines et câbles d’alimentation et de fibre optique",
-    "imageCredit": "Esquilo, CC BY-SA 3.0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:PDC_server_room.jpg"
+    "image": "/assets/img/blog/covers/etat.svg",
+    "imageAlt": "Des barres de disponibilité en points violets, une ligne de pouls blanche au-dessus"
   },
   {
     "id": "nouveau-site-web-silvercore",
@@ -46,10 +40,8 @@
     "date": "2026-04-28",
     "author": "Équipe Silvercore",
     "category": "Annonce",
-    "image": "/assets/img/blog/covers/casse-typographe.webp",
-    "imageAlt": "Une casse de typographe remplie de caractères en plomb, au musée Champollion",
-    "imageCredit": "Vigneron, CC BY 3.0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Casse_de_typographe,_Grandjean_-_mus%C3%A9e_Champollion.JPG"
+    "image": "/assets/img/blog/covers/site.svg",
+    "imageAlt": "Une fenêtre de navigateur dessinée en points, avec un titre et une image"
   },
   {
     "id": "bun-runtime-performance-silvercore",
@@ -59,10 +51,8 @@
     "date": "2026-05-28",
     "author": "Équipe Silvercore",
     "category": "Technologie",
-    "image": "/assets/img/blog/covers/chronometre.webp",
-    "imageAlt": "Un chronomètre ancien à gousset sur fond noir",
-    "imageCredit": "Ansgar Koreng, CC BY-SA 4.0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Stopwatch,_1810201155,_ako.jpg"
+    "image": "/assets/img/blog/covers/bun.svg",
+    "imageAlt": "Un chronomètre dessiné en points, son aiguille en blanc"
   },
   {
     "id": "chat-control-danger-silvercore",
@@ -72,9 +62,7 @@
     "date": "2026-07-09",
     "author": "Équipe Silvercore",
     "category": "Sécurité & Vie Privée",
-    "image": "/assets/img/blog/covers/cachet-de-cire.webp",
-    "imageAlt": "Une lettre pliée et fermée par un cachet de cire rouge",
-    "imageCredit": "Contrafool, CC BY-SA 3.0, Wikimedia Commons",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:Wax_seal_with_impression_of_uppercase_letter_A.jpg"
+    "image": "/assets/img/blog/covers/chat-control.svg",
+    "imageAlt": "Une lettre scellée dessinée en points, traversée par une ligne de balayage blanche"
   }
 ]
