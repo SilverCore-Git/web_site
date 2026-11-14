@@ -1,7 +1,9 @@
+import { usePageMeta } from '@/src/seo';
 import { FAQS } from '@/src/constants';
 import { PageHead } from '@/src/components/ui';
 
 export function FAQ() {
+  usePageMeta({ title: 'Questions fréquentes · Silvercore', description: 'Gratuité, chiffrement, hébergement, revente de données, support : les réponses aux questions les plus posées sur Silvercore et ses services.', path: '/faq' });
   return (
     <section className="section section--page" aria-labelledby="faq-h">
       <div className="wrap">

@@ -1,7 +1,9 @@
+import { usePageMeta } from '@/src/seo';
 import { PageHead } from '@/src/components/ui';
 import { SOCIALS } from '@/src/constants';
 
 export function Legal() {
+  usePageMeta({ title: 'Mentions légales · Silvercore', description: 'Les mentions légales du site silvercore.fr : éditeur, hébergement et conditions d’utilisation.', path: '/legal' });
   return (
     <section className="section section--page" aria-labelledby="legal-h">
       <div className="wrap">

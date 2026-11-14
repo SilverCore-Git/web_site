@@ -4,31 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <title>Silvercore : services numériques souverains et chiffrés, hébergés en France</title>
-    <meta
-      name="description"
-      content="Silvercore conçoit des services numériques européens et souverains, pensés pour la sécurité : chiffrés, hébergés sur ses propres serveurs en France, sans pisteurs ni revente de données."
-    />
+    <!-- the home page's; every other page sets its own from src/seo.ts -->
+    <title>Silvercore : services européens chiffrés, hébergés en France</title>
+    <meta name="description" content="Silvernote pour vos notes, Silvertransfert pour vos fichiers : des services européens et souverains, chiffrés et hébergés en France, sans pub ni pisteurs." />
     <meta name="author" content="Silvercore" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.silvercore.fr" />
+    <link rel="canonical" href="https://www.silvercore.fr/" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="Silvercore" />
-    <meta property="og:title" content="Silvercore : services numériques souverains et chiffrés" />
-    <meta property="og:description" content="Des services européens et souverains, chiffrés et hébergés en France, sans pisteurs ni revente de données." />
-    <meta property="og:url" content="https://www.silvercore.fr" />
+    <meta property="og:title" content="Silvercore : services européens et souverains" />
+    <meta property="og:description" content="Notes et fichiers chiffrés, sur nos propres serveurs en France. Gratuits pour l’essentiel, sans publicité, sans pisteurs et sans revente de vos données." />
+    <meta property="og:url" content="https://www.silvercore.fr/" />
     <meta property="og:image" content="https://www.silvercore.fr/assets/img/og-banner.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Silvercore, services européens et souverains : l’Europe en points violets, reliée à nos serveurs en France" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Silvercore : services numériques souverains et chiffrés" />
-    <meta name="twitter:description" content="Des services européens et souverains, chiffrés et hébergés en France, sans pisteurs ni revente de données." />
+    <meta name="twitter:title" content="Silvercore : services européens et souverains" />
+    <meta name="twitter:description" content="Notes et fichiers chiffrés, sur nos propres serveurs en France. Gratuits pour l’essentiel, sans publicité, sans pisteurs et sans revente de vos données." />
     <meta name="twitter:image" content="https://www.silvercore.fr/assets/img/og-banner.png" />
+    <meta name="twitter:image:alt" content="Silvercore, services européens et souverains : l’Europe en points violets, reliée à nos serveurs en France" />
 
     <meta name="theme-color" content="#0b0b12" />
     <meta name="site-kind" content="software" />
@@ -37,24 +38,59 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Silvercore",
-        "url": "https://www.silvercore.fr",
-        "logo": "https://www.silvercore.fr/assets/img/og-banner.png",
-        "description": "Silvercore conçoit des services numériques européens et souverains, centrés sur la sécurité. Notes et transferts de fichiers chiffrés, hébergés en France.",
-        "foundingLocation": {
-          "@type": "Place",
-          "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" }
-        },
-        "areaServed": { "@type": "Country", "name": "France" },
-        "contactPoint": [
-          { "@type": "ContactPoint", "contactType": "customer support", "email": "support@silvercore.fr", "availableLanguage": ["French"] },
-          { "@type": "ContactPoint", "contactType": "general inquiries", "email": "contact@silvercore.fr", "availableLanguage": ["French"] }
-        ],
-        "sameAs": [
-          "https://taap.it/silvercore.discord",
-          "https://taap.it/silvercore.discord.support",
-          "https://taap.it/silvercore.insta"
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.silvercore.fr/#organisation",
+            "name": "Silvercore",
+            "url": "https://www.silvercore.fr/",
+            "logo": { "@type": "ImageObject", "url": "https://www.silvercore.fr/assets/logo/scoreV2/silvercore_logo.png", "width": 1200, "height": 1200 },
+            "image": "https://www.silvercore.fr/assets/img/og-banner.png",
+            "description": "Silvercore conçoit des services numériques européens et souverains, centrés sur la sécurité : Silvernote pour les notes, Silvertransfert pour les fichiers, chiffrés et hébergés sur ses propres serveurs en France.",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" }
+            },
+            "areaServed": { "@type": "Place", "name": "Union européenne" },
+            "knowsAbout": ["chiffrement de bout en bout", "souveraineté numérique", "RGPD", "hébergement en France"],
+            "contactPoint": [
+              { "@type": "ContactPoint", "contactType": "customer support", "email": "support@silvercore.fr", "availableLanguage": ["French"] },
+              { "@type": "ContactPoint", "contactType": "general inquiries", "email": "contact@silvercore.fr", "availableLanguage": ["French"] }
+            ],
+            "sameAs": [
+              "https://taap.it/silvercore.discord",
+              "https://taap.it/silvercore.insta",
+              "https://taap.it/silvercore.github"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.silvercore.fr/#site",
+            "url": "https://www.silvercore.fr/",
+            "name": "Silvercore",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "https://www.silvercore.fr/#organisation" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Silvernote",
+            "url": "https://www.silvernote.fr",
+            "applicationCategory": "ProductivityApplication",
+            "operatingSystem": "Web",
+            "description": "L’app de prise de notes chiffrées et partagées : dossiers, écriture à plusieurs en temps réel, synchronisation sur tous vos appareils.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "publisher": { "@id": "https://www.silvercore.fr/#organisation" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Silvertransfert",
+            "url": "https://www.silvertransfert.fr",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Web",
+            "description": "Envoyez des fichiers jusqu’à 10 Go par un simple lien, chiffrés de bout en bout en AES-256 et supprimés après 30 jours.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "publisher": { "@id": "https://www.silvercore.fr/#organisation" }
+          }
         ]
       }
     </script>

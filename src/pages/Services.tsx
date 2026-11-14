@@ -1,7 +1,9 @@
+import { usePageMeta } from '@/src/seo';
 import { SERVICES } from '@/src/constants';
 import { Check, PageHead } from '@/src/components/ui';
 
 export function Services() {
+  usePageMeta({ title: 'Services : notes et transferts de fichiers chiffrés · Silvercore', description: 'Silvernote pour des notes chiffrées et partagées, Silvertransfert pour envoyer jusqu’à 10 Go chiffrés de bout en bout. Gratuits, hébergés en France.', path: '/services' });
   return (
     <section className="section section--page" aria-labelledby="services-h">
       <div className="wrap">

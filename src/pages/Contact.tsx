@@ -1,7 +1,9 @@
+import { usePageMeta } from '@/src/seo';
 import { PageHead } from '@/src/components/ui';
 import { SOCIALS } from '@/src/constants';
 
 export function Contact() {
+  usePageMeta({ title: 'Contacter Silvercore', description: 'Une question, un bug ou une idée pour nos services ? Écrivez à l’équipe Silvercore : par le formulaire, par e-mail ou sur notre Discord.', path: '/contact' });
   return (
     <section className="section section--page" aria-labelledby="contact-h">
       <div className="wrap">

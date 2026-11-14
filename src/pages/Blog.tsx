@@ -1,3 +1,4 @@
+import { usePageMeta } from '@/src/seo';
 import { BlogService, type BlogPost } from '@/src/services/blogService';
 import { Arrow, PageHead, formatDate } from '@/src/components/ui';
 
@@ -12,6 +13,7 @@ function Meta({ post }: { post: BlogPost }) {
 }
 
 export function Blog() {
+  usePageMeta({ title: 'Blog : vie privée, chiffrement et souveraineté · Silvercore', description: 'Les articles de Silvercore sur la vie privée, le chiffrement, l’hébergement en France et la souveraineté numérique, et les nouvelles de nos services.', path: '/blog' });
   const [lead, ...rest] = BlogService.getSortedPosts();
 
   return (

@@ -1,6 +1,8 @@
+import { usePageMeta } from '@/src/seo';
 import { PageHead } from '@/src/components/ui';
 
 export function Privacy() {
+  usePageMeta({ title: 'Politique de confidentialité · Silvercore', description: 'Les données personnelles que Silvercore traite, pourquoi et combien de temps, et comment exercer vos droits au titre du RGPD.', path: '/privacy' });
   return (
     <section className="section section--page" aria-labelledby="privacy-h">
       <div className="wrap">

@@ -3,10 +3,34 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { BlogService } from '@/src/services/blogService';
 import { formatDate } from '@/src/components/ui';
+import { usePageMeta, SITE_URL } from '@/src/seo';
 
 export function BlogPost() {
   const { id } = useParams();
   const post = BlogService.getPostById(id || '');
+  usePageMeta(post ? {
+    title: `${post.title} · Silvercore`,
+    description: post.excerpt,
+    path: `/blog/${post.id}`,
+    type: 'article',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      inLanguage: 'fr-FR',
+      mainEntityOfPage: `${SITE_URL}/blog/${post.id}`,
+      author: { '@type': 'Organization', name: post.author, url: SITE_URL },
+      publisher: { '@type': 'Organization', name: 'Silvercore', logo: { '@type': 'ImageObject', url: `${SITE_URL}/assets/logo/scoreV2/silvercore_logo.png` } },
+      image: `${SITE_URL}/assets/img/og-banner.png`,
+    },
+  } : {
+    title: 'Article introuvable · Silvercore',
+    description: 'Cet article n’existe pas ou a été déplacé.',
+    path: `/blog/${id ?? ''}`,
+    noindex: true,
+  });
 
   if (!post) {
     return (

@@ -1,3 +1,4 @@
+import { usePageMeta, HOME } from '@/src/seo';
 import { MAIN_ACTION, SERVICES, FAQS, STATUS_URL } from '@/src/constants';
 import { BlogService } from '@/src/services/blogService';
 import { Arrow, Check, formatDate } from '@/src/components/ui';
@@ -40,6 +41,7 @@ const HOSTING = JSON.stringify({
 });
 
 export function Home() {
+  usePageMeta({ title: HOME.title, description: HOME.description, path: '/' });
   const posts = BlogService.getSortedPosts().slice(0, 3);
 
   return (

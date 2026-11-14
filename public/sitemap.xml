@@ -45,35 +45,41 @@
   </url> -->
 
   <url>
-    <loc>https://www.silvercore.fr/blog/transparence-totale-nouvelle-page-status-silvercore</loc>
+    <loc>https://www.silvercore.fr/blog/transparence-totale-status-page</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/pourquoi-heberger-en-france</loc>
+    <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/chiffrement-de-bout-en-bout-explique</loc>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/bun-runtime-performance-silvercore</loc>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/nouveau-site-web-silvercore</loc>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
     <loc>https://www.silvercore.fr/blog/chat-control-danger-silvercore</loc>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
