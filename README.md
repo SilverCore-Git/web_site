@@ -24,7 +24,7 @@ npm run dev        # http://localhost:3000
 ## Arborescence
 
 ```
-index.html              meta par défaut (page d'accueil), Umami
+index.html              meta par défaut (page d'accueil)
 src/
   App.tsx               routes (react-router)
   constants.ts          nom du site, liens de navigation, services, engagements
