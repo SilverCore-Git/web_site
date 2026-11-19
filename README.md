@@ -6,20 +6,20 @@ C'est une application React 19 + TypeScript construite avec Vite, puis servie en
 
 ## Démarrer
 
-Il faut Node 22.
+Le projet utilise [Bun](https://bun.sh) (`bun.lock`).
 
 ```bash
-npm ci
-npm run dev        # http://localhost:3000
+bun install
+bun run dev        # http://localhost:3000
 ```
 
 | Commande          | Rôle                                     |
 |-------------------|------------------------------------------|
-| `npm run dev`     | serveur de dev sur le port 3000          |
-| `npm run build`   | build de production dans `dist/`         |
-| `npm run preview` | sert le build localement                 |
-| `npm run lint`    | vérification des types (`tsc --noEmit`)  |
-| `npm run clean`   | supprime `dist/`                         |
+| `bun run dev`     | serveur de dev sur le port 3000          |
+| `bun run build`   | build de production dans `dist/`         |
+| `bun run preview` | sert le build localement                 |
+| `bun run lint`    | vérification des types (`tsc --noEmit`)  |
+| `bun run clean`   | supprime `dist/`                         |
 
 ## Arborescence
 
@@ -73,7 +73,7 @@ Les liens internes sont de vrais `<a href>` (rechargement complet) : les scripts
 
 ## Déploiement
 
-- `Dockerfile` : build Node 22, puis image `nginx:alpine` qui sert `dist/` (`nginx.conf` renvoie toutes les routes vers `index.html` et met `/assets/` en cache un an).
+- `Dockerfile` : build Node 22 avec `npm ci` (il lit `package-lock.json`, pas `bun.lock`), puis image `nginx:alpine` qui sert `dist/` (`nginx.conf` renvoie toutes les routes vers `index.html` et met `/assets/` en cache un an).
 - `.github/workflows/docker.yml` : à chaque push sur `main` ou tag `v*`, l'image est construite et poussée sur `ghcr.io/silvercore-git/web-site` (tags `latest`, branche/tag et sha). Secrets nécessaires : `GHCR_USER`, `GHCR_TOKEN` (PAT avec `write:packages`).
 
 Pour tester l'image en local :
